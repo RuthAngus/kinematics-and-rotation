@@ -2,3 +2,7 @@
 *csv
 *fits
 *pdf
+.ipynb_checkpoints
+__pycache__
+mcquillan
+posteriors
