@@ -7,7 +7,7 @@ import sys
 import os
 
 # Add cwd to path for SLURM because it executes a copy
-# sys.path.append(os.getcwd())
+sys.path.append(os.getcwd())
 
 from multiprocessing import Pool
 
@@ -34,12 +34,12 @@ def infer_stellar_age(df):
                    Av=df["Av"], Av_err=df["Av_std"],
                    savedir="mcquillan", filename="{}".format(df["KID"]))
 
-    star.fit(max_n=1000, thin_by=100)
+    star.fit(max_n=10000, thin_by=100)
 
 
 if __name__ == "__main__":
-    df = pd.read_csv("single_MS_stars.csv")
-    df = df.iloc[:4]
+    df = pd.read_csv("gaia_mc_cool.csv")
+    df = df.iloc[:24]
 
     list_of_dicts =  []
     for i in range(len(df)):
@@ -47,5 +47,5 @@ if __name__ == "__main__":
     print(list_of_dicts[0])
     print(len(list_of_dicts))
 
-    p = Pool(4)
+    p = Pool(24)
     list(p.map(infer_stellar_age, list_of_dicts))
