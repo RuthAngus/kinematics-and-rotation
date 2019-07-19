@@ -1,0 +1,121 @@
+% zip ms_files.zip ms.tex abstract.tex intro.tex method.tex results.tex conclusion.tex Praesepe.pdf variance.pdf simulated_CMD.pdf rotation_model_praesepe.pdf simulation_results.pdf NGC6819.pdf NGC6819_results.pdf hz.bib
+
+\documentclass[useAMS, usenatbib, preprint, 12pt]{aastex}
+% \documentclass[a4paper,fleqn,usenatbib,useAMS]{mnras}
+\usepackage{cite, natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{epsfig}
+\usepackage{cases}
+\usepackage[section]{placeins}
+\usepackage{graphicx, subfigure}
+\usepackage{color}
+\usepackage{bm}
+
+\AtBeginDocument{\let\textlabel\label}
+
+\newcommand{\ie}{{\it i.e.}}
+\newcommand{\eg}{{\it e.g.}}
+\newcommand{\etal}{{\it et al.}}
+
+\newcommand{\kepler}{{\it Kepler}}
+\newcommand{\Kepler}{{\it Kepler}}
+\newcommand{\corot}{{\it CoRoT}}
+\newcommand{\Ktwo}{{\it K2}}
+\newcommand{\ktwo}{\Ktwo}
+\newcommand{\TESS}{{\it TESS}}
+\newcommand{\tess}{{\it TESS}}
+\newcommand{\LSST}{{\it LSST}}
+\newcommand{\lsst}{{\it LSST}}
+\newcommand{\Wfirst}{{\it WFIRST}}
+\newcommand{\wfirst}{{\it WFIRST}}
+\newcommand{\SDSS}{{\it SDSS}}
+\newcommand{\PLATO}{{\it PLATO}}
+\newcommand{\plato}{{\it PLATO}}
+\newcommand{\Gaia}{{\it Gaia}}
+\newcommand{\gaia}{{\it Gaia}}
+\newcommand{\panstarrs}{{\it PanSTARRS}}
+
+\newcommand{\Teff}{$T_{\mathrm{eff}}$}
+\newcommand{\teff}{$T_{\mathrm{eff}}$}
+\newcommand{\FeH}{[Fe/H]}
+\newcommand{\feh}{[Fe/H]}
+\newcommand{\prot}{$P_{\mathrm{rot}}$}
+\newcommand{\pmega}{$\bar{\omega}$}
+\newcommand{\mj}{$m_j$}
+\newcommand{\mh}{$m_h$}
+\newcommand{\mk}{$m_k$}
+\newcommand{\mx}{$m_x$}
+\newcommand{\logg}{log(g)}
+\newcommand{\dnu}{$\Delta \nu$}
+\newcommand{\numax}{$\nu_{\mathrm{max}}$}
+
+% \newcommand{\nsim_stars}{841}
+
+\newcommand{\amnh}{1}
+\newcommand{\cca}{2}
+\newcommand{\hawaii}{3}
+
+\newcommand{\sd}{{\tt stardate}}
+\newcommand{\gcolor}{$G_{BP} - G_{RP}$}
+\newcommand{\mcp}{\citep{mcquillan2014}}
+\newcommand{\mct}{\citet{mcquillan2014}}
+\newcommand{\bvector}{${\bf b}$}
+\newcommand{\python}{{\it Python}}
+
+\newcommand{\racomment}[1]{{\color{blue}#1}}
+
+\begin{document}
+
+\title{Exploring the ages of rotating stars using galactic dynamics}
+
+\author{%
+    Ruth Angus,
+    Adrian Price-Whelan,
+    Jennifer van Saders,
+    Elisabeth Newton,
+    Travis Berger,
+    Gus Beane,
+    Rocio Kiman
+    \& Dan Huber}
+
+% \altaffiltext{\amnh}{American Museum of Natural History, Central Park West,
+% Manhattan, NY, USA}
+% \altaffiltext{\cca}{Center for Computational Astrophysics, Flatiron Institute,
+% 162 5th Avenue, Manhattan, NY, USA}
+% \altaffiltext{\hawaii}{Institute for Astronomy, University of Hawai'i at
+% M\={a}noa, Honolulu, HI, USA}
+
+% Word limit: 3500
+
+% Word limit: 250
+\begin{abstract}
+    \include{abstract}
+\end{abstract}
+
+% Word limit: 750
+\include{intro}
+% FIGURE: The gap
+
+% Word limit: 750
+\include{method}
+% FIGURE: The CMD.
+% FIGURE: The age histogram.
+
+% Word limit: 500
+\include{results}
+% FIGURE: V_B - period plot
+% FIGURE: V_B - age plot
+
+% Word limit: 500
+\include{discussion}
+
+% Word limit: 500
+\include{conclusion}
+
+\include{acknowledgements}
+
+\bibliographystyle{plainnat}
+\bibliography{refs.bib}
+\end{document}
