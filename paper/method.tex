@@ -1,0 +1,73 @@
+% 270 words
+% Limit: 500 words
+\section{Method}
+
+\subsection{Calculating velocites}
+
+We crossmatched the \mct\ catalog of stellar rotation periods, measured from
+\kepler\ light curves with the \gaia\ DR2 catalog.
+We added 2MASS K-band photometry from the Kepler Input Catalog
+\citep{brown2011} and SDSS g-band photometry \racomment{(citations)}.
+
+\begin{figure}
+  \caption{
+A color magnitude diagram in SDSS g and 2MASS K bands showing the
+\citet{mcquillan2014} sample, colored by their rotation periods.
+We excluded photometric binaries and subgiants from our analysis by removing
+stars above the two dashed lines.
+The rotation periods of binaries and subgiants do not follow a Skumanich-like
+braking law and were removed from our sample.
+% since we rely on a simple scaling
+% between rotation period and age to make the argument that the rotation period
+% is not caused by incorrect period measurements.
+}
+  \centering
+    \includegraphics[width=1\textwidth]{CMD_cuts}
+\label{fig:CMD_cuts}
+\end{figure}
+
+In order to explore the age of this stellar population from a rotation-period
+standpoint, it was first necessary to remove visual binaries and subgiants
+from the sample.
+The rotation-period evolution of these two types of stars is generally
+different to that of single stars which more usually follow a Skumanich-like
+spin-down law.
+Tidal and magnetic interactions between the two components of a binary system
+can influence the rotation periods of both stars, and the expanding envelopes
+of subgiants drive rapid spin-down through conservation of angular momentum.
+We removed visual binaries from the sample by fitting a 6th-order polynomial
+to the main sequence and raising it by subtracting 0.15 magnitudes to
+approximate the line between the single-star and binary main sequences.
+This polynomial is shown in figure \ref{fig:CMD_cuts}.
+\racomment{Why did we do this in g-K?}
+In order to remove subgiants, we removed stars brighter than 6th magnitude in
+the g-band from the sample.
+
+We used the {\tt Pyia} {\it Python} package to calculate stellar velocities.
+{\tt Pyia} has built-in functionality for calculating velocity samples from
+the full \gaia\ uncertainty covariance matrix via Monte Carlo sampling.
+It therefore not only incorporates uncertainties on the \gaia\ positions
+parallaxes and proper motions, it also accounts for the covariance between
+these properties.
+We calculated \vb\ for each star in the \mct\ catalog that survived the visual
+binary and subgiant cuts.
+
+% \begin{figure}
+%   \caption{
+% the rotation periods of stars in the \citet{mcquillan2014} sample vs.
+% effective temperature.
+% black points are dwarf stars identified as non-photometric binaries, hotter
+% than 4800 k.
+% blue circle points are non-photometric binary dwarfs, cooler than 4800 k, with
+% a rotation period and \gaia\ color indicating they are older than 1.1 gyr.
+% orange squares are stars that with rotation periods that fall just below the
+% gap: they have rotation-ages between 0.5 and 1.1 gyrs.
+% green triangles are stars with rotation periods faster than the main envelop
+% of stars.
+% these are probably binaries whose rotation periods are synchronized to their
+% orbits and have been spun-up via tidal interactions.
+% }
+%   \centering
+%     \includegraphics[width=1\textwidth]{period_teff}
+% \label{fig:period_teff}
+% \end{figure}
