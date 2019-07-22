@@ -1,0 +1,56 @@
+% word limit: 500
+\begin{itemize}
+\item{Showing that the gap stars are young.}
+\item{Is there a lack of old M dwarfs is this sample?}
+\end{itemize}
+
+\begin{figure}
+  \caption{
+Rotation period vs. velocity in the galactic latitute direction.
+}
+  \centering
+    \includegraphics[width=1\textwidth]{rotation_vb_dispersion}
+\label{fig:rotation_vb_dispersion}
+\end{figure}
+
+\begin{figure}
+  \caption{
+Age vs. velocity in the galactic latitute direction.
+The velocity of stars as a function of their age.
+}
+  \centering
+    \includegraphics[width=1\textwidth]{age_vb_dispersion}
+\label{fig:age_vb_dispersion}
+\end{figure}
+figure \ref{age_vb_dispersion} shows the velocity of stars in the \bvector\
+direction, plotted against their gyrochronal ages.
+These ages were calculated using equation 1 of \citet{stardate_paper},
+implemented in the \sd\ \python\ package \citep{stardate}.
+The two vertical lines show the approximate locations of the synchronized
+binary upper limit and the rotation gap.
+Stars to the left of the rotation gap (age $\lesssim$ 1 Gyr) and to the right
+of the synchronized binary regime (age $\gtrsim$ 0.5 Gyr) have lower $V_b$
+dispersion than stars to the right of the rotation gap (age $gtrsim$ 1 Gyr),
+indicating that they are kinematically young.
+This increase in velocity dispersion can be seen in both the individually
+plotted stars, and in the bins of standard deviation shown as the solid black
+line, which increase with age.
+This figure clearly indicates that stars with rotation periods that indicate
+they are young (but are greater than 7 days), are indeed young.
+This rules out the possibility that the rotation period gap is caused by
+either incorrect rotation periods, or binarity.
+
+This figure also shows a lack of M dwarfs at old ages caused by the `M dwarf
+dip' \citep{vansaders2019, mcquillan2014}.
+This is a feature of the \citet{mcquillan2014} sample where there appears to
+be a lack of slowly rotating stars at temperatures cooler than 4000 K.
+Like the rotation period gap, the origin of the M dwarf dip could either be
+due to a lack of stars with long rotation periods, or due to a suppression in
+the amplitudes of variability for these stars.
+However, in general the completeness of the \citet{mcquillan2014} catalog
+increases as a function of decreasing temperature, and is around 80\% for M
+dwarfs \citep{mcquillan2013, mcquillan2014, simonian2019}.
+This suggests that the age-rotation relation has a different shape at
+different ages, as indicated by the 1 Gyr NGC 6811 cluster that has a
+different rotation period-age relation to those of younger clusters
+\citep{curtis2019}.
