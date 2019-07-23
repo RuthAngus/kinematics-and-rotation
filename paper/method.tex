@@ -17,6 +17,9 @@ We excluded photometric binaries and subgiants from our analysis by removing
 stars above the two dashed lines.
 The rotation periods of binaries and subgiants do not follow a Skumanich-like
 braking law and were removed from our sample.
+The rotation period gradient across the main sequence is visible by eye in
+    this figure: young, rapidly rotating stars are located below the old,
+    slowly rotating stars.
 % since we rely on a simple scaling
 % between rotation period and age to make the argument that the rotation period
 % is not caused by incorrect period measurements.
@@ -35,10 +38,13 @@ spin-down law.
 Tidal and magnetic interactions between the two components of a binary system
 can influence the rotation periods of both stars, and the expanding envelopes
 of subgiants drive rapid spin-down through conservation of angular momentum.
-We removed visual binaries from the sample by fitting a 6th-order polynomial
-to the main sequence and raising it by subtracting 0.15 magnitudes to
-approximate the line between the single-star and binary main sequences.
+We removed visual binaries and subgiants from the sample by applying cuts to
+the color-magnitude diagram (CMD).
+We fit a 6th-order polynomial to the main sequence and raised it by
+subtracting 0.15 magnitudes to approximate the line between the single-star
+and binary main sequences.
 This polynomial is shown in figure \ref{fig:CMD_cuts}.
+We removed all stars above this line from the sample.
 \racomment{Why did we do this in g-K?}
 In order to remove subgiants, we removed stars brighter than 6th magnitude in
 the g-band from the sample.
