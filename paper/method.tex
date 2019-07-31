@@ -2,24 +2,36 @@
 % Limit: 500 words
 \section{Method}
 
-\subsection{Calculating velocites}
+\subsection{The data}
 
 We crossmatched the \mct\ catalog of stellar rotation periods, measured from
-\kepler\ light curves with the \gaia\ DR2 catalog.
-We added 2MASS K-band photometry from the Kepler Input Catalog
-\citep{brown2011} and SDSS g-band photometry \racomment{(citations)}.
+\kepler\ light curves, with the \gaia\ DR2 catalog.
+Reddening and extinction from dust was calculated for each star using the
+Bayestar dust map implemented in the dustmaps {\it Python} package
+\citep{green2018}.
+We estimated effective temperatures from dereddened \Gaia\ \gcolor\ color,
+using an 8th-order polynomial relation calibrated using .... stars
+\racomment{ask Jason for details}.
+\begin{equation}
+    \mathrm{T_{eff}} = 8960 -4802C + 1931C^2 -2446C^3 + 2669C^4 - 1324C^5 +
+    301C^6 - 26C^7,
+% 8959.8112335205078, -4801.5566310882568, 1931.4756631851196,
+%           -2445.9980716705322, 2669.0248055458069, -1324.0671020746231,
+%           301.13205924630165, -25.923997443169355]
+\end{equation}
+where C is \gaia\ \gcolor.
 
 \begin{figure}
   \caption{
-A color magnitude diagram in SDSS g and 2MASS K bands showing the
-\citet{mcquillan2014} sample, colored by their rotation periods.
+A \gaia\ color magnitude diagram showing the \citet{mcquillan2014} sample with
+    extinction-corrected magnitudes, colored by their rotation periods.
 We excluded photometric binaries and subgiants from our analysis by removing
 stars above the two dashed lines.
-The rotation periods of binaries and subgiants do not follow a Skumanich-like
-braking law and were removed from our sample.
-The rotation period gradient across the main sequence is visible by eye in
-    this figure: young, rapidly rotating stars are located below the old,
-    slowly rotating stars.
+% The rotation periods of binaries and subgiants do not follow a Skumanich-like
+% braking law.
+% The rotation period gradient across the main sequence is visible by eye in
+%     this figure: young, rapidly rotating stars are located below the old,
+%     slowly rotating stars.
 % since we rely on a simple scaling
 % between rotation period and age to make the argument that the rotation period
 % is not caused by incorrect period measurements.
@@ -28,8 +40,7 @@ The rotation period gradient across the main sequence is visible by eye in
     \includegraphics[width=1\textwidth]{CMD_cuts}
 \label{fig:CMD_cuts}
 \end{figure}
-
-In order to explore the age of this stellar population from a rotation-period
+To explore the age of this stellar population from a rotation-period
 standpoint, it was first necessary to remove visual binaries and subgiants
 from the sample.
 The rotation-period evolution of these two types of stars is generally
@@ -39,24 +50,25 @@ Tidal and magnetic interactions between the two components of a binary system
 can influence the rotation periods of both stars, and the expanding envelopes
 of subgiants drive rapid spin-down through conservation of angular momentum.
 We removed visual binaries and subgiants from the sample by applying cuts to
-the color-magnitude diagram (CMD).
-We fit a 6th-order polynomial to the main sequence and raised it by
-subtracting 0.15 magnitudes to approximate the line between the single-star
-and binary main sequences.
-This polynomial is shown in figure \ref{fig:CMD_cuts}.
+the color-magnitude diagram (CMD), shown in figure \ref{fig:CMD_cuts}.
+We fit a 6th-order polynomial to the main sequence and raised it by 0.22 dex,
+to approximate the division between single stars and visual binaries.
 We removed all stars above this line from the sample.
-\racomment{Why did we do this in g-K?}
-In order to remove subgiants, we removed stars brighter than 6th magnitude in
-the g-band from the sample.
+We removed subgiants by eliminating stars brighter than 6th magnitude in
+\gaia\ G-band from the sample.
 
+We removed stars with negative parallaxes and parallax signal-to-noise ratios
+below 10 from the sample.
+We also removed a small number of stars fainter than 16th magnitude from the
+sample.
 We used the {\tt Pyia} {\it Python} package to calculate stellar velocities.
 {\tt Pyia} has built-in functionality for calculating velocity samples from
 the full \gaia\ uncertainty covariance matrix via Monte Carlo sampling.
 It therefore not only incorporates uncertainties on the \gaia\ positions
-parallaxes and proper motions, it also accounts for the covariance between
-these properties.
-We calculated \vb\ for each star in the \mct\ catalog that survived the visual
-binary and subgiant cuts.
+parallaxes and proper motions, it also accounts for the {\it covariance}
+between these properties.
+We removed stars with absolute \vb\ uncertainties greater than 1 \kms\ from
+the sample.
 
 % \begin{figure}
 %   \caption{
