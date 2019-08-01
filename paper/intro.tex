@@ -5,11 +5,11 @@
 It has long been known that the rotation periods of FGKM dwarfs increase over
 time \citep{skumanich1972}.
 This characteristic of main-sequence stars allows them to be dated via their
-rotation periods in a practice known as gyrochronology, which is convenient
+rotation periods in a practice known as gyrochronology, which is useful
 since the ages of main-sequence stars are extremely difficult to measure via
 the traditional age-dating method of isochrone placement.
 It is also well established that stars of the same age but different {\it
-masses} have different rotation periods \racomment{(citation)}, assumed to be
+masses} have different rotation periods \racomment{(citation)}, thought to be
 caused by the deeper convective zones, and therefore stronger magnetic dynamos
 (and more efficient magnetic braking) in lower-mass stars
 \footnote{Color is the directly observable quantity to which empirical
@@ -29,7 +29,7 @@ to reproduce the data \citep{vansaders2016, vansaders2018}.
 An even more recent analysis of middle-aged open clusters provides further
 indication that the exponent of the period-age relation is mass-dependent.
 New rotation period measurements of the 1.1 Gyr open cluster, NGC 6811,
-revealed a flattened relationship between rotation period and color
+reveal a flattened relationship between rotation period and color
 \citep{curtis2019}.
 In this cluster, the G dwarfs rotate at the same rate as the K dwarfs.
 
@@ -67,7 +67,7 @@ Since the age-velocity dispersion relations (AVRs) are themselves still
 actively being calibrated, it is difficult to directly compare gyrochronal
 ages with kinematic ones.
 However, regardless of the exact relation between velocity dispersion and
-stellar age, it is expected to be monotonic relationship, therefore velocity
+stellar age, it is expected to be a monotonic relationship, therefore velocity
 dispersion can be used effectively to {\it rank} groups of stars by age.
 \racomment{Say some words here to prime the reader for the upcoming caveats.}
 
@@ -78,31 +78,28 @@ dispersion can be used effectively to {\it rank} groups of stars by age.
 % In contrast, orbital velocities are different at periapsis and apoapsis -- so
 % in this sense, {\it actions} are the natural quantities to use as age proxies.
 Vertical action is a better age indicator than vertical velocity, however both
-vertical action and vertical velocity (\vz/W) can only be calculated with full
-6-dimensional position and velocity information, yet most stars with measured
-rotation periods do not have radial velocity measurements because they are
-\kepler\ targets which are relatively faint (between $\sim$11th and $~$18th
-magnitudes).
+vertical action ($J_z$) and vertical velocity (\vz/W) can only be calculated
+with full 6-dimensional position and velocity information, yet most stars with
+measured rotation periods do not have radial velocity measurements because
+they are relatively faint \kepler\ targets ($\sim$11th-18th magnitudes).
 For this reason, we used an alternative age proxy: velocity in the direction
 of galactic latitude, \vb.
-The \kepler\ field is at low galactic latitude (b=5-20\degrees), so \vb is a
-close approximation to \vz.
-% Since the stars in our sample only have proper motions, parallaxes and
-% positions, with no radial velocites, we could not calculate full 3D velocities
-% or actions.
+The \kepler\ field is positioned at low galactic latitude (b=5-20\degrees), so
+\vb\ is a close approximation to \vz.
 
 % \subsection{The degeneracy between gyrochronology and mass-dependent heating}
 
-In this paper we tested the \citet{angus2019} gyrochronology relation which
+In this paper we test the \citet{angus2019} gyrochronology relation, which
 was calibrated using the period-color relation of Praesepe and the period-age
-relation of Praesepe and the Sun and is calibrated in \gaia\ \gcolor\ color.
+relation of Praesepe and the Sun.
+It is calibrated to \gaia\ \gcolor\ color.
 % This relation was calibrated by fitting a 5th-order polynomial to the relation
 % between (log) rotation period and (log) \gaia\ \gcolor\ color for around 800
 % members of the Praesepe cluster, and a straight line in (log) age to Praesepe
 % and the Sun.
 Although only calibrated using Praesepe and the Sun, this gyrochronology
 relation was tested on NGC 6819, a 2.5 Gyr cluster, for which it predicted
-accurate ages
+accurate ages.
 In addition, the period-color relation of Praesepe is nearly identical to the
 period-color relation of the Hyades, a cluster of around the same age: $\sim$
 650 years \citep{douglas2019}.
@@ -120,7 +117,8 @@ around 1 Gyr.
 If the period-color relation of the \citet{angus2019} gyrochronology model
 {\it were} a perfect model for the rotational evolution of stars, then groups
 of stars selected to be similar ages using this relation should fall on an
-isochrone on both a CMD, and in period-\teff\ space.
+isochrone on a CMD, an isochrone in period-color space, and an
+isochrone in velocity dispersion-color space.
 Unfortunately, uncertainties on \gaia\ photometry and parallaxes, plus
 variations in metallicity and extinction, blur out the main sequence enough
 that differences between stars in different age and rotation bins are not
@@ -132,18 +130,7 @@ magnitude and color-based isochrones: although kinematics as an age indicator
 is not necessarily as well calibrated to an absolute age scale as CMD
 position, it can be very sensitive to {\it differences} in the ages of stellar
 populations.
-\begin{figure}
-  \caption{
-Main sequence stars with \mct\ rotation periods on the \gaia\ CMD with visual
-    binaries removed.
-    Points are colored by their gyrochronal age, according to the
-    \citet{angus2019} gyrochronology relation.
-    A general age gradient is visible across the main sequence.
-}
-  \centering
-    \includegraphics[width=1\textwidth]{age_gradient}
-\label{fig:age_gradient}
-\end{figure}
+
 Isochrones and stellar evolution tracks are highly dependent on choices made
 about input physics and assumptions and have often been calibrated using
 different types of stars.
