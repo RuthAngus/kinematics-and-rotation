@@ -24,7 +24,7 @@ where C is \gaia\ \gcolor.
 \begin{figure}
   \caption{
 A \gaia\ color magnitude diagram showing the \citet{mcquillan2014} sample with
-    extinction-corrected magnitudes, colored by their rotation periods.
+    extinction-corrected magnitudes, colored by rotation period.
 We excluded photometric binaries and subgiants from our analysis by removing
 stars above the two dashed lines.
 % The rotation periods of binaries and subgiants do not follow a Skumanich-like
@@ -46,16 +46,16 @@ from the sample.
 The rotation-period evolution of these two types of stars is generally
 different to that of single stars which more usually follow a Skumanich-like
 spin-down law.
-Tidal and magnetic interactions between the two components of a binary system
-can influence the rotation periods of both stars, and the expanding envelopes
-of subgiants drive rapid spin-down through conservation of angular momentum.
+% Tidal and magnetic interactions between the two components of a binary system
+% can influence the rotation periods of both stars, and the expanding envelopes
+% of subgiants drive rapid spin-down through conservation of angular momentum.
 We removed visual binaries and subgiants from the sample by applying cuts to
 the color-magnitude diagram (CMD), shown in figure \ref{fig:CMD_cuts}.
 We fit a 6th-order polynomial to the main sequence and raised it by 0.22 dex,
 to approximate the division between single stars and visual binaries.
 We removed all stars above this line from the sample.
-We removed subgiants by eliminating stars brighter than 6th magnitude in
-\gaia\ G-band from the sample.
+We also removed subgiants by eliminating stars brighter than 6th magnitude in
+\gaia\ G-band.
 \begin{figure}
   \caption{
 Dereddened main sequence stars with \mct\ rotation periods on the \gaia\ CMD
@@ -71,9 +71,10 @@ Dereddened main sequence stars with \mct\ rotation periods on the \gaia\ CMD
 
 We removed stars with negative parallaxes and parallax signal-to-noise ratios
 below 10 from the sample.
-We also removed a small number of stars fainter than 16th magnitude from the
-sample.
-We used the {\tt Pyia} {\it Python} package to calculate stellar velocities.
+We also removed a small number of stars fainter than 16th magnitude.
+We used the {\tt Pyia} \citep{price-whelan_2018} and {\tt astropy}
+\citep{astropy2013, astropy2018} {\it Python} packages to calculate stellar
+velocities.
 {\tt Pyia} has built-in functionality for calculating velocity samples from
 the full \gaia\ uncertainty covariance matrix via Monte Carlo sampling.
 It therefore not only incorporates uncertainties on the \gaia\ positions

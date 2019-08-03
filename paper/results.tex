@@ -24,21 +24,26 @@ equal numbers of stars.
 Top: rotation period vs effective temperature for stars in the \mct\
     catalog.
     The full catalog, with subgiants and visual binaries removed is shown in
-    grey, and stars selected to be in different age groups are overlayed in
-    color.
-    These age groups were selected using the \citet{angus2019} gyrochronology
+    grey, and stars selected to be in different age groups (between 3500 and
+    5000 K) are overlayed in color.
+These age groups were selected using the \citet{angus2019} gyrochronology
     relation.
-The legend in the center of the figure lists the age range of each group.
-    Bottom: velocity dispersion vs effective temperature for each age group.
+The legend in the center of the figure lists the age range, in Gyr, of each
+    group.
+Bottom: velocity dispersion vs effective temperature for each age
+    group.
 The color of the line corresponds to the color of the group shown in the top
     panel.
-If the gyrochronal model were correct at all ages and the stars in each group
+If the gyrochronal model were correct at all ages, and the stars in each group
     were the same age across temperatures, the velocity dispersion would be
     constant as a function of \teff.
-However, the velocity dispersions of the oldest age groups depend on \teff,
-    indicating that the \citet{angus2019} gyrochronology model either
-    overpredicts the ages of old M dwarfs or underpredicts the ages of old G
-    and K dwarfs.
+However, the velocity dispersions of the oldest age groups increase \teff,
+    indicating the \citet{angus2019} gyrochronology model underpredicts the
+    the ages of late-K dwarfs relative to the ages of early K dwarfs at old
+    ages.
+An alternative explanation could be that the gyrochronology relation is
+    correct and {\it mass-dependent heating} is responsible for the greater
+    velocity dispersions of cooler stars.
 }
   \centering
     \includegraphics[width=1\textwidth]{age_cut}
@@ -47,8 +52,8 @@ However, the velocity dispersions of the oldest age groups depend on \teff,
 The top panel of figure \ref{fig:age_cut} shows the full \mct\ sample
 (excluding visual binaries and subgiants) in grey, with coeval groups shown in
 color.
-The color of the points corresponds to the age ranges specified in the legend,
-which also apply to the lines in the lower panel.
+The color of the points corresponds to the age ranges specified in the legend
+(in Gyr), which also apply to the lines in the lower panel.
 The bottom panel shows the velocity dispersion, \sigmavb\ of each age group,
 as a function of effective temperature.
 We only included stars within a temperature range of 5000 - 3500 K in our
@@ -65,10 +70,19 @@ temperatures lower than $\sim$ 4000 K.
 
 Overall, figure \ref{fig:age_cut} shows that velocity dispersion increases
 with gyrochronal age across all temperatures.
-However, if the stars in each selected age group had the {\it same} age across
-the temperature range, their velocity dispersion would be a constant function
-of \teff.
-Although the youngest age groups have a relatively constant velocity
+The consistent velocity dispersion of young stars as a function of temperature
+shows that the Praesepe-calibrated gyrochronology relation accurately predicts
+the relative ages of {\it young} field stars.
+% To our knowledge, no gyrochronology relation has never been demonstrated to
+% correctly predict ages (either relative or absolute) for such cool or such
+% young field stars.
+% This is not particularly remarkable however, since these young stars are a
+% similar age to the Praesepe cluster, which was used to calibrate the
+% period-color relation.
+% However, if the stars in each selected age group had the {\it same} age across
+% the temperature range, their velocity dispersion would be a constant function
+% of \teff.
+However, although the youngest age groups have a relatively constant velocity
 dispersions across temperatures, the oldest age groups do not.
 This indicates {\it either} that the shape of the period-color relation does
 not remain constant over time, \ie\ it flattens out, {\it or} that cool stars
@@ -163,16 +177,6 @@ in heating rates.
 % of the gyrochronology relations is certainly warranted in a follow-up study.
 % }
 
-The consistent velocity dispersion of young stars as a function of temperature
-in figure \ref{fig:age_cut} shows that the Praesepe-calibrated gyrochronology
-relation accurately predicts the relative ages of {\it young} field stars.
-To our knowledge, no gyrochronology relation has never been demonstrated to
-correctly predict ages (either relative or absolute) for such cool or such
-young field stars.
-This is not particularly remarkable however, since these young stars are a
-similar age to the Praesepe cluster, which was used to calibrate the
-period-color relation.
-
 % Figure \ref{fig:age_comparison} shows the ages of star groups, predicted with
 % the \citet{angus2019} gyrochronology relation, compared with the ages of star
 % groups, predicted with the \citet{holmberg2009} AVR.
@@ -224,11 +228,10 @@ period-color relation.
 % that the {\it relative} age of these youngest stars are under-predicted by
 % kinematics or over-predicted by gyrochronology.
 
-For now, we assume that the rise in velocity dispersions at cooler effective
+If we assume that the rise in velocity dispersions at cooler effective
 temperatures is caused by an inaccurate period-color relation rather than
-mass-dependent dynamical heating.
-This assumption allows us to estimate what the shape of the period-color
-relations {\it should} be.
+mass-dependent dynamical heating, we can estimate what the shape of the
+period-color relations {\it should} be.
 Figure \ref{fig:age_cut} indicates that the period-color relation flattens
 out, so we applied the same analysis to groups of stars with similar rotation
 periods, equivalent to a completely flat period-color relation.
