@@ -1,14 +1,16 @@
 % 270 words
 % Limit: 500 words
-\section{Method}
 
 \subsection{The data}
+\label{sec:the_data}
 
-We crossmatched the \mct\ catalog of stellar rotation periods, measured from
-\kepler\ light curves, with the \gaia\ DR2 catalog.
+We used the publicly available \kepler-\gaia\ DR2 crossmatched
+catalog\footnote{Available at gaia-kepler.fun} to combine the \mct\ catalog of
+stellar rotation periods, measured from \kepler\ light curves, with the \gaia\
+DR2 catalog.
 Reddening and extinction from dust was calculated for each star using the
-Bayestar dust map implemented in the dustmaps {\it Python} package
-\citep{green2018}.
+Bayestar dust map implemented in the {\tt dustmaps} {\it Python} package
+\citep{green2018}, and {\tt astropy} \citep{astropy2013}.
 We estimated effective temperatures from dereddened \Gaia\ \gcolor\ color,
 using an 8th-order polynomial relation calibrated using .... stars
 \racomment{ask Jason for details}.
@@ -18,70 +20,99 @@ using an 8th-order polynomial relation calibrated using .... stars
 % 8959.8112335205078, -4801.5566310882568, 1931.4756631851196,
 %           -2445.9980716705322, 2669.0248055458069, -1324.0671020746231,
 %           301.13205924630165, -25.923997443169355]
+\label{eq:curtis}
 \end{equation}
 where C is \gaia\ \gcolor.
 
-\begin{figure}
-  \caption{
-A \gaia\ color magnitude diagram showing the \citet{mcquillan2014} sample with
-    extinction-corrected magnitudes, colored by rotation period.
-We excluded photometric binaries and subgiants from our analysis by removing
-stars above the two dashed lines.
-% The rotation periods of binaries and subgiants do not follow a Skumanich-like
-% braking law.
-% The rotation period gradient across the main sequence is visible by eye in
-%     this figure: young, rapidly rotating stars are located below the old,
-%     slowly rotating stars.
-% since we rely on a simple scaling
-% between rotation period and age to make the argument that the rotation period
-% is not caused by incorrect period measurements.
-}
-  \centering
-    \includegraphics[width=1\textwidth]{CMD_cuts}
-\label{fig:CMD_cuts}
-\end{figure}
-To explore the age of this stellar population from a rotation-period
-standpoint, it was first necessary to remove visual binaries and subgiants
-from the sample.
-The rotation-period evolution of these two types of stars is generally
-different to that of single stars which more usually follow a Skumanich-like
-spin-down law.
+% \begin{figure}
+%   \caption{
+% A \gaia\ color magnitude diagram showing the \citet{mcquillan2014} sample with
+%     extinction-corrected magnitudes, colored by rotation period.
+% We excluded photometric binaries and subgiants from our analysis by removing
+% stars above the two dashed lines.
+% % The rotation periods of binaries and subgiants do not follow a Skumanich-like
+% % braking law.
+% % The rotation period gradient across the main sequence is visible by eye in
+% %     this figure: young, rapidly rotating stars are located below the old,
+% %     slowly rotating stars.
+% % since we rely on a simple scaling
+% % between rotation period and age to make the argument that the rotation period
+% % is not caused by incorrect period measurements.
+% }
+%   \centering
+%     \includegraphics[width=1\textwidth]{CMD_cuts}
+% \label{fig:CMD_cuts}
+% \end{figure}
+% To explore the age of this stellar population from a rotation standpoint, it
+% was first necessary to remove visual binaries and subgiants from the sample.
+% The rotational evolution of these two types of stars is generally different to
+% that of single stars which more usually follow a Skumanich-like spin-down law.
 % Tidal and magnetic interactions between the two components of a binary system
 % can influence the rotation periods of both stars, and the expanding envelopes
 % of subgiants drive rapid spin-down through conservation of angular momentum.
 We removed visual binaries and subgiants from the sample by applying cuts to
-the color-magnitude diagram (CMD), shown in figure \ref{fig:CMD_cuts}.
-We fit a 6th-order polynomial to the main sequence and raised it by 0.22 dex,
-to approximate the division between single stars and visual binaries.
-We removed all stars above this line from the sample.
+the color-magnitude diagram (CMD), shown in figure \ref{fig:age_gradient}.
+We fit a 6th-order polynomial to the main sequence and raised it by 0.27 dex
+to approximate the division between single stars and visual binaries and
+removed all stars above this line from the sample.
 We also removed subgiants by eliminating stars brighter than 6th magnitude in
 \gaia\ G-band.
 \begin{figure}
   \caption{
-Dereddened main sequence stars with \mct\ rotation periods on the \gaia\ CMD
-    with visual binaries removed.  Points are colored by their gyrochronal
+Dereddened MS \kepler\ stars with \mct\ rotation periods on the \gaia\ CMD.
+We excluded visual binaries by removing stars above the dashed line.
+    Points are colored by their gyrochronal
     age, according to the
     \citet{angus2019} gyrochronology relation.
     A general age gradient is visible across the main sequence.
 }
   \centering
-    \includegraphics[width=1\textwidth]{age_gradient}
+    \includegraphics[width=1\textwidth]{age_gradient_combo}
 \label{fig:age_gradient}
 \end{figure}
 
-We removed stars with negative parallaxes and parallax signal-to-noise ratios
-below 10 from the sample.
-We also removed a small number of stars fainter than 16th magnitude.
-We used the {\tt Pyia} \citep{price-whelan_2018} and {\tt astropy}
-\citep{astropy2013, astropy2018} {\it Python} packages to calculate stellar
-velocities.
+The {\tt Pyia} \citep{price-whelan_2018} and {\tt astropy} \citep{astropy2013,
+astropy2018} {\it Python} packages were used to calculate stellar velocities.
 {\tt Pyia} has built-in functionality for calculating velocity samples from
 the full \gaia\ uncertainty covariance matrix via Monte Carlo sampling.
 It therefore not only incorporates uncertainties on the \gaia\ positions
 parallaxes and proper motions, it also accounts for the {\it covariance}
 between these properties.
-We removed stars with absolute \vb\ uncertainties greater than 1 \kms\ from
-the sample.
+We removed stars with negative parallaxes, parallax signal-to-noise ratios
+less than 10, stars fainter than 16th magnitude, stars with absolute \vb\
+uncertainties greater than 1 \kms\, and stars with galactic latitudes greater
+than 15\degrees\ from the sample.
+Because \vb\ is only a close approximation to \vz\ at low galactic latitudes,
+and because latitude is correlated with stellar mass (lower mass stars are
+older and tend to be preferentially located at high $b$), we found that
+including stars with $b > 15$\degrees\ led to a larger number of \vb\ outliers
+at low stellar mass.
+15\degrees\ was found to be an adequate compromise between maintaining a close
+relationship between \vb\ and \vz\ and keeping a large enough sample size to
+provide meaningful results.
+We also found that the anti-correlation between stellar mass and $b$ is
+negligable for stars cooler than 5000 K.
+For this reason, and because the rotational evolution of old, G stars does not
+follow a simple Skumanich-like spin-down law \citep{vansaders2016}, we
+restricted our sample to temperatures between \tmin\ and 5000 K, \ie\ K
+dwarfs.
+
+To explore the relationship between rotation period, \teff\ and age, we
+selected groups of stars within different age ranges \citep[where age was
+calculated using the][gyrochronology relation]{angus2019}, and calculated the
+velocity dispersion: the standard deviation of velocities, \sigmavb, as a
+function of effective temperature for each age group.
+We performed 3$\sigma$ sigma-clipping on the stellar velocities in each age
+and temperature bin to remove non-Gaussian outliers.
+Without sigma-clipping, we found that a small number of high velocity
+outliers at the low-temperature end of our sample substantially raised the
+velocity dispersion for cooler stars.
+Ages were calculated using dereddened \gaia\ \gcolor\ color, however
+throughout this paper we show rotation periods as a function of {\it effective
+temperature}.
+We chose to use effective temperatures and not colors in this analysis as it
+is the linear quantity and therefore easier to divide into bins of roughly
+equal numbers of stars.
 
 % \begin{figure}
 %   \caption{

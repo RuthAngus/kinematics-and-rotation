@@ -1,30 +1,13 @@
 % word limit: 500
 \section{Results}
-
-\subsection{Selecting groups of coeval stars}
-
-To explore the relationship between rotation period, \teff\ and age, we
-selected groups of stars within different age ranges \citep[where age was
-calculated using the][gyrochronology relation]{angus2019}, and calculated the
-velocity dispersion: the standard deviation of velocities, \sigmavb, as a
-function of effective temperature for each age group.
-Since the processes that produce dynamical heating in the galactic disk are
-expected to generate Gaussian-distributed velocities, we performed
-sigma-clipping on stars in each age and temperature bin, to remove
-non-Gaussian outliers.
-Ages were calculated using dereddened \gaia\ \gcolor\ color, however
-throughout this paper we show rotation periods as a function of {\it effective
-temperature}.
-We chose to use effective temperatures and not colors in this analysis as it
-is the linear quantity and therefore easier to divide into bins of roughly
-equal numbers of stars.
+\label{sec:results}
 
 \begin{figure}
   \caption{
 Top: rotation period vs effective temperature for stars in the \mct\
     catalog.
     The full catalog, with subgiants and visual binaries removed is shown in
-    grey, and stars selected to be in different age groups (between 3500 and
+    grey, and stars selected to be in different age groups (between \tmin\ and
     5000 K) are overlayed in color.
 These age groups were selected using the \citet{angus2019} gyrochronology
     relation.
@@ -37,13 +20,13 @@ The color of the line corresponds to the color of the group shown in the top
 If the gyrochronal model were correct at all ages, and the stars in each group
     were the same age across temperatures, the velocity dispersion would be
     constant as a function of \teff.
-However, the velocity dispersions of the oldest age groups increase \teff,
-    indicating the \citet{angus2019} gyrochronology model underpredicts the
-    the ages of late-K dwarfs relative to the ages of early K dwarfs at old
-    ages.
-An alternative explanation could be that the gyrochronology relation is
-    correct and {\it mass-dependent heating} is responsible for the greater
-    velocity dispersions of cooler stars.
+However, the velocity dispersions of the oldest age groups increase with
+    \teff, indicating the \citet{angus2019} gyrochronology model underpredicts
+    the the ages of late-K dwarfs relative to the ages of early K dwarfs at
+    old ages.
+% An alternative explanation could be that the gyrochronology relation is
+%     correct and {\it mass-dependent heating} is responsible for the greater
+%     velocity dispersions of cooler stars.
 }
   \centering
     \includegraphics[width=1\textwidth]{age_cut}
@@ -56,9 +39,9 @@ The color of the points corresponds to the age ranges specified in the legend
 (in Gyr), which also apply to the lines in the lower panel.
 The bottom panel shows the velocity dispersion, \sigmavb\ of each age group,
 as a function of effective temperature.
-We only included stars within a temperature range of 5000 - 3500 K in our
-analysis, as hotter stars are more likely to have stopped magnetic braking
-\citep{vansaders2016}, which could bias the results.
+% We only included stars within a temperature range of 5000 - 3500 K in our
+% analysis, as hotter stars are more likely to have stopped magnetic braking
+% \citep{vansaders2016}, which could bias the results.
 M dwarfs were not included in our analysis because such faint stars cannot be
 observed at large heights above the plane (because of the low galactic
 latitude of the \kepler\ field, stars at high-Z are more distant), which
@@ -70,7 +53,7 @@ temperatures lower than $\sim$ 4000 K.
 
 Overall, figure \ref{fig:age_cut} shows that velocity dispersion increases
 with gyrochronal age across all temperatures.
-The consistent velocity dispersion of young stars as a function of temperature
+The constant velocity dispersion of young stars as a function of temperature
 shows that the Praesepe-calibrated gyrochronology relation accurately predicts
 the relative ages of {\it young} field stars.
 % To our knowledge, no gyrochronology relation has never been demonstrated to
@@ -82,57 +65,157 @@ the relative ages of {\it young} field stars.
 % However, if the stars in each selected age group had the {\it same} age across
 % the temperature range, their velocity dispersion would be a constant function
 % of \teff.
-However, although the youngest age groups have a relatively constant velocity
-dispersions across temperatures, the oldest age groups do not.
-This indicates {\it either} that the shape of the period-color relation does
-not remain constant over time, \ie\ it flattens out, {\it or} that cool stars
-experience more efficient dynamical heating than hot stars.
+However, although velocity dispersion is constant across temperature for young
+stars, it increases as a function of temperature for old stars.
+This indicates that the shape of the period-color relation flattens out over
+time.
 
-Mass-dependent dynamical heating could occur because lower-mass stars
-experience greater velocity changes when gravitationally perturbed.
-However, mass-dependent orbital heating has not yet been unambiguously
-observed in the galactic disk because of the strong anti-correlation between
-stellar mass and stellar age.
+An alternative explanation for this phenomenon is that lower-mass stars
+experience greater velocity changes when gravitationally perturbed and are
+more efficiently dynamically heated.
+Mass-dependent orbital heating has not been unambiguously observed in the
+galactic disk because of the strong anti-correlation between stellar mass and
+stellar age.
 Less massive stars do indeed have larger velocity dispersions, however they
-are also older on average \racomment{(citations)}.
+are also older on average.
 This mass-age degeneracy is highly reduced in M dwarfs because their
 main-sequence lifetimes are longer than the age of the Universe, however no
 evidence for mass-dependent heating has been detected in these low mass stars
 \citep{faherty2009}.
+To investigate further, we selected late K and M dwarfs observed by both
+\kepler\ and \gaia, whose MS lifetimes exceed around 11 Gyrs and are therefore
+representative of the initial mass function.
+% This allowed us to remove the degeneracy between mass and age that would
+% confound evidence for mass-dependent heating among more massive stars.
+% In a sample of massive stars with short MS lifetimes, lower-mass stars
+% typically have greater velocity dispersion, but this could be either because
+% dynamical heating is more efficient in lower mass stars, or because lower mass
+% stars tend to be older because they live longer.
+% In a sample of late K and M dwarfs, whose MS lifetime is longer than the age
+% of the Universe, we can assume that none have evolved into giants and any
+% additional heating seen in the lower-mass stars must be caused by
+% mass-dependent heating.
+We selected all \kepler\ targets with dereddened \gaia\ \gcolor\ colors
+greater than 1.2 (corresponding to an effective temperature $\lesssim$
+4800 K) and absolute \gaia\ $G$-band magnitudes $<$ 4.
+We also eliminated visual binaries by removing stars above a 6th order
+polynomial, fit to the MS on the \gaia\ CMD.
+% shown in figure \ref{fig:mdwarf_CMD}.
+We then applied the same quality cuts as described in section
+\ref{sec:the_data}.
+% \begin{figure}
+%   \caption{
+% A \gaia\ color-magnitude diagram, showing all \kepler\ targets.
+% We selected K and M dwarfs by applying color and magnitude cuts at \gcolor\ =
+%     1.2 (\teff\ $\sim$ 4800 K) and $G$ = 4.
+% We eliminated visual binaries by fitting a 6th order polynomial to the MS and
+%     removing stars above it.
+% Selected K and M dwarfs are shown as darker points.
+% }
+%   \centering
+%     \includegraphics[width=1\textwidth]{mdwarf_CMD}
+% \label{fig:mdwarf_CMD}
+% \end{figure}
+To search for evidence of mass-dependent heating we calculated the (\vb)
+velocity dispersion of stars in effective temperature bins.
+Again, we applied sigma clipping to remove high velocity outliers before
+calculating the standard deviation of stars in each bin.
+% A slight excess of non-Gaussian outliers at lower temperatures leads to a
+% marginal increase in velocity dispersion at low temperatures when sigma
+% clipping is not performed.
+% Figure \ref{fig:vb_vs_color} shows velocity and velocity dispersion as a
+% function of \gaia\ \gcolor\ color.
+% There is no clear trend between velocity dispersion and color.
+Figure \ref{fig:vb_vs_teff} shows velocity and velocity dispersion
+as a function of effective temperature (calculated by transforming dereddened
+\gaia\ colors using equation \ref{eq:curtis}).
+Velocity dispersion very slightly {\it decreases} with decreasing temperature,
+(the opposite of the trend expected for mass-dependent heating) however the
+slope is only inconsistent with zero at the 1.3 $\sigma$ level.
+This trend may be due to a selection bias: cooler stars are fainter and
+therefore typically closer, with smaller heights above the galactic plane and
+smaller velocities.
+The essential point here is that the increasing velocity dispersion with age
+and decreasing temperature that is evident in figure \ref{fig:age_cut} is not
+a result of an intrinsically larger velocity dispersion for low-mass stars.
+We performed the same analysis on the 537 stars in this sample with RVs in
+{\it vertical} velocity (\vz) and found the slope of the velocity
+dispersion-temperature relation was consistent with zero.
+% \begin{figure}
+%   \caption{
+%       Top: Stellar velocity (\vb) as a function of \gaia\ \gcolor\ color for
+%       \kepler\ K and M dwarfs.
+% Vertical lines indicate different color-groupings used to calculate velocity
+%     dispersion.
+% Pink stars were not included in velocity dispersion calculations as they were
+%     removed as outliers during a sigma clipping process.
+% Bottom: velocity dispersion as a function of color.
+% There is no obvious trend between velocity dispersion and stellar color
+%     indicating that mass-dependent heating does not significantly effect
+%     low-mass stars in the \kepler\ field.
+% }
+%   \centering
+%     \includegraphics[width=1\textwidth]{vb_vs_color}
+% \label{fig:vb_vs_color}
+% \end{figure}
 
-The \vb\ AVR is not directly comparable to the \vz\ AVR, so, to draw a
-comparison with results from the literature, we calculated a \vz\ AVR for
-the subset of 290 stars in our sample with \gaia\ RVs.
-We measured an AVR exponent of 0.47 $\pm$ 0.1, which falls within the range of
-values (0.45-0.53) reported from measurements of F and G stars in the Solar
-neighborhood \citep{holmberg2009, aumer2009, aumer2016}.
-It is a little lower than the values of 0.56 $\pm$ 0.14 (for low-z) and 0.51
-$\pm$ 0.15 (for high-z stars), calculated using \LAMOST\ \racomment{(LAMOST
-citation)} K giants \citep{yu2018}.
-K giants are more massive than K dwarfs \racomment{(how much more massive?)},
-so this slightly higher value contradicts the mass-dependent heating
-hypothesis.
-\racomment{Add some words about selection functions...}
-
-To investigate further, we calculated the exponent of the (\vb) AVR for each
-temperature bin in figure \ref{fig:age_cut}.
 \begin{figure}
   \caption{
-      The exponent of the (\vb) AVR as a function of effective temperature.
+      Top: Stellar velocity (\vb) as a function of \teff\ for
+      \kepler\ K and M dwarfs.
+Vertical lines indicate different \teff-groupings used to calculate velocity
+    dispersion.
+Pink stars were not included in velocity dispersion calculations as they were
+    either removed as outliers during a sigma clipping process, or they lie at
+    the sparcely populated, extremely cool end of the temperature range.
+    Velocity dispersion and \teff\ are slightly correlated,
+    indicating that mass-dependent heating does not significantly affect
+    low-mass stars in the \kepler\ field.
 }
   \centering
-    \includegraphics[width=1\textwidth]{AVR_exponent}
-\label{fig:AVR_exponent}
+    \includegraphics[width=1\textwidth]{vb_vs_teff}
+\label{fig:vb_vs_teff}
 \end{figure}
-Figure \ref{fig:AVR_exponent} shows the significant rise the in AVR exponent
-as a function of effective temperature.
-The hottest stars in our sample (\teff\ = 4833-5000 K) have a (\vb) AVR
-exponent of 0.39 $\pm$ 0.02 and the coolest (\teff\ = 3500-3667 K) have an
-exponent of 0.74 $\pm$ 0.02.
-The masses of stars in our sample differ by less than a factor of two,
-so mass-dependent heating cannot be entirely responsible for this large spread
-in heating rates.
-\racomment{Need to look into this further.}
+Figure \ref{fig:vb_vs_teff} indicates that mass-dependent heating does not
+strongly affect the \mct\ sample of rotating \kepler\ stars.
+For this reason, we assume that age difference is the only significant cause
+of velocity dispersion differences between groups.
+In other words, (\vb) velocity dispersion is a reliable age proxy for the
+\mct\ sample.
+
+% The \vb\ AVR is not directly comparable to the \vz\ AVR, so, to draw a
+% comparison with results from the literature, we calculated a \vz\ AVR for
+% the subset of 290 cool stars in the \mct\ sample with \gaia\ RVs.
+% We measured an AVR exponent of 0.47 $\pm$ 0.1, which falls within the range of
+% values (0.45-0.53) reported from measurements of F and G stars in the Solar
+% neighborhood \citep{holmberg2009, aumer2009, aumer2016}.
+% It is a little lower than the values of 0.56 $\pm$ 0.14 (for low-z) and 0.51
+% $\pm$ 0.15 (for high-z stars), calculated using \LAMOST\ \racomment{(LAMOST
+% citation)} K giants \citep{yu2018}.
+% K giants are more massive than K dwarfs \racomment{(how much more massive?)},
+% so this slightly higher value contradicts the mass-dependent heating
+% hypothesis.
+% \racomment{Add some words about selection functions...}
+
+% To investigate further, we calculated the exponent of the (\vb) AVR for each
+% temperature bin in figure \ref{fig:age_cut}.
+% \begin{figure}
+%   \caption{
+%       The exponent of the (\vb) AVR as a function of effective temperature.
+% }
+%   \centering
+%     \includegraphics[width=1\textwidth]{AVR_exponent}
+% \label{fig:AVR_exponent}
+% \end{figure}
+% Figure \ref{fig:AVR_exponent} shows the significant rise the in AVR exponent
+% as a function of effective temperature.
+% The hottest stars in our sample (\teff\ = 4833-5000 K) have a (\vb) AVR
+% exponent of 0.39 $\pm$ 0.02 and the coolest (\teff\ = 3500-3667 K) have an
+% exponent of 0.74 $\pm$ 0.02.
+% The masses of stars in our sample differ by less than a factor of two,
+% so mass-dependent heating cannot be entirely responsible for this large spread
+% in heating rates.
+% \racomment{Need to look into this further.}
 
 % If mass-dependent heating is strongly affecting our data, the exponent of the
 % AVR should increase with decreasing effective temperature, \ie\ the heating
@@ -228,53 +311,50 @@ in heating rates.
 % that the {\it relative} age of these youngest stars are under-predicted by
 % kinematics or over-predicted by gyrochronology.
 
-If we assume that the rise in velocity dispersions at cooler effective
-temperatures is caused by an inaccurate period-color relation rather than
-mass-dependent dynamical heating, we can estimate what the shape of the
-period-color relations {\it should} be.
-Figure \ref{fig:age_cut} indicates that the period-color relation flattens
-out, so we applied the same analysis to groups of stars with similar rotation
-periods, equivalent to a completely flat period-color relation.
-The top panel of figure \ref{fig:period_cut} shows the \mct\ sample with stars
-in different period ranges plotted in different colors.
-The bottom panel shows the velocity dispersion of each group as a function of
-effective temperature.
-\begin{figure}
-  \caption{
-This figure is similar to figure \ref{fig:age_cut}, with stars divided into
-    period groups rather than age groups.
-The velocity dispersion is more constant across effective temperatures for the
-    most slowly rotating stars, compared to the stars selected with the
-    \citet{angus2019} gyrochronology model, indicating that the gyrochronology
-    models flatten out, and possibly even invert, at old ages.
-}
-  \centering
-    \includegraphics[width=1\textwidth]{period_cut}
-\label{fig:period_cut}
-\end{figure}
-Once again, the velocity dispersion increases with rotation period overall.
-For the most rapidly rotating groups of stars, velocity dispersion decreases
-with \teff\ as expected given the positively sloped period-color relation of
-Praesepe and other young clusters: late K dwarfs rotate more slowly than early
-K dwarfs of the same age.
-Between rotation periods of 15 and 25 days, the temperature dependence of the
-velocity dispersion starts to disappear, indicating that the period-color
-relation becomes flat: late K dwarfs rotate at the same rate as early K dwarfs
-of the same age.
-At long rotation periods, the velocity dispersion still increases with
-effective temperature, although the increase is much more modest compared to
-the oldest stars in figure \ref{fig:age_cut}.
-This suggests that rotation period may {\it decrease} with effective
-temperature, \ie\ late K dwarfs may rotate {\it more} rapidly than early K
-dwarfs.
-This would be a paradigm shift for gyrochronology, stellar spin-down rate is
-thought to be directly tied to magnetic field strength.
-The deeper convection zones of later type stars generate stronger magnetic
-fields which {\it should} lead to more efficient angular momentum loss.
+% If we assume that the rise in velocity dispersions at cooler effective
+% temperatures is caused by an inaccurate period-color relation rather than
+% mass-dependent dynamical heating, we can estimate what the shape of the
+% period-color relations {\it should} be.
+% Figure \ref{fig:age_cut} indicates that the period-color relation flattens
+% out, so we applied the same analysis to groups of stars with similar rotation
+% periods, equivalent to a completely flat period-color relation.
+% The top panel of figure \ref{fig:period_cut} shows the \mct\ sample with stars
+% in different period ranges plotted in different colors.
+% The bottom panel shows the velocity dispersion of each group as a function of
+% effective temperature.
+% \begin{figure}
+%   \caption{
+% This figure is similar to figure \ref{fig:age_cut}, with stars divided into
+%     period groups rather than age groups.
+% The velocity dispersion is more constant across effective temperatures for the
+%     most slowly rotating stars, compared to the stars selected with the
+%     \citet{angus2019} gyrochronology model, indicating that the gyrochronology
+%     models flatten out, and possibly even invert, at old ages.
+% }
+%   \centering
+%     \includegraphics[width=1\textwidth]{period_cut}
+% \label{fig:period_cut}
+% \end{figure}
+% Once again, the velocity dispersion increases with rotation period overall.
+% For the most rapidly rotating groups of stars, velocity dispersion decreases
+% with \teff\ as expected given the positively sloped period-color relation of
+% Praesepe and other young clusters: late K dwarfs rotate more slowly than early
+% K dwarfs of the same age.
+% Between rotation periods of 15 and 25 days, the temperature dependence of the
+% velocity dispersion starts to disappear, indicating that the period-color
+% relation becomes flat: late K dwarfs rotate at the same rate as early K dwarfs
+% of the same age.
+% At long rotation periods, the velocity dispersion still increases with
+% effective temperature, although the increase is much more modest compared to
+% the oldest stars in figure \ref{fig:age_cut}.
 
+% If we assume the rise in velocity dispersion at cooler effective temperatures
+% is caused by an inaccurate period-color relation rather than mass-dependent
+% dynamical heating, we can generate a graphical representation of what the
+% relations {\it should} look like.
 \begin{figure}
   \caption{
-The rotation periods vs effective temperatures of stars in the \mct\ sample,
+Rotation period vs effective temperature for stars in the \mct\ sample,
     colored by the velocity dispersions of stars in restricted period and
     temperature ranges.
 }
@@ -282,20 +362,39 @@ The rotation periods vs effective temperatures of stars in the \mct\ sample,
     \includegraphics[width=1\textwidth]{dispersion_period_teff}
 \label{fig:dispersion_period_teff}
 \end{figure}
-
-Figure \ref{fig:dispersion_period_teff} shows the stars in our sample on a
+Figure \ref{fig:dispersion_period_teff} shows the stars in our sample of
+rotating dwarfs on a
 plot of period vs effective temperature, coloured by their (\vb) velocity
-dispersion, where velocity dispersion was calculated in period and temperature
-bins (made apparent by the visible grid-like structure).
-If we assume that mass dependent heating does {\it not} affect this sample,
-velocity dispersion can be interpreted as an age proxy and stars bins of
-similar colour in figure \ref{fig:dispersion_period_teff} are similar ages.
-Interpreted this way, it appears as though isochrones slope downwards in
-period-temperature space at old ages.
-This figure also suggests that the oldest stars with measured rotation periods
-are cool, which may be because cooler stars remain active for longer, and
-their rotation periods can therefore be measured at older ages.
+dispersion.
+Here, velocity dispersion was calculated for groups of stars in
+uniformly-spaced bins in $\log_{10}$(period) and temperature.
+If we assume that mass dependent heating doesn't affect this sample, and \vb\
+at low galactic latitudes is an unbiased tracer of \vz, \vb\ velocity
+dispersion can be interpreted as an age proxy and stars plotted in a similar
+color in figure \ref{fig:dispersion_period_teff} are similar ages.
+Interpreted this way, it appears as though rotation period {\it decreases}
+with decreasing effective temperature at old ages.  This is a paradigm shift
+for gyrochronology because stellar spin-down rate is thought to be directly
+tied to magnetic field strength, and the deeper convection zones of cooler
+stars generate stronger magnetic fields which {\it should} lead to more
+efficient angular momentum loss.
 
-Unfortunately, we still cannot rule out the possibility that mass-dependent
-heating is acting on these stars which could be responsible for some, if not
-all, of the increased velocity dispersion at cooler effective temperatures.
+Something like this has been observed in the 1.1 Gyr NGC 6811 cluster, where
+the rotation periods of mid-K dwarfs are faster than expected; their
+rotational evolution appears to have stalled.
+NGC 6811 straddles the rotation period gap and may be the `missing link' of
+gyrochronology that connects the two periods of stellar spin-down: the early
+stage where the period-color relation for K dwarfs has a positive slope and
+the late stage where it has a negative slope.
+In this case the period gap may delineate the transition between these two
+regimes and is the point at which stellar magnetic dynamos likely undergo a
+dramatic structural shift.
+
+Figure \ref{fig:dispersion_period_teff} also indicates that the oldest stars
+with measured rotation periods are cool, which may be because cooler stars
+remain active for longer, and their rotation periods can therefore be measured
+at older ages.
+
+% Unfortunately, we still cannot rule out the possibility that mass-dependent
+% heating is acting on these stars which could be responsible for some, if not
+% all, of the increased velocity dispersion at cooler effective temperatures.

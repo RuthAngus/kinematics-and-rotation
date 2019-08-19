@@ -1,0 +1,224 @@
+% zip ms_files.zip ms.tex abstract.tex intro.tex method.tex results.tex conclusion.tex Praesepe.pdf variance.pdf simulated_CMD.pdf rotation_model_praesepe.pdf simulation_results.pdf NGC6819.pdf NGC6819_results.pdf hz.bib
+
+\documentclass[useAMS, usenatbib, preprint, 12pt]{aastex}
+% \documentclass[a4paper,fleqn,usenatbib,useAMS]{mnras}
+\usepackage{cite, natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{epsfig}
+\usepackage{cases}
+\usepackage[section]{placeins}
+\usepackage{graphicx, subfigure}
+\usepackage{color}
+\usepackage{bm}
+
+\AtBeginDocument{\let\textlabel\label}
+
+\newcommand{\ie}{{\it i.e.}}
+\newcommand{\eg}{{\it e.g.}}
+\newcommand{\etal}{{\it et al.}}
+
+\newcommand{\kepler}{{\it Kepler}}
+\newcommand{\Kepler}{{\it Kepler}}
+\newcommand{\corot}{{\it CoRoT}}
+\newcommand{\Ktwo}{{\it K2}}
+\newcommand{\ktwo}{\Ktwo}
+\newcommand{\TESS}{{\it TESS}}
+\newcommand{\tess}{{\it TESS}}
+\newcommand{\LSST}{{\it LSST}}
+\newcommand{\lsst}{{\it LSST}}
+\newcommand{\Wfirst}{{\it WFIRST}}
+\newcommand{\wfirst}{{\it WFIRST}}
+\newcommand{\SDSS}{{\it SDSS}}
+\newcommand{\PLATO}{{\it PLATO}}
+\newcommand{\plato}{{\it PLATO}}
+\newcommand{\Gaia}{{\it Gaia}}
+\newcommand{\gaia}{{\it Gaia}}
+\newcommand{\panstarrs}{{\it PanSTARRS}}
+\newcommand{\LAMOST}{{\it LAMOST}}
+
+\newcommand{\Teff}{$T_{\mathrm{eff}}$}
+\newcommand{\teff}{$T_{\mathrm{eff}}$}
+\newcommand{\FeH}{[Fe/H]}
+\newcommand{\feh}{[Fe/H]}
+\newcommand{\prot}{$P_{\mathrm{rot}}$}
+\newcommand{\pmega}{$\bar{\omega}$}
+\newcommand{\mj}{$m_j$}
+\newcommand{\mh}{$m_h$}
+\newcommand{\mk}{$m_k$}
+\newcommand{\mx}{$m_x$}
+\newcommand{\logg}{log(g)}
+\newcommand{\dnu}{$\Delta \nu$}
+\newcommand{\numax}{$\nu_{\mathrm{max}}$}
+\newcommand{\degrees}{$^\circ$}
+\newcommand{\vz}{$v_{\bf z}$}
+\newcommand{\vb}{$v_{\bf b}$}
+\newcommand{\kms}{$kms^{-1}$}
+\newcommand{\sigmavb}{$\sigma_{v{\bf b}}$}
+\newcommand{\sigmavz}{$\sigma_{v{\bf z}}$}
+
+% \newcommand{\nsim_stars}{841}
+
+\newcommand{\amnh}{1}
+\newcommand{\cca}{2}
+\newcommand{\hawaii}{3}
+
+\newcommand{\sd}{{\tt stardate}}
+\newcommand{\gcolor}{$G_{BP} - G_{RP}$}
+\newcommand{\mcp}{\citep{mcquillan2014}}
+\newcommand{\mct}{\citet{mcquillan2014}}
+\newcommand{\bvector}{${\bf b}$}
+\newcommand{\python}{{\it Python}}
+
+\newcommand{\racomment}[1]{{\color{blue}#1}}
+
+\begin{document}
+
+\title{Exploring the ages of rotating stars using galactic dynamics: a novel
+approach to calibrating gyrochronology}
+
+\author{%
+    Ruth Angus,
+    Angus Beane,
+    Adrian Price-Whelan,
+    Jennifer van Saders,
+    Elisabeth Newton,
+    Jason Curtis,
+    Travis Berger,
+    Dan Foreman-Mackey,
+    Lauren Anderson,
+    Megan Bedell,
+    Jackie Faherty,
+    Rocio Kiman,
+    Melissa Ness}
+
+% \altaffiltext{\amnh}{American Museum of Natural History, Central Park West,
+% Manhattan, NY, USA}
+% \altaffiltext{\cca}{Center for Computational Astrophysics, Flatiron Institute,
+% 162 5th Avenue, Manhattan, NY, USA}
+% \altaffiltext{\hawaii}{Institute for Astronomy, University of Hawai'i at
+% M\={a}noa, Honolulu, HI, USA}
+
+
+% abstract.
+\begin{abstract}
+
+The distribution of rotation periods of K and M stars, measured from light
+curves obtained from the \kepler\ spacecraft, has a sharp mass-dependent gap
+at around 10-20 days.
+This gap traces a line of constant age and constant Rossby number in the
+rotation period-effective temperature plane, indicating that the cause could
+be related to a discontinuity in either the local star formation history, or
+the magnetic braking evolution of stars.
+A third explanation for the rotation period gap is measurement error caused by
+confounders such as binary companions or aliasing.
+For example, the lower rotation sequence could be a reflection of the upper
+sequence, caused by incorrect measurements at half the true period.
+In this paper, we rule out the possibility that this gap could be caused by
+incorrect period measurements or binary companions, by showing that the
+rapidly rotating stars are dynamically young.
+\end{abstract}
+
+\section{Introduction}
+\subsection{The rotation periods of field stars}
+The rotation periods of middle-aged FGKM stars are mostly determined by their
+mass, age and evolutionary stage, and this is due, for the most part, to
+angular momentum loss through magnetic braking.
+Although stars are born with a range of rotation periods, a steep dependence
+of angular momentum loss, $J$ angular frequency, $\omega$, $J \propto
+\omega^3$ causes stellar rotation periods to converge after a characteristic
+timescale.
+This timescale is on the order of a few tens of millions of years for F and G
+stars, but hundreds of millions of years for K and M stars.
+Once stars exceed this age, they steadily lose angular momentum via magnetized
+stellar winds that remove angular momentum from the star at a radius that is
+determined by the magnetic field strength.
+The Rossby number, the ratio of rotation period to convective turnover
+timescale, is linked to the strength of stellar magnetic dynamos.
+Large-scale polodial and toroidal stellar magnetic fields are thought to be
+generated by the $\alpha-\Omega$ mechanism, whereby convective motion of
+plasma and differential stellar rotation cause the winding up of magnetic
+field lines, generating a strong magnetic field \racomment{(citations)}.
+In general, the ratio between a star's rotation period and its characteristic
+timescale of convective motion (the Rossby number) determines the strength of
+the magnetic field \racomment{(citation)}.
+Stars that rotate quickly and have deep convection zones, therefore long
+convective turnover times, have small Rossby numbers and strong magnetic
+fields.
+Young M dwarfs typically have the strongest magnetic fields.
+Slowly rotating stars with shallow convective zones, such as old F and G
+dwarfs, have weak magnetic fields \racomment{(citations)}.
+Since magnetic field strength depends on stellar rotation period and mass via
+the Rossby number, it follows that angular momentum loss driven by magnetized
+stellar winds also depends on Rossby number.
+
+The first large-scale stellar rotation period catalog, generated from
+analyzing light curves from the \kepler\ spacecraft is the
+\citet{mcquillan2014} catalog.
+It contains around 34,000 rotation periods of FGKM dwarfs and subgiants,
+measured by calculating autocorrelation functions (ACFs) of light curves.
+This catalog revealed a gap in the rotation periods of K and M dwarfs: a strip
+in the rotation vs effective temperature plane that is under-populated
+compared to the surrounding parts of parameter space.
+This gap can be seen in figure \ref{fig:the_gap}.
+\begin{figure}
+  \caption{
+The rotation periods of 18,259 FGKM dwarf stars, measured by \mct, vs. their
+effective temperatures.
+We applied cuts to the \gaia\ color-magnitude diagram of these stars (figure
+\ref{fig:CMD_cuts}) in order to remove equal-mass binaries and subgiants from
+the sample.
+The rotation period gap can be seen as an almost-horizontal gap toward the
+right of this figure.
+}
+  \centering
+    \includegraphics[width=1\textwidth]{the_gap}
+\label{fig:the_gap}
+\end{figure}
+The rotation period gap is most prevalent for low-mass stars, of spectral type
+K and M, but was recently shown to extend through G, F and A types as well
+\citep{davenport2017}.
+
+Three explanations for the origin of this have been proposed.
+Firstly, since the gap falls along a rotational/gyrochronal isochrone, it
+follows that it may be caused by a discontinuous age distribution within the
+sample.
+The gap could be created if there exist two populations of stars with
+different age distributions, with the distribution of young ages peaking at
+around 800 Myr, and the distribution of old ages peaking at around 2-3 billion
+years.
+This idea was investigated by \mct, who suggested that the two populations
+might be the thin and thick disk of the Milky Way.
+However, they found no sharp change in kinematic properties between the two
+samples.
+In addition, the age distributions of the thin and think disks are expected to
+be around ... and ... years respectively: older than the majority of stars in
+the \mct\ sample \racomment{(citations)}.
+
+The second explanation for the rotation period gap is that stars do not lose
+angular momentum uniformly over time: instead they undergo a period of rapid
+spin down at an age of around 1.1 Gyr, or a Rossby number of around...
+\racomment{(Calculate this!)}.
+Since the rotation period gap is located along a line of constant Rossby
+number \racomment{(what is this number?)}, and since the rate of stellar
+angular momentum loss is known to be related to magnetic field strength (this
+is the principle behind gyrochronology \citep[\eg][]{kawaler1989,
+pinsonneault1989, barnes2003, barnes2007, angus2015, vansaders2016,
+vansaders2018, angus2019}), it follows that the gap could be caused
+by some phenomenon related to magnetic braking.
+
+As of May 2019, the \citet{mcquillan2014} catalog has been used more than 250
+times, for a range of studies spanning fields from exoplanets to white dwarfs,
+to galactic archaeology.
+Since it underpins so many astronomical studies, a large number of incorrectly
+measured rotation periods in this catalog would undermine several of the
+studies built upon it.
+
+\subsection{Using kinematics to solve the mystery}
+
+Why does proper motion in galactic latitude work for this problem?
+
+\bibliographystyle{plainnat}
+\bibliography{bib.bib}
+\end{document}
