@@ -2,6 +2,25 @@
 \section{Results}
 \label{sec:results}
 
+\subsection{Velocity dispersion of coeval groups}
+
+To explore the relationship between rotation period, \teff\ and age, we
+selected groups of stars within different age ranges \citep[where age was
+calculated using the][gyrochronology relation]{angus2019}, and calculated the
+velocity dispersion: the standard deviation of velocities, \sigmavb, as a
+function of effective temperature for each age group.
+We performed 3$\sigma$ sigma-clipping on the stellar velocities in each age
+and temperature bin to remove non-Gaussian outliers.
+Without sigma-clipping, we found that a small number of high velocity
+outliers at the low-temperature end of our sample substantially raised the
+velocity dispersion for cooler stars.
+Ages were calculated using dereddened \gaia\ \gcolor\ color, however
+throughout this paper we show rotation periods as a function of {\it effective
+temperature}.
+We chose to use effective temperatures and not colors in this analysis as it
+is the linear quantity and therefore easier to divide into bins of roughly
+equal numbers of stars.
+
 \begin{figure}
   \caption{
 Top: rotation period vs effective temperature for stars in the \mct\
@@ -69,6 +88,8 @@ However, although velocity dispersion is constant across temperature for young
 stars, it increases as a function of temperature for old stars.
 This indicates that the shape of the period-color relation flattens out over
 time.
+
+\subsection{Mass-dependent heating}
 
 An alternative explanation for this phenomenon is that lower-mass stars
 experience greater velocity changes when gravitationally perturbed and are
@@ -182,6 +203,36 @@ For this reason, we assume that age difference is the only significant cause
 of velocity dispersion differences between groups.
 In other words, (\vb) velocity dispersion is a reliable age proxy for the
 \mct\ sample.
+
+\subsection{The period gap}
+An unsolved mystery within gyrochronology is the origin of the rotation period
+gap, first identified by \citet{mcquillan2013}.
+This gap can be seen in figure \ref{fig:age_cut} as an under-density of points
+between the 0.7-1.0 and 1.0-1.5 Gyr age ranges and roughly follows a line of
+constant gyrochronal age of around 1.1 Gyr \citep[according to
+the gyrochronology relation of][]{angus2019}.
+Several explanations for its origin have been proposed, including a
+discontinuous star formation history \citep{mcquillan2013, davenport2017,
+davenport2018}, a rapid change in magnetic field structure
+\citep{reinhold2019}, and erroneous rotation period measurements that are
+incorrect by a factor of two \citep{koen2018}.
+The latter explanation can be ruled out because stars below the gap have
+smaller velocity dispersions than the stars above the gap, indicating that
+they are kinematically younger \citep{mcquillan2013, davenport2018}, as
+evident in figure \ref{fig:age_cut}.
+For stars below the gap, in the 0.7-1.0 Gyr age range shown in figure
+\ref{fig:age_cut}, velocity dispersion is relatively constant as a function of
+temperature, however above the gap, in the 1.0-1.5 Gyr age range and older,
+velocity dispersion increases with \teff.
+The coolest stars in the 1.0-1.5 Gyr age range have the same velocity
+dispersion as the hottest stars in the age range above which indicates that
+the period-\teff\ relations are {\it flat} at these rotation periods.
+It may be a coincidence that the gyrochronology relations seem to only flatten
+off {\it above} the period gap, or it may be that the period gap is located at
+magnetic transition period.
+We lack a sufficient quantity of data to investigate in detail but new field
+star rotation periods from the \ktwo\ and \tess\ missions may be able to
+validate or rule out this hypothesis in the future.
 
 % The \vb\ AVR is not directly comparable to the \vz\ AVR, so, to draw a
 % comparison with results from the literature, we calculated a \vz\ AVR for
@@ -352,6 +403,9 @@ In other words, (\vb) velocity dispersion is a reliable age proxy for the
 % is caused by an inaccurate period-color relation rather than mass-dependent
 % dynamical heating, we can generate a graphical representation of what the
 % relations {\it should} look like.
+
+\subsection{The period-\teff\ relations, revealed}
+
 \begin{figure}
   \caption{
 Rotation period vs effective temperature for stars in the \mct\ sample,
@@ -362,38 +416,36 @@ Rotation period vs effective temperature for stars in the \mct\ sample,
     \includegraphics[width=1\textwidth]{dispersion_period_teff}
 \label{fig:dispersion_period_teff}
 \end{figure}
-Figure \ref{fig:dispersion_period_teff} shows the stars in our sample of
-rotating dwarfs on a
-plot of period vs effective temperature, coloured by their (\vb) velocity
-dispersion.
+Figure \ref{fig:dispersion_period_teff} shows rotation period vs. \teff\ for
+our sample, coloured by (\vb) velocity dispersion.
 Here, velocity dispersion was calculated for groups of stars in
 uniformly-spaced bins in $\log_{10}$(period) and temperature.
 If we assume that mass dependent heating doesn't affect this sample, and \vb\
 at low galactic latitudes is an unbiased tracer of \vz, \vb\ velocity
 dispersion can be interpreted as an age proxy and stars plotted in a similar
 color in figure \ref{fig:dispersion_period_teff} are similar ages.
-Interpreted this way, it appears as though rotation period {\it decreases}
-with decreasing effective temperature at old ages.  This is a paradigm shift
+Interpreted this way, it appears that rotation period {\it decreases} with
+decreasing effective temperature at old ages.  This is a paradigm shift
 for gyrochronology because stellar spin-down rate is thought to be directly
 tied to magnetic field strength, and the deeper convection zones of cooler
 stars generate stronger magnetic fields which {\it should} lead to more
 efficient angular momentum loss.
-
-Something like this has been observed in the 1.1 Gyr NGC 6811 cluster, where
+A similar phenomenon has been observed in the 1.1 Gyr NGC 6811 cluster, where
 the rotation periods of mid-K dwarfs are faster than expected; their
-rotational evolution appears to have stalled.
-NGC 6811 straddles the rotation period gap and may be the `missing link' of
-gyrochronology that connects the two periods of stellar spin-down: the early
-stage where the period-color relation for K dwarfs has a positive slope and
-the late stage where it has a negative slope.
+rotational evolution appears to have stalled, and the period-\teff\ relation
+is flat \citep{curtis2019}.
+NGC 6811 straddles the rotation period gap and may be the `missing link' that
+connects two epoch of stellar spin-down: an early stage where the
+period-\teff\ relation for K dwarfs has a negative slope and a late stage
+where it has a positive slope.
 In this case the period gap may delineate the transition between these two
 regimes and is the point at which stellar magnetic dynamos likely undergo a
 dramatic structural shift.
 
-Figure \ref{fig:dispersion_period_teff} also indicates that the oldest stars
-with measured rotation periods are cool, which may be because cooler stars
-remain active for longer, and their rotation periods can therefore be measured
-at older ages.
+Figure \ref{fig:dispersion_period_teff} also shows that the (kinematically)
+oldest stars with measured rotation periods are cooler than 4500 K.
+This may be because cooler stars remain active for longer, and their rotation
+periods can therefore be measured at older ages.
 
 % Unfortunately, we still cannot rule out the possibility that mass-dependent
 % heating is acting on these stars which could be responsible for some, if not
