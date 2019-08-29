@@ -113,7 +113,7 @@ flag[~m] = np.ones(len(flag[~m]))
 gaia_mc["flag"] = flag
 
 # Calculate photometric Teff
-teffs = bprp_to_teff(gaia_mc.bp_dered, gaia_mc.rp_dered)
+teffs = bprp_to_teff(gaia_mc.bp_dered - gaia_mc.rp_dered)
 gaia_mc["color_teffs"] = teffs
 
 print("Calculating gyro ages")
