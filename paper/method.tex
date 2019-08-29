@@ -7,7 +7,7 @@
 We used the publicly available \kepler-\gaia\ DR2 crossmatched
 catalog\footnote{Available at gaia-kepler.fun} to combine the \mct\ catalog of
 stellar rotation periods, measured from \kepler\ light curves, with the \gaia\
-DR2 catalog.
+DR2 catalog of parallaxes, proper motions and apparent magnitudes.
 Reddening and extinction from dust was calculated for each star using the
 Bayestar dust map implemented in the {\tt dustmaps} {\it Python} package
 \citep{green2018}, and {\tt astropy} \citep{astropy2013}.
@@ -50,13 +50,13 @@ where C is \gaia\ \gcolor.
 % Tidal and magnetic interactions between the two components of a binary system
 % can influence the rotation periods of both stars, and the expanding envelopes
 % of subgiants drive rapid spin-down through conservation of angular momentum.
-We removed visual binaries and subgiants from the sample by applying cuts to
+Visual binaries and subgiants were removed from the sample by applying cuts to
 the color-magnitude diagram (CMD), shown in figure \ref{fig:age_gradient}.
-We fit a 6th-order polynomial to the main sequence and raised it by 0.27 dex
-to approximate the division between single stars and visual binaries and
-removed all stars above this line from the sample.
-We also removed subgiants by eliminating stars brighter than 6th magnitude in
-\gaia\ G-band.
+A 6th-order polynomial was fit to the main sequence and raised by 0.27 dex to
+approximate the division between single stars and visual binaries.
+All stars above this line were removed from the sample.
+Subgiants were also removed by eliminating stars brighter than 6th magnitude
+in \gaia\ G-band.
 \begin{figure}
   \caption{
 Dereddened MS \kepler\ stars with \mct\ rotation periods on the \gaia\ CMD.
@@ -73,30 +73,32 @@ We excluded visual binaries by removing stars above the dashed line.
 
 The {\tt Pyia} \citep{price-whelan_2018} and {\tt astropy} \citep{astropy2013,
 astropy2018} {\it Python} packages were used to calculate stellar velocities.
-{\tt Pyia} has built-in functionality for calculating velocity samples from
-the full \gaia\ uncertainty covariance matrix via Monte Carlo sampling.
+{\tt Pyia} calculates velocity samples from the full \gaia\ uncertainty
+covariance matrix via Monte Carlo sampling.
 It therefore not only incorporates uncertainties on the \gaia\ positions
 parallaxes and proper motions, it also accounts for the {\it covariance}
 between these properties.
-We removed stars with negative parallaxes, parallax signal-to-noise ratios
-less than 10, stars fainter than 16th magnitude, stars with absolute \vb\
-uncertainties greater than 1 \kms\, and stars with galactic latitudes greater
-than 15\degrees\ from the sample.
+Stars with negative parallaxes, parallax signal-to-noise ratios less than 10,
+stars fainter than 16th magnitude, stars with absolute \vb\ uncertainties
+greater than 1 \kms\, and stars with galactic latitudes greater than
+15\degrees\ were removed from the sample.
 Because \vb\ is only a close approximation to \vz\ at low galactic latitudes,
 and because latitude is correlated with stellar mass (lower mass stars are
-older and tend to be preferentially located at high $b$), we found that
-including stars with $b > 15$\degrees\ led to a larger number of \vb\ outliers
-at low stellar mass.
+older and tend to be preferentially located at high $b$, although this trends
+is greatly reduced for stars cooler than 5000 K), we found that excluding
+stars with $b > 15$\degrees\ reduced the number of \vb\ outliers at low
+stellar mass.
 15\degrees\ was found to be an adequate compromise between maintaining a close
-relationship between \vb\ and \vz\ and keeping a large enough sample size to
-provide meaningful results as we found that reducing this to 10\degrees did
-not significantly affect our results.
-We also found that the anti-correlation between stellar mass and $b$ is
-negligable for stars cooler than 5000 K.
-For this reason, and because the rotational evolution of old, G stars does not
-follow a simple Skumanich-like spin-down law \citep{vansaders2016}, we
-restricted our sample to temperatures between \tmin\ and 5000 K, \ie\ K
-dwarfs.
+relationship between \vb\ and \vz\ and retaining a sample large enough to
+provide meaningful results.
+Reducing this cut to 10\degrees\ resulted in a sample size too small to reveal
+trends in the data.
+% We also found that the anti-correlation between stellar mass and $b$ is
+% negligable for stars cooler than 5000 K.
+% For this reason, and because the rotational evolution of old, G stars does not
+% follow a simple Skumanich-like spin-down law \citep{vansaders2016}, we
+% restricted our sample to temperatures between \tmin\ and 5000 K, \ie\ K
+% dwarfs.
 
 % \begin{figure}
 %   \caption{

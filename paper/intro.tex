@@ -4,39 +4,45 @@
 \subsection{Gyrochronology}
 It is well established that the rotation periods of FGKM dwarfs increase over
 time \citep{skumanich1972}.
-This characteristic of main-sequence (MS) stars allows them to be dated via
-their rotation periods in a practice known as gyrochronology, which is useful
-since the ages of MS stars are extremely difficult to measure via the
-traditional age-dating method of isochrone placement.
+This characteristic of main-sequence (MS) stars allows them to be dated using
+their rotation periods, via gyrochronology \citep[\eg][]{kawaler1989,
+pinsonneault1989, barnes2003, barnes2007, barnes2010, meibom2011, meibom2015},
+which is particularly useful since the ages of MS stars are difficult to
+measure via isochrone placement.
 It is also well established that stars of the same age but different masses
-have different rotation periods \racomment{(citation)}, thought to be caused
-by the deeper convective zones, and therefore stronger magnetic dynamos (and
-more efficient magnetic braking) in lower-mass stars.
+have different rotation periods \citep[\eg][]{kraft1967, matt2012}, thought to
+be caused by the deeper convective zones, and therefore stronger magnetic
+dynamos (and more efficient magnetic braking) in lower-mass stars.
 However, an underlying assumption behind many empirical gyrochronology
 relations is that the relationships between rotation period and photometric
-color\footnote{As the directly observable quantity, color is usually used as a
-mass-proxy, and empirical gyrochronology relations are usually calibrated in
-color, rather than mass or effective temperature.
-}, and rotation period and age are {\it separable}, meaning that the
+color\footnote{As the directly observable quantity, color is often used as a
+mass proxy, and empirical gyrochronology relations are usually calibrated in
+color, rather than mass or effective temperature.},
+and rotation period and age are {\it separable}, meaning that the
 period-color relation is the same at all ages and the period-age relation is
 the same at all colors \citep[\eg][]{barnes2003, barnes2007, mamajek2008,
 meibom2011, angus2015, angus2019}.
+Not all gyrochronology models follow this form, particularly those motivated
+based on stellar structure and evolution theory or with a Rossby number,
+rather than rotation period dependence \citep[\eg][]{barnes2010, matt2012,
+vansaders2016]}.
 It was recently shown that old field stars rotate more rapidly than a simple,
 separable gyrochronology relation would predict \citep{angus2015,
 vansaders2016, vansaders2018, metcalfe2019}, and that a mass-dependent
-modification to the classical \citet{skumanich1972} spin-down law is required
-to reproduce the data \citep{vansaders2016, vansaders2018}.
+modification to the classical \prot\ $\propto t^{\frac{1}{2}}$ spin-down law
+\citep{skumanich1972} is required to reproduce the data \citep{vansaders2016,
+vansaders2018}.
 An even more recent analysis of the 1.1 Gyr open cluster, NGC 6811, provides
 further indication that the exponent of the period-age relation is
-mass and time-dependent.
-This cluster has a flattened relationship between rotation period and color:
-the G dwarfs rotate at the same rate as the K dwarfs \citep{curtis2019}.
+mass and time-dependent \citep{curtis2019}.
+This cluster has a flattened relationship between rotation period and color
+and the G dwarfs rotate at the same rate as the K dwarfs.
 % Since a separable period-age and period-color relation provided an adequate
 % fit for the young stars, it was naturally assumed to apply to old stars too.
 
-In this paper, we tested the \citet{angus2019} gyrochronology relation, which
-was calibrated using the period-color relation of Praesepe (in \gaia\ \gcolor\
-color) and the period-age relation of Praesepe and the Sun.
+In this paper, we tested the \citet{angus2019} gyrochronology relation, a
+separable relation, calibrated using the period-color relation of Praesepe (in
+\gaia\ \gcolor\ color) and the period-age relation of Praesepe and the Sun.
 The large number of Praesepe members with precise rotation periods from the
 \ktwo\ mission \citep{douglas2017, rebull2017}, spanning spectral types F
 through early M, makes it the ideal cluster for calibrating the period-color
@@ -49,9 +55,11 @@ This relation accurately describes the rotation periods of F and G stars up to
 around 2.5 Gyr (the age of NGC 6819 -- the oldest cluster with available
 rotation periods), but over-predicts the rotation periods of K dwarfs in the
 1.1 Gyr NGC 6811 cluster.
-No reliable age estimates exist for K dwarfs with rotation periods older than
-1.1 Gyr, so the rotational evolution of these stars beyond this age is a
-mystery.
+Very few reliable age estimates exist for K dwarfs with rotation periods older
+than 1.1 Gyr, or between the ages of $\sim$ 800 Myr--1.1 Gyr so the rotational
+evolution of middle-aged K dwarfs is a mystery\footnote{The oldest M dwarfs
+with reliable ages and rotation periods are members of Praesepe ($\sim$ 650
+Myrs), so even less is known about their rotational evolution.}.
 % In this paper, we shed light on the rotational evolution of old K dwarfs using
 % population-based dynamical ages.
 % Unfortunately, open clusters with rotation period measurements are mostly
@@ -60,17 +68,20 @@ mystery.
 % difficult to calibrate the relationship between rotation period and color at
 % old ages.
 For this reason, we used a population-based stellar age indicator, velocity
-dispersion, to investigate the period-color relations at old ages.
+dispersion, to investigate the period-color relations at old ages in the
+field.
 
 \subsection{Kinematics as an age proxy}
 
 Stars are thought to be born in the thin disk of the Milky Way (MW), orbiting
 the center of the galaxy with a low out-of-plane, or vertical, velocity ($W$,
-or $v_z$).
+or $v_z$), just like the star-forming molecular gas observed in the disk today
+\citep[\eg][]{stark1989, stark2005, aumer2009, martig2014, aumer2016}.
 % because the MW's gas disk is thin and its gas moves in circular
 % orbits.
 Young stars have relatively small vertical velocities, but gain momentum in
-the vertical direction over time.
+the vertical direction over time \citep[\eg][]{nordstrom2004, holmberg2007,
+holmberg2009, aumer2009, casagrande2011}.
 Although the cause of orbital heating is not well understood, interactions
 with giant molecular clouds, spiral arms and the galactic bar are thought to
 play an important role \citep[see][for a review of secular evolution in the
@@ -84,9 +95,9 @@ on the implied relative ages of populations.
 % Stellar velocities have a history of being used as an age proxy, with several
 % notable examples within stellar astronomy \citep[\eg][]{faherty2009,
 % west2011}.
-Since the age-velocity dispersion relations (AVRs) are themselves still
-actively being calibrated, it is difficult to directly compare gyrochronal
-ages with kinematic ones.
+The age-velocity dispersion relations (AVRs) are still actively being
+calibrated, so it is difficult to directly compare gyrochronal ages with
+kinematic ones.
 However, regardless of the exact relation between velocity dispersion and
 stellar age, it is expected to be a monotonic relationship, therefore velocity
 dispersion can be used effectively to {\it rank} groups of stars by age.
@@ -98,16 +109,16 @@ dispersion can be used effectively to {\it rank} groups of stars by age.
 % In contrast, orbital velocities are different at periapsis and apoapsis -- so
 % in this sense, {\it actions} are the natural quantities to use as age proxies.
 Vertical action is a better age indicator than vertical velocity
-\citep[although still only a weak age indicator for individual
-stars,][]{beane2018}, however both vertical action ($J_z$) and vertical velocity
-(\vz/W) can only be calculated with full 6-dimensional position and velocity
-information.
+\citep{ting2019}, although still only a weak age indicator for individual
+stars \citep{beane2018}, however both vertical action ($J_z$) and vertical
+velocity (\vz/W) can only be calculated with full 6-dimensional position and
+velocity information.
 Unfortunately, most stars with measured rotation periods do not have radial
 velocity (RV) measurements because they are relatively faint \kepler\ targets
 ($\sim$11th-18th magnitudes).
 For this reason, we used velocity in the direction of galactic latitude, \vb.
 The \kepler\ field is positioned at low galactic latitude (b=5-20\degrees), so
-\vb\ is a close (although not perfect -- see section \ref{sec:results})
+\vb\ is a close (although imperfect -- see section \ref{sec:results})
 approximation to \vz.
 
 % \subsection{The degeneracy between gyrochronology and mass-dependent heating}

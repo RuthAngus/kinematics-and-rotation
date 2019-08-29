@@ -7,19 +7,20 @@
 To explore the relationship between rotation period, \teff\ and age, we
 selected groups of stars within different age ranges \citep[where age was
 calculated using the][gyrochronology relation]{angus2019}, and calculated the
-velocity dispersion: the standard deviation of velocities, \sigmavb, as a
-function of effective temperature for each age group.
+velocity dispersion: the standard deviation of velocities in the direction of
+increasing galactic latitude, \sigmavb, as a function of effective temperature
+for each age group.
 We performed 3$\sigma$ sigma-clipping on the stellar velocities in each age
 and temperature bin to remove non-Gaussian outliers.
 Without sigma-clipping, we found that a small number of high velocity
 outliers at the low-temperature end of our sample substantially raised the
 velocity dispersion for cooler stars.
 Ages were calculated using dereddened \gaia\ \gcolor\ color, however
-throughout this paper we show rotation periods as a function of {\it effective
-temperature}.
-We chose to use effective temperatures and not colors in this analysis as it
-is the linear quantity and therefore easier to divide into bins of roughly
-equal numbers of stars.
+throughout this paper we show rotation periods as a function of effective
+temperature, \teff.
+We chose to use \teff and not photometric color in this analysis as it is the
+linear quantity and therefore easier to divide into bins of roughly equal
+numbers of stars.
 
 \begin{figure}
   \caption{
@@ -27,7 +28,7 @@ Top: rotation period vs effective temperature for stars in the \mct\
     catalog.
     The full catalog, with subgiants and visual binaries removed is shown in
     grey, and stars selected to be in different age groups (between \tmin\ and
-    5000 K) are overlayed in color.
+    \tmax\ K) are overlayed in color.
 These age groups were selected using the \citet{angus2019} gyrochronology
     relation.
 The legend in the center of the figure lists the age range, in Gyr, of each
@@ -61,17 +62,18 @@ as a function of effective temperature.
 % We only included stars within a temperature range of 5000 - 3500 K in our
 % analysis, as hotter stars are more likely to have stopped magnetic braking
 % \citep{vansaders2016}, which could bias the results.
-M dwarfs were not included in our analysis because such faint stars cannot be
-observed at large heights above the plane (because of the low galactic
-latitude of the \kepler\ field, stars at high-Z are more distant), which
-introduces a mass-dependent velocity bias: cooler populations of stars are
-skewed towards lower velocity dispersions.
-The coolest temperature bins in figure \ref{fig:age_cut} have low velocity
-dispersions, indicating that this effect may already become important at
-temperatures lower than $\sim$ 4000 K.
+Late M dwarfs were not included in our analysis because such faint stars
+cannot be observed at large heights above the plane (because of the low
+galactic latitude of the \kepler\ field, stars at high-Z are more distant),
+which introduces a mass-dependent velocity bias: cooler populations of stars
+are skewed towards lower velocity dispersions.
+The coolest temperature bins in the lower panel of figure \ref{fig:age_cut}
+have low velocity dispersions, indicating that this effect may already become
+important at temperatures lower than $\sim$ 4000 K.
 
 Overall, figure \ref{fig:age_cut} shows that velocity dispersion increases
-with gyrochronal age across all temperatures.
+with gyrochronal age across all temperatures, implying that both velocity
+dispersion and rotation periods increase with age as expected.
 The constant velocity dispersion of young stars as a function of temperature
 shows that the Praesepe-calibrated gyrochronology relation accurately predicts
 the relative ages of {\it young} field stars.
@@ -84,10 +86,14 @@ the relative ages of {\it young} field stars.
 % However, if the stars in each selected age group had the {\it same} age across
 % the temperature range, their velocity dispersion would be a constant function
 % of \teff.
-However, although velocity dispersion is constant across temperature for young
-stars, it increases as a function of temperature for old stars.
-This indicates that the shape of the period-color relation flattens out over
-time.
+In contrast however, velocity dispersion increases as a function of
+temperature for old stars, meaning the \citet{angus2019} gyrochronology
+relation underpredicts the ages of old, late-K dwarfs (or overpredicts the
+ages of old early-K dwarfs).
+This indicates that the relationship between period and photometric
+color or \teff\ flattens out over time.
+In other words, the lines of constant age sweeping diagonally upwards in the
+top panel of figure \ref{fig:age_cut} are too steeply sloped at old ages.
 
 \subsection{Mass-dependent heating}
 
@@ -158,8 +164,17 @@ therefore typically closer, with smaller heights above the galactic plane and
 smaller velocities.
 The essential point here is that the increasing velocity dispersion with age
 and decreasing temperature that is evident in figure \ref{fig:age_cut} is not
-a result of an intrinsically larger velocity dispersion for low-mass stars.
-We performed the same analysis on the 537 stars in this sample with RVs in
+a result of an intrinsically larger velocity dispersion for low-mass stars,
+nor is it a result of the selection function.
+Since we use \vb, not \vz\ in this analysis, it is possible that the
+anti-correlation between \teff\ and galactic latitude, $b$, could influence
+these results: stars at higher latitudes would have additional velocity
+components in the ${\bf x}$ and ${\bf y}$ directions, which could increase
+\vb\ but not \vz.
+However, since the relationship between \sigmavb\ and \teff\ is positively,
+not negatively correlated for cool stars in the \kepler\ field, this effect is
+probably too small to influence our results.
+We performed the same analysis on the 537 stars in this sample with RVs using
 {\it vertical} velocity (\vz) and found the slope of the velocity
 dispersion-temperature relation was consistent with zero.
 % \begin{figure}
@@ -189,9 +204,10 @@ Vertical lines indicate different \teff-groupings used to calculate velocity
 Pink stars were not included in velocity dispersion calculations as they were
     either removed as outliers during a sigma clipping process, or they lie at
     the sparcely populated, extremely cool end of the temperature range.
-    Velocity dispersion and \teff\ are slightly correlated,
-    indicating that mass-dependent heating does not significantly affect
-    low-mass stars in the \kepler\ field.
+    Velocity dispersion and \teff\ are slightly positively correlated, likely
+    due to a brightness-related selection bias, indicating that mass-dependent
+    heating does not significantly affect low-mass stars in the \kepler\
+    field.
 }
   \centering
     \includegraphics[width=1\textwidth]{vb_vs_teff}
@@ -203,36 +219,6 @@ For this reason, we assume that age difference is the only significant cause
 of velocity dispersion differences between groups.
 In other words, (\vb) velocity dispersion is a reliable age proxy for the
 \mct\ sample.
-
-\subsection{The period gap}
-An unsolved mystery within gyrochronology is the origin of the rotation period
-gap, first identified by \citet{mcquillan2013}.
-This gap can be seen in figure \ref{fig:age_cut} as an under-density of points
-between the 0.7-1.0 and 1.0-1.5 Gyr age ranges and roughly follows a line of
-constant gyrochronal age of around 1.1 Gyr \citep[according to
-the gyrochronology relation of][]{angus2019}.
-Several explanations for its origin have been proposed, including a
-discontinuous star formation history \citep{mcquillan2013, davenport2017,
-davenport2018}, a rapid change in magnetic field structure
-\citep{reinhold2019}, and erroneous rotation period measurements that are
-incorrect by a factor of two \citep{koen2018}.
-The latter explanation can be ruled out because stars below the gap have
-smaller velocity dispersions than the stars above the gap, indicating that
-they are kinematically younger \citep{mcquillan2013, davenport2018}, as
-evident in figure \ref{fig:age_cut}.
-For stars below the gap, in the 0.7-1.0 Gyr age range shown in figure
-\ref{fig:age_cut}, velocity dispersion is relatively constant as a function of
-temperature, however above the gap, in the 1.0-1.5 Gyr age range and older,
-velocity dispersion increases with \teff.
-The coolest stars in the 1.0-1.5 Gyr age range have the same velocity
-dispersion as the hottest stars in the age range above which indicates that
-the period-\teff\ relations are {\it flat} at these rotation periods.
-It may be a coincidence that the gyrochronology relations seem to only flatten
-off {\it above} the period gap, or it may be that the period gap is located at
-magnetic transition period.
-We lack a sufficient quantity of data to investigate in detail but new field
-star rotation periods from the \ktwo\ and \tess\ missions may be able to
-validate or rule out this hypothesis in the future.
 
 % The \vb\ AVR is not directly comparable to the \vz\ AVR, so, to draw a
 % comparison with results from the literature, we calculated a \vz\ AVR for
@@ -413,7 +399,7 @@ Rotation period vs effective temperature for stars in the \mct\ sample,
     temperature ranges.
 }
   \centering
-    \includegraphics[width=1\textwidth]{dispersion_period_teff}
+    \includegraphics[width=1\textwidth]{vplot}
 \label{fig:dispersion_period_teff}
 \end{figure}
 Figure \ref{fig:dispersion_period_teff} shows rotation period vs. \teff\ for
@@ -450,3 +436,33 @@ periods can therefore be measured at older ages.
 % Unfortunately, we still cannot rule out the possibility that mass-dependent
 % heating is acting on these stars which could be responsible for some, if not
 % all, of the increased velocity dispersion at cooler effective temperatures.
+
+\subsection{The period gap}
+An unsolved mystery within gyrochronology is the origin of the rotation period
+gap, first identified by \citet{mcquillan2013}.
+This gap can be seen in figure \ref{fig:age_cut} as an under-density of points
+between the 0.7-1.0 and 1.0-1.5 Gyr age ranges and roughly follows a line of
+constant gyrochronal age of around 1.1 Gyr \citep[according to
+the gyrochronology relation of][]{angus2019}.
+Several explanations for its origin have been proposed, including a
+discontinuous star formation history \citep{mcquillan2013, davenport2017,
+davenport2018}, a rapid change in magnetic field structure
+\citep{reinhold2019}, and erroneous rotation period measurements that are
+incorrect by a factor of two \citep{koen2018}.
+The latter explanation can be ruled out because stars below the gap have
+smaller velocity dispersions than the stars above the gap, indicating that
+they are kinematically younger \citep{mcquillan2013, davenport2018}, as
+evident in figure \ref{fig:age_cut}.
+For stars below the gap, in the 0.7-1.0 Gyr age range shown in figure
+\ref{fig:age_cut}, velocity dispersion is relatively constant as a function of
+temperature, however above the gap, in the 1.0-1.5 Gyr age range and older,
+velocity dispersion increases with \teff.
+The coolest stars in the 1.0-1.5 Gyr age range have the same velocity
+dispersion as the hottest stars in the age range above which indicates that
+the period-\teff\ relations are {\it flat} at these rotation periods.
+It may be a coincidence that the gyrochronology relations seem to only flatten
+off {\it above} the period gap, or it may be that the period gap is located at
+magnetic transition period.
+We lack a sufficient quantity of data to investigate in detail but new field
+star rotation periods from the \ktwo\ and \tess\ missions may be able to
+validate or rule out this hypothesis in the future.
