@@ -45,7 +45,7 @@ separable relation, calibrated using the period-color relation of Praesepe (in
 \gaia\ \gcolor\ color) and the period-age relation of Praesepe and the Sun.
 The large number of Praesepe members with precise rotation periods from the
 \ktwo\ mission \citep{douglas2017, rebull2017}, spanning spectral types F
-through early M, makes it the ideal cluster for calibrating the period-color
+through early M, makes it a good cluster for calibrating the period-color
 relation of stars at 650 Myrs.
 % This relation was calibrated by fitting a 5th-order polynomial to the relation
 % between (log) rotation period and (log) \gaia\ \gcolor\ color for around 800
@@ -57,9 +57,34 @@ rotation periods), but over-predicts the rotation periods of K dwarfs in the
 1.1 Gyr NGC 6811 cluster.
 Very few reliable age estimates exist for K dwarfs with rotation periods older
 than 1.1 Gyr, or between the ages of $\sim$ 800 Myr--1.1 Gyr so the rotational
-evolution of middle-aged K dwarfs is a mystery\footnote{The oldest M dwarfs
-with reliable ages and rotation periods are members of Praesepe ($\sim$ 650
-Myrs), so even less is known about their rotational evolution.}.
+evolution of middle-aged K dwarfs is difficult to characterize\footnote{The
+oldest M dwarfs with reliable ages and rotation periods are members of
+Praesepe ($\sim$ 650 Myrs), so even less is known about their rotational
+evolution.}.
+
+The gyrochronal ages of the stars in our sample were calculated with the
+\citep{angus2019} gyrochronology model, using de-reddened \Gaia\ \gcolor\
+color and rotation periods reported by \mct.
+These rotational ages are shown on the CMD in figure \ref{fig:age_gradient}.
+The stars with old rotational ages, plotted in yellow hues, predominantly lie
+along the upper edge of the MS, where stellar evolution models predict old
+stars to be, however the majority of stars with old rotational ages are bluer
+than \gcolor\ $\sim$ 1.5 dex.
+This provides a first hint that the \citet{angus2019} gyrochronology relation
+under-predicts the ages of low-mass stars.
+There is no reason to expect the oldest stars in this sample to be the bluer
+ones: M dwarfs are, on average, older than K dwarfs and are expected to remain
+active for longer, so should therefore have measurable rotation periods at
+older ages.
+Since the \citet{angus2019} gyrochronology model, which is based on the
+period-color relation of Praesepe, does not predict old ages for any M dwarfs,
+it is probably under-predicting the ages of some of these low-mass stars.
+It is therefore likely that old M dwarfs rotate more rapidly than this
+Praesepe-based model predicts.
+In what follows we use a population-based stellar age indicator, velocity
+dispersion, to investigate the period-color relations at old ages in the
+field.
+
 % In this paper, we shed light on the rotational evolution of old K dwarfs using
 % population-based dynamical ages.
 % Unfortunately, open clusters with rotation period measurements are mostly
@@ -67,9 +92,9 @@ Myrs), so even less is known about their rotational evolution.}.
 % Without rotation periods for precisely dated old stars, it is extremely
 % difficult to calibrate the relationship between rotation period and color at
 % old ages.
-For this reason, we used a population-based stellar age indicator, velocity
-dispersion, to investigate the period-color relations at old ages in the
-field.
+% For this reason, we used a population-based stellar age indicator, velocity
+% dispersion, to investigate the period-color relations at old ages in the
+% field.
 
 \subsection{Kinematics as an age proxy}
 
@@ -175,3 +200,14 @@ approximation to \vz.
 % over time.
 % This means that it is relatively easy to rank groups of stars by age: older
 % groups have a larger velocity dispersion.
+
+This paper is laid out as follows: in section \ref{sec:the_data} we describe
+our sample selection process and the methods used to calculated stellar
+velocities.
+In section \ref{sec:results} we use stellar kinematics to investigate the
+relationship between rotation period, age and color/\teff\ in field stars.
+In section \ref{sec:mass-dependent-heating} we show that neither
+mass-dependent heating nor the selection function is likely to have a strong
+affect on our sample.
+Finally, in section \ref{sec:period_gap} we discuss the implications of our
+results.
