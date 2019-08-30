@@ -24,32 +24,6 @@ using an 8th-order polynomial relation calibrated using .... stars
 \end{equation}
 where C is \gaia\ \gcolor.
 
-% \begin{figure}
-%   \caption{
-% A \gaia\ color magnitude diagram showing the \citet{mcquillan2014} sample with
-%     extinction-corrected magnitudes, colored by rotation period.
-% We excluded photometric binaries and subgiants from our analysis by removing
-% stars above the two dashed lines.
-% % The rotation periods of binaries and subgiants do not follow a Skumanich-like
-% % braking law.
-% % The rotation period gradient across the main sequence is visible by eye in
-% %     this figure: young, rapidly rotating stars are located below the old,
-% %     slowly rotating stars.
-% % since we rely on a simple scaling
-% % between rotation period and age to make the argument that the rotation period
-% % is not caused by incorrect period measurements.
-% }
-%   \centering
-%     \includegraphics[width=1\textwidth]{CMD_cuts}
-% \label{fig:CMD_cuts}
-% \end{figure}
-% To explore the age of this stellar population from a rotation standpoint, it
-% was first necessary to remove visual binaries and subgiants from the sample.
-% The rotational evolution of these two types of stars is generally different to
-% that of single stars which more usually follow a Skumanich-like spin-down law.
-% Tidal and magnetic interactions between the two components of a binary system
-% can influence the rotation periods of both stars, and the expanding envelopes
-% of subgiants drive rapid spin-down through conservation of angular momentum.
 Visual binaries and subgiants were removed from the sample by applying cuts to
 the color-magnitude diagram (CMD), shown in figure \ref{fig:age_gradient}.
 A 6th-order polynomial was fit to the main sequence and raised by 0.27 dex to
@@ -100,22 +74,87 @@ trends in the data.
 % restricted our sample to temperatures between \tmin\ and 5000 K, \ie\ K
 % dwarfs.
 
-% \begin{figure}
-%   \caption{
-% the rotation periods of stars in the \citet{mcquillan2014} sample vs.
-% effective temperature.
-% black points are dwarf stars identified as non-photometric binaries, hotter
-% than 4800 k.
-% blue circle points are non-photometric binary dwarfs, cooler than 4800 k, with
-% a rotation period and \gaia\ color indicating they are older than 1.1 gyr.
-% orange squares are stars that with rotation periods that fall just below the
-% gap: they have rotation-ages between 0.5 and 1.1 gyrs.
-% green triangles are stars with rotation periods faster than the main envelop
-% of stars.
-% these are probably binaries whose rotation periods are synchronized to their
-% orbits and have been spun-up via tidal interactions.
-% }
-%   \centering
-%     \includegraphics[width=1\textwidth]{period_teff}
-% \label{fig:period_teff}
-% \end{figure}
+\subsection{Establishing \vb\ as an age proxy}
+\label{sec:mass-dependent-heating}
+
+If lower-mass stars experience greater velocity changes when gravitationally
+perturbed and are dynamically heated more efficiently than higher-mass stars,
+that means velocity dispersion is a function of {\it both} age and mass and
+cannot be straightforwardly interpreted as an age proxy.
+Mass-dependent dynamical heating has not been unambiguously observed in the
+galactic disk because of the strong anti-correlation between stellar mass and
+stellar age.
+Less massive stars do indeed have larger velocity dispersions, however they
+are also older on average.
+This mass-age degeneracy is highly reduced in M dwarfs because their
+main-sequence lifetimes are longer than the age of the Universe, however no
+evidence for mass-dependent heating has been found in M dwarfs
+\citep{faherty2009}.
+
+To investigate whether mass-dependent heating could be acting on the \kepler\
+sample, we selected late K and M dwarfs observed by both \kepler\ and \gaia,
+whose MS lifetimes exceed around 11 Gyrs and are therefore representative of
+the initial mass function.
+We could not perform this analysis on the \mct\ sample, because only stars
+with {\it detectable} rotation periods appear there.
+Since lower-mass stars stay active for longer it is likely that there are more
+old stars (with larger velocity dispersions) at low masses in this sample.
+We selected all \kepler\ targets with dereddened \gaia\ \gcolor\ colors
+greater than 1.2 (corresponding to an effective temperature $\lesssim$
+4800 K) and absolute \gaia\ $G$-band magnitudes $<$ 4.
+We also eliminated visual binaries by removing stars above a 6th order
+polynomial, fit to the MS on the \gaia\ CMD.
+We then applied the quality cuts described in section \ref{sec:the_data}.
+To search for evidence of mass-dependent heating we calculated the (\vb)
+velocity dispersion of stars in effective temperature bins.
+Again, sigma clipping was used to remove high velocity outliers before
+calculating the standard deviation of stars in each bin.
+
+Figure \ref{fig:vb_vs_teff} shows velocity and velocity dispersion
+as a function of effective temperature (calculated by transforming dereddened
+\gaia\ colors using equation \ref{eq:curtis}).
+Velocity dispersion very slightly {\it decreases} with decreasing temperature,
+(the opposite of the trend expected for mass-dependent heating) however the
+slope is only inconsistent with zero at the 1.3 $\sigma$ level.
+This trend may be due to a selection bias: cooler stars are fainter and
+therefore typically closer, with smaller heights above the galactic plane and
+smaller velocities.
+The essential point here is that we do not find  evidence for mass-dependent
+heating acting on stars in the \kepler\ field, meaning \sigmavb\ {\it can} be
+used as an age proxy.
+We performed the same analysis on the 537 stars in this sample with RVs using
+{\it vertical} velocity (\vz) and found the slope of the velocity
+dispersion-temperature relation was consistent with zero.
+
+Since we used \vb, not \vz\ in our analysis, it is possible that an
+anti-correlation between \teff\ and galactic latitude, $b$, could influence
+our results: stars at higher latitudes have additional velocity components in
+the ${\bf x}$ and ${\bf y}$ directions, which could increase \vb\ but not \vz.
+Again however, since the relationship between \sigmavb\ and \teff\ is
+positively, not negatively correlated for cool stars in the \kepler\ field,
+this effect is probably too small to influence our results.
+
+\begin{figure}
+  \caption{
+      Top: Stellar velocity (\vb) as a function of \teff\ for
+      \kepler\ K and M dwarfs.
+Vertical lines indicate different \teff-groupings used to calculate velocity
+    dispersion.
+Pink stars were not included in velocity dispersion calculations as they were
+    either removed as outliers during a sigma clipping process, or they lie at
+    the sparcely populated, extremely cool end of the temperature range.
+    Velocity dispersion and \teff\ are slightly positively correlated, likely
+    due to a brightness-related selection bias, indicating that mass-dependent
+    heating does not significantly affect low-mass stars in the \kepler\
+    field.
+}
+  \centering
+    \includegraphics[width=1\textwidth]{vb_vs_teff}
+\label{fig:vb_vs_teff}
+\end{figure}
+Figure \ref{fig:vb_vs_teff} indicates that mass-dependent heating does not
+strongly affect the \mct\ sample of rotating \kepler\ stars.
+For this reason, we assume that age difference is the major cause of velocity
+dispersion differences between groups.
+In other words, (\vb) velocity dispersion is a reliable age proxy for the
+\mct\ sample.
