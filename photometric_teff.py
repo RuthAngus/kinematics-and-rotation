@@ -1,6 +1,8 @@
 # Calculate photometric Teff from Gaia color
 # This should be dereddened colour!
 
+import numpy as np
+
 
 def bprp_to_teff(bprp):
     """

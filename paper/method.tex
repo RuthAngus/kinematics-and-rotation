@@ -1,6 +1,9 @@
 % 270 words
 % Limit: 500 words
 
+\section{Method}
+\label{sec:method}
+
 \subsection{The data}
 \label{sec:the_data}
 
@@ -66,7 +69,8 @@ stellar mass.
 relationship between \vb\ and \vz\ and retaining a sample large enough to
 provide meaningful results.
 Reducing this cut to 10\degrees\ resulted in a sample size too small to reveal
-trends in the data.
+trends in the data, and intermediate cuts did not significantly change the
+results.
 % We also found that the anti-correlation between stellar mass and $b$ is
 % negligable for stars cooler than 5000 K.
 % For this reason, and because the rotational evolution of old, G stars does not
@@ -79,8 +83,11 @@ trends in the data.
 
 If lower-mass stars experience greater velocity changes when gravitationally
 perturbed and are dynamically heated more efficiently than higher-mass stars,
-that means velocity dispersion is a function of {\it both} age and mass and
-cannot be straightforwardly interpreted as an age proxy.
+velocity dispersion would be a function of {\it both} age and mass and cannot
+be straightforwardly interpreted as an age proxy.
+So, in order to establish whether \sigmavb\ can be used as an age proxy, we
+searched for signs of mass-dependent heating within the \kepler\ field.
+
 Mass-dependent dynamical heating has not been unambiguously observed in the
 galactic disk because of the strong anti-correlation between stellar mass and
 stellar age.
@@ -107,29 +114,30 @@ polynomial, fit to the MS on the \gaia\ CMD.
 We then applied the quality cuts described in section \ref{sec:the_data}.
 To search for evidence of mass-dependent heating we calculated the (\vb)
 velocity dispersion of stars in effective temperature bins.
-Again, sigma clipping was used to remove high velocity outliers before
-calculating the standard deviation of stars in each bin.
+Sigma clipping was performed at the 3$\sigma$ level to remove high velocity
+outliers before calculating the standard deviation of stars in each bin.
 
 Figure \ref{fig:vb_vs_teff} shows velocity and velocity dispersion
 as a function of effective temperature (calculated by transforming dereddened
 \gaia\ colors using equation \ref{eq:curtis}).
 Velocity dispersion very slightly {\it decreases} with decreasing temperature,
-(the opposite of the trend expected for mass-dependent heating) however the
+the opposite of the trend expected for mass-dependent heating, however the
 slope is only inconsistent with zero at the 1.3 $\sigma$ level.
 This trend may be due to a selection bias: cooler stars are fainter and
 therefore typically closer, with smaller heights above the galactic plane and
 smaller velocities.
-The essential point here is that we do not find  evidence for mass-dependent
-heating acting on stars in the \kepler\ field, meaning \sigmavb\ {\it can} be
-used as an age proxy.
+The essential point is that we do not find evidence for mass-dependent heating
+acting on stars in the \kepler\ field, meaning \sigmavb\ {\it can} be used as
+an age proxy.
 We performed the same analysis on the 537 stars in this sample with RVs using
 {\it vertical} velocity (\vz) and found the slope of the velocity
 dispersion-temperature relation was consistent with zero.
 
 Since we used \vb, not \vz\ in our analysis, it is possible that an
 anti-correlation between \teff\ and galactic latitude, $b$, could influence
-our results: stars at higher latitudes have additional velocity components in
-the ${\bf x}$ and ${\bf y}$ directions, which could increase \vb\ but not \vz.
+our results.
+Stars at higher latitudes have additional velocity components in the ${\bf x}$
+and ${\bf y}$ directions, which could increase \vb\ but not \vz.
 Again however, since the relationship between \sigmavb\ and \teff\ is
 positively, not negatively correlated for cool stars in the \kepler\ field,
 this effect is probably too small to influence our results.
@@ -152,9 +160,10 @@ Pink stars were not included in velocity dispersion calculations as they were
     \includegraphics[width=1\textwidth]{vb_vs_teff}
 \label{fig:vb_vs_teff}
 \end{figure}
-Figure \ref{fig:vb_vs_teff} indicates that mass-dependent heating does not
-strongly affect the \mct\ sample of rotating \kepler\ stars.
-For this reason, we assume that age difference is the major cause of velocity
-dispersion differences between groups.
-In other words, (\vb) velocity dispersion is a reliable age proxy for the
-\mct\ sample.
+
+% Figure \ref{fig:vb_vs_teff} indicates that mass-dependent heating does not
+% strongly affect the \mct\ sample of rotating \kepler\ stars.
+% For this reason, we assume that age difference is the major cause of velocity
+% dispersion differences between groups.
+% In other words, (\vb) velocity dispersion is a reliable age proxy for the
+% \mct\ sample.
