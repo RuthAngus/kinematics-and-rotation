@@ -45,50 +45,53 @@ The large number of Praesepe members with precise rotation periods from the
 \ktwo\ mission \citep{douglas2017, rebull2017}, spanning spectral types F
 through early M, makes it a good cluster for calibrating the period-color
 relation of stars at 650 Myrs.
-This relation accurately describes the rotation periods of F and G stars up to
-around 2.5 Gyr (the age of NGC 6819 -- the oldest cluster with available
-rotation periods), but over-predicts the rotation periods of K dwarfs in the
-1.1 Gyr NGC 6811 cluster.
+However, although this relation accurately describes the rotation periods of F
+and G stars up to around 2.5 Gyr (the age of NGC 6819 -- the oldest cluster
+with available rotation periods), it over-predicts the rotation periods of K
+dwarfs in the 1.1 Gyr NGC 6811 cluster.
 Very few reliable age estimates exist for K dwarfs with rotation periods older
 than 1.1 Gyr, or between the ages of $\sim$ 800 Myr--1.1 Gyr so the rotational
-evolution of middle-aged K dwarfs is difficult to characterize\footnote{The
-oldest M dwarfs with reliable ages and rotation periods are members of
-Praesepe ($\sim$ 650 Myrs), so even less is known about their rotational
-evolution.}.
+evolution of middle-aged K dwarfs is largely unknown.
+The oldest M dwarfs with reliable ages and rotation periods are members of
+Praesepe ($\sim$ 650 Myrs), so even {\it less} is known about their rotational
+evolution.
 
-The gyrochronal ages of the stars in our sample were calculated with the
-\citep{angus2019} gyrochronology model, using de-reddened \Gaia\ \gcolor\
-color and rotation periods reported by \mct.
-These rotational ages are shown on the CMD in figure \ref{fig:age_gradient}.
-The stars with old rotational ages, plotted in yellow hues, predominantly lie
+In this paper, gyrochronal ages of cool field dwarfs in the \kepler\ field
+were calculated with the \citep{angus2019} gyrochronology model, using
+de-reddened \Gaia\ \gcolor\ color and rotation periods reported by \mct\ (we
+explain our data selection process in section \ref{sec:the_data}).
+These gyrochronal ages are shown on a \gaia\ color-magnitude diagram (CMD) in
+figure \ref{fig:age_gradient}.
+The stars with old gyrochronal ages, plotted in yellow hues, predominantly lie
 along the upper edge of the MS, where stellar evolution models predict old
-stars to be, however the majority of stars with old rotational ages are bluer
-than \gcolor\ $\sim$ 1.5 dex.
-This provides a first hint that the \citet{angus2019} gyrochronology relation
-under-predicts the ages of low-mass stars.
+stars to be, however the majority of these `old' stars are bluer than \gcolor\
+$\sim$ 1.5 dex.
+This provides the first hint that the \citet{angus2019} gyrochronology
+relation under-predicts the ages of low-mass stars.
 There is no reason to expect the oldest stars in this sample to be the bluer
 ones: M dwarfs are, on average, older than K dwarfs and are expected to remain
 active for longer, so should therefore have measurable rotation periods at
 older ages.
 Since the \citet{angus2019} gyrochronology model, which is based on the
-period-color relation of Praesepe, does not predict old ages for any M dwarfs,
-it is probably under-predicting the ages of some of these low-mass stars.
-It is therefore likely that old M dwarfs rotate more rapidly than this
-Praesepe-based model predicts.
-In what follows we use a population-based stellar age indicator, velocity
-dispersion, to further investigate the gyrochronology relations at old ages in
+period-color relation of Praesepe, predicts the oldest stars in this sample to
+be K dwarfs, it is probably either under-predicting M dwarf ages or
+over-predicting K dwarf ages.
+% In other words, old M dwarfs rotate more rapidly or K dwarfs rotate more
+% slowly than the model predicts.
+In what follows, we use a population-based stellar age indicator, velocity
+dispersion, to investigate the gyrochronology relations at old ages in
 the field.
 
 \subsection{Kinematics as an age proxy}
 
 Stars are thought to be born in the thin disk of the Milky Way (MW), orbiting
-the center of the galaxy with a low out-of-plane, or vertical, velocity ($W$,
-or $v_z$), just like the star-forming molecular gas observed in the disk today
+the galaxy with a low out-of-plane, or vertical, velocity ($W$, or \vz),
+just like the star-forming molecular gas observed in the disk today
 \citep[\eg][]{stark1989, stark2005, aumer2009, martig2014, aumer2016}.
-Young stars have relatively small vertical velocities, but gain momentum in
-the vertical direction over time \citep[\eg][]{nordstrom2004, holmberg2007,
-holmberg2009, aumer2009, casagrande2011}.
-Although the cause of orbital heating is not well understood, interactions
+On average, the vertical velocities of stars increase over time
+\citep[\eg][]{nordstrom2004, holmberg2007, holmberg2009, aumer2009,
+casagrande2011}.
+Although the cause of dynamical heating is not well understood, interactions
 with giant molecular clouds, spiral arms and the galactic bar are thought to
 play an important role \citep[see][for a review of secular evolution in the
 MW]{sellwood2014}.
@@ -98,18 +101,14 @@ on average, that group is old or young relative to other groups.
 In this work we compare the velocity dispersions of groups of stars to
 ascertain which groups are older and which younger and draw conclusions based
 on the implied relative ages of populations.
-The age-velocity dispersion relations (AVRs) are still actively being
-calibrated, so it is difficult to directly compare gyrochronal ages with
-kinematic ones.
-However, regardless of the exact relation between velocity dispersion and
-stellar age, it is expected to be a monotonic relationship, therefore velocity
-dispersion can be used effectively to {\it rank} groups of stars by age.
+% The age-velocity dispersion relations (AVRs) are still actively being
 
-Vertical action is thought to be a better age indicator than vertical velocity
-\citep{ting2019}, although still only a weak age indicator for individual
-stars \citep{beane2018}, however both vertical action ($J_z$) and vertical
-velocity (\vz/W) can only be calculated with full 6-dimensional position and
-velocity information.
+% Vertical action is thought to be a better age indicator than vertical
+% velocity \citep{ting2019}, although still only a weak age indicator for
+% individual stars \citep{beane2018}, however both vertical action ($J_z$) and
+% vertical
+Vertical velocity, \vz, can only be calculated with full 6-dimensional
+position and velocity information.
 Unfortunately, most stars with measured rotation periods do not have radial
 velocity (RV) measurements because they are relatively faint \kepler\ targets
 ($\sim$11th-18th magnitudes).
@@ -117,14 +116,23 @@ For this reason, we used velocity in the direction of galactic latitude, \vb.
 The \kepler\ field is positioned at low galactic latitude (b=5-20\degrees), so
 \vb\ is a close (although imperfect -- see section \ref{sec:results})
 approximation to \vz.
+Because we use \vb\ rather than \vz\, it is difficult to directly compare
+gyrochronal ages with kinematic ones using an age-velocity dispersion relation
+(AVR).
+However, regardless of direction, velocity dispersion is expected to
+monotonically increase over time, and can therefore be used effectively to
+{\it rank} groups of stars by age.
 
-
-This paper is laid out as follows: in section \ref{sec:the_data} we describe
-our sample selection process and the methods used to calculated stellar
+This paper is laid out as follows: in section \ref{sec:method} we describe our
+sample selection process and the methods used to calculated stellar
 velocities.
+We also establish that \vb\ velocity dispersion, \sigmavb, can be used as an
+age proxy by demonstrating that neither mass-dependent heating nor the
+selection function is likely to have a strong affect on our sample.
 In section \ref{sec:results} we use stellar kinematics to investigate the
 relationship between rotation period, age and color/\teff\ in the field.
-In section \ref{sec:mass-dependent-heating} we show that neither
-mass-dependent heating nor the selection function is likely to have a strong
-affect on our sample, and in section \ref{sec:period_gap} we discuss the
-implications of our results.
+We show that the period-color relation of Praesepe is not applicable to
+old stars in section \ref{sec:age_cut}, and reveal the true shape of the
+period-color relations in section \ref{sec:the_reveal}.
+We discuss a possible connection with the rotation period gap in section
+\ref{sec:period_gap}.
