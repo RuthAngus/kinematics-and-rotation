@@ -69,7 +69,7 @@ def dispersion(x, y, bins, method):
         if method == "std":
             d[i] = np.std(y[m])
         if method == "mad":
-            d[i] = np.median(np.abs(y[m])) # - np.median(y[m])))
+            d[i] = 1.5*np.median(np.abs(y[m] - np.median(y[m])))
 
         # Calculate kurtosis
         k[i] = sps.kurtosis(y[m])
