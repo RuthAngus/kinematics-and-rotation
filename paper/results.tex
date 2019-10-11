@@ -5,9 +5,36 @@
 \subsection{Velocity dispersion of coeval groups}
 \label{sec:age_cut}
 
-To explore the relationship between rotation period, \teff\ and age, we
-selected groups of stars within different gyrochronal age ranges \citep[where
-age was calculated using the][gyrochronology relation]{angus2019}, and
+To explore the relationship between rotation period, \teff\ and age for field
+K dwarfs, we calculated gyrochronal ages using dereddened \citep[extinction
+was calculated using the][Python package]{green2018} \Gaia\ photometry
+($G$, $G_{BP}$ and $G_{RP}$) and rotation periods from \citet{mcquillan2014}.
+We used the \citet{angus2019} gyrochronology relation which is a separable
+relation in \gcolor\ color and age, calibrated using the period-color relation
+of Praesepe and the period-age relation of Praesepe and the Sun.
+The large number of Praesepe members with precise rotation periods from the
+\ktwo\ mission \citep{howell2013, douglas2017, rebull2017}, spanning spectral
+types F through early M, makes it a good cluster for calibrating the
+period-color relation of stars at 650 Myrs.
+However, this is an extremely simple model and although it accurately
+describes the rotation periods of F and G stars up to around 2.5 Gyr (the age
+of NGC 6819 -- the oldest cluster with available rotation periods), it
+over-predicts the rotation periods of K dwarfs in the 1.1 Gyr NGC 6811
+cluster.
+These gyrochronal ages are shown on a \gaia\ color-magnitude diagram (CMD) in
+figure \ref{fig:age_gradient}.
+The stars with old gyrochronal ages, plotted in yellow hues, predominantly lie
+along the upper edge of the MS, where stellar evolution models predict old
+stars to be, however the majority of these `old' stars are bluer than \gcolor\
+$\sim$ 1.5 dex.
+This suggests that the \citet{angus2019} gyrochronology relation
+under-predicts the ages of low-mass stars because there is no reason to expect
+the oldest stars in this sample to be the bluer ones: M dwarfs are, on
+average, older than K dwarfs and are expected to remain active for longer, so
+should therefore have measurable rotation periods at older ages.
+
+To further explore the relationship between rotation period, \teff\ and age,
+we selected groups of stars within different gyrochronal age ranges and
 calculated the velocity dispersion (\sigmavb), the standard deviation of \vb\
 velocities, as a function of effective temperature for each age group.
 We performed 3$\sigma$ sigma-clipping on the stellar velocities in each age

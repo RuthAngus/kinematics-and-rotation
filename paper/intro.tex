@@ -1,21 +1,31 @@
 % Word limit: 500
 \section{Introduction}
 
-\subsection{Gyrochronology}
-It is well established that the rotation periods of FGKM dwarfs increase over
-time \citep{skumanich1972}, however the exact nature and form of rotational
-evolution is still being actively studied.
-Once rotational evolution is well understood, rotation periods can be used to
-precisely and accurately date stars via gyrochronology
-\citep[\eg][]{kawaler1989, pinsonneault1989, barnes2003, barnes2007,
-barnes2010, meibom2011, meibom2015}.
-It is also well established that stars of the same age but different masses
-have different rotation periods \citep[\eg][]{kraft1967, matt2012}, which is
-thought to be caused by the variation in convection zone depth.
-For example, lower mass stars with deeper convections zones are expected to
-have stronger magnetic dynamos and lose angular momentum more rapidly.
-However, as new rotation period measurements have become available, a more
-complicated picture of stellar rotational evolution is emerging.
+\subsection{Gyrochronology} It is well established that the rotation periods
+of FGKM dwarfs increase over time \citep[\eg][]{schatzmann, weber,
+skumanich1972 kawaler1989, pinsonneault1989, barnes2003, barnes2007,
+barnes2010, meibom2011, meibom2015}, however the exact nature and form of
+rotational evolution is still being actively studied.
+% Once the relationship between rotation period, mass and age is well
+% calibrated, rotation periods can be used to precisely and accurately date
+% stars via gyrochronology \citep[\eg][]{kawaler1989, pinsonneault1989,
+% barnes2003, barnes2007, barnes2010, meibom2011, meibom2015}.
+% It is also well established that stars of the same age but different masses
+In particular, as new rotation period measurements for stars with precise ages
+become available, the mass-dependence of the relationship between rotation and
+age appears to be more complicated than once thought.
+From both observations and theoretical modelling, stars of different masses
+are expected to have different rotation periods \citep[\eg][]{kraft1967,
+matt2012}, which is thought to be mainly driven by variation in convection
+zone depth.
+For example in the Praesepe cluster, M dwarfs spin more slowly than G dwarfs,
+presumably because lower mass stars with deeper convections zones are have
+stronger magnetic dynamos and lose angular momentum more rapidly.
+However, new rotation period measurements show that variation in convection
+zone depth cannot be solely responsible for mass-dependent rotational
+evolution.
+% revealing that rotational
+% evolution is clearly a more complicated process than once thought.
 % However, an underlying assumption behind many empirical gyrochronology
 % relations is that the relationships between rotation period and photometric
 % color\footnote{As the directly observable quantity, color is often used as a
@@ -29,72 +39,31 @@ complicated picture of stellar rotational evolution is emerging.
 % stellar structure and evolution theory or with a Rossby number, rather than
 % rotation period dependence \citep[\eg][]{barnes2010, matt2012,
 % vansaders2016]}.
-For example, it was recently shown that old field stars rotate more rapidly
-than models predicted \citep{angus2015, vansaders2016, vansaders2018,
-metcalfe2019}, and a mass-dependent modification to the classical \prot\
-$\propto t^{\frac{1}{2}}$ spin-down law \citep{skumanich1972} was required to
-reproduce the data \citep{vansaders2016, vansaders2018}.
-Even more recent analyses of the 1.1 Gyr open cluster, NGC 6811, provides
-further indication that the exponent of the period-age relation is mass and
+For example, old field stars seem rotate more rapidly than models predicted
+\citep{angus2015, vansaders2016, vansaders2018, metcalfe2019}, and a
+mass-dependent modification to the classical \prot\ $\propto t^{\frac{1}{2}}$
+spin-down law \citep{skumanich1972} is required to reproduce the data
+\citep{vansaders2016, vansaders2018}.
+Recent analyses of the 1.1 Gyr open cluster, NGC 6811, provide further
+indication that the exponent of the period-age relation is mass and
 time-dependent \citep{curtis2019 spada2019}.
 This cluster has a flattened relationship between rotation period and
 color: the G dwarfs rotate at the same rate as the K dwarfs.
-New theoretical models that vary the rate of magnetic braking and the
-redistribution of angular momentum in the interior of stars are able to
-successfully reproduce the flattened period-color relation seen in old open
-clusters \citep{spada2019}.
-With the advent of large time-series photometry surveys, providing large
-numbers of precise rotation period measurements over the last few years, we
-now know that the rotational evolution of stars is a complicated process.
-However, relying on open clusters (which are typically young) and
-asteroseismic stars (which are typically G-type stars or more massive) to
-calibrate gyrochronology limits the mass and age coverage of the calibration
+New semi-empirical models that vary the redistribution of angular momentum in
+the interiors of stars are able to reproduce this flattened period-color
+relation \citep{spada2019}.
+% With the advent of large time-series photometry surveys, providing large
+% numbers of precise rotation period measurements over the last few years.
+We now know that the rotational evolution of stars is a complicated process,
+however relying on open clusters (which are typically young) and asteroseismic
+stars (which are typically G-type stars or more massive) to calibrate
+gyrochronology relations limits the mass and age coverage of the calibration
 sample.
-
-In this paper, we tested the \citet{angus2019} gyrochronology relation, a
-separable relation in color and age, calibrated using the period-color
-relation of Praesepe (in \gaia\ \gcolor\ color) and the period-age relation of
-Praesepe and the Sun.
-The large number of Praesepe members with precise rotation periods from the
-\ktwo\ mission \citep{douglas2017, rebull2017}, spanning spectral types F
-through early M, makes it a good cluster for calibrating the period-color
-relation of stars at 650 Myrs.
-However, although this relation accurately describes the rotation periods of F
-and G stars up to around 2.5 Gyr (the age of NGC 6819 -- the oldest cluster
-with available rotation periods), it over-predicts the rotation periods of K
-dwarfs in the 1.1 Gyr NGC 6811 cluster.
-Very few reliable age estimates exist for K dwarfs with rotation periods older
-than 1.1 Gyr, or between the ages of $\sim$ 800 Myr--1.1 Gyr so the rotational
-evolution of middle-aged K dwarfs is largely unknown.
-The oldest M dwarfs with reliable ages and rotation periods are members of
-Praesepe ($\sim$ 650 Myrs), so even {\it less} is known about their rotational
-evolution.
-
-We calculated gyrochronal ages of cool field dwarfs in the \kepler\ field
-using the \citep{angus2019} gyrochronology model, with de-reddened \Gaia\
-\gcolor\ color and rotation periods reported by \mct\ (we explain our data
-selection process in section \ref{sec:the_data}).
-These gyrochronal ages are shown on a \gaia\ color-magnitude diagram (CMD) in
-figure \ref{fig:age_gradient}.
-The stars with old gyrochronal ages, plotted in yellow hues, predominantly lie
-along the upper edge of the MS, where stellar evolution models predict old
-stars to be, however the majority of these `old' stars are bluer than \gcolor\
-$\sim$ 1.5 dex.
-This provides the first hint that the \citet{angus2019} gyrochronology
-relation under-predicts the ages of low-mass stars.
-There is no reason to expect the oldest stars in this sample to be the bluer
-ones: M dwarfs are, on average, older than K dwarfs and are expected to remain
-active for longer, so should therefore have measurable rotation periods at
-older ages.
-Since the \citet{angus2019} gyrochronology model, which is based on the
-period-color relation of Praesepe, predicts the oldest stars in this sample to
-be K dwarfs, it is probably either under-predicting M dwarf ages or
-over-predicting K dwarf ages.
-% In other words, old M dwarfs rotate more rapidly or K dwarfs rotate more
-% slowly than the model predicts.
-In what follows, we use a population-based stellar age indicator, velocity
-dispersion, to investigate the gyrochronology relations at old ages in
-the field.
+In this paper, we use stellar velocity dispersions to gain insight into the
+rotational evolution of field stars.
+This technique provides relative ages for groups of stars that cover a broad
+range of masses and ages, allowing us to observe the rotational evolution of
+stars in an average sense.
 
 \subsection{Kinematics as an age proxy}
 
@@ -122,14 +91,14 @@ on the implied relative ages of populations.
 % individual stars \citep{beane2018}, however both vertical action ($J_z$) and
 % vertical
 Vertical velocity, \vz, can only be calculated with full 6-dimensional
-position and velocity information.
-Unfortunately, most stars with measured rotation periods do not have radial
-velocity (RV) measurements because they are relatively faint \kepler\ targets
-($\sim$11th-18th magnitudes).
-For this reason, we used velocity in the direction of galactic latitude, \vb.
-The \kepler\ field is positioned at low galactic latitude (b=5-20\degrees), so
-\vb\ is a close (although imperfect -- see section \ref{sec:results})
-approximation to \vz.
+position and velocity information, and unfortunately most stars with measured
+rotation periods do not have radial velocity (RV) measurements because they
+are relatively faint \kepler\ targets ($\sim$11th-18th magnitudes).
+For this reason, we used velocity in the direction of galactic latitude, \vb,
+to mimic \vz.
+The \kepler\ field is positioned at low galactic latitude
+(b=$\sim$5-20\degrees), so \vb\ is a close (although imperfect -- see section
+\ref{sec:results}) approximation to \vz.
 Because we use \vb\ rather than \vz\, it is difficult to directly compare
 gyrochronal ages with kinematic ones using an age-velocity dispersion relation
 (AVR).
@@ -150,3 +119,48 @@ old stars in section \ref{sec:age_cut}, and reveal the true shape of the
 period-color relations in section \ref{sec:the_reveal}.
 We discuss a possible connection with the rotation period gap in section
 \ref{sec:period_gap}.
+
+% We also tested the \citet{angus2019} gyrochronology relation, a separable
+% relation in color and age, calibrated using the period-color relation of
+% Praesepe (in \gaia\ \gcolor\ color) and the period-age relation of Praesepe
+% and the Sun.
+% The large number of Praesepe members with precise rotation periods from the
+% \ktwo\ mission \citep{douglas2017, rebull2017}, spanning spectral types F
+% through early M, makes it a good cluster for calibrating the period-color
+% relation of stars at 650 Myrs.
+% However, although this relation accurately describes the rotation periods of F
+% and G stars up to around 2.5 Gyr (the age of NGC 6819 -- the oldest cluster
+% with available rotation periods), it over-predicts the rotation periods of K
+% dwarfs in the 1.1 Gyr NGC 6811 cluster.
+% Very few reliable age estimates exist for K dwarfs with rotation periods older
+% than 1.1 Gyr, or between the ages of $\sim$ 800 Myr--1.1 Gyr so the rotational
+% evolution of middle-aged K dwarfs is largely unknown.
+% The oldest M dwarfs with reliable ages and rotation periods are members of
+% Praesepe ($\sim$ 650 Myrs), so even {\it less} is known about their rotational
+% evolution.
+
+% We calculated gyrochronal ages of cool field dwarfs in the \kepler\ field
+% using the \citep{angus2019} gyrochronology model, with de-reddened \Gaia\
+% \gcolor\ color and rotation periods reported by \mct\ (we explain our data
+% selection process in section \ref{sec:the_data}).
+% These gyrochronal ages are shown on a \gaia\ color-magnitude diagram (CMD) in
+% figure \ref{fig:age_gradient}.
+% The stars with old gyrochronal ages, plotted in yellow hues, predominantly lie
+% along the upper edge of the MS, where stellar evolution models predict old
+% stars to be, however the majority of these `old' stars are bluer than \gcolor\
+% $\sim$ 1.5 dex.
+% This suggests that the \citet{angus2019} gyrochronology relation
+% under-predicts the ages of low-mass stars.
+% There is no reason to expect the oldest stars in this sample to be the bluer
+% ones: M dwarfs are, on average, older than K dwarfs and are expected to remain
+% active for longer, so should therefore have measurable rotation periods at
+% older ages.
+% Since the \citet{angus2019} gyrochronology model, which is based on the
+% period-color relation of Praesepe, predicts the oldest stars in this sample to
+% be K dwarfs, it is probably either under-predicting M dwarf ages or
+% over-predicting K dwarf ages.
+% % In other words, old M dwarfs rotate more rapidly or K dwarfs rotate more
+% % slowly than the model predicts.
+% In what follows, we use a population-based stellar age indicator, velocity
+% dispersion, to investigate the gyrochronology relations at old ages in
+% the field.
