@@ -1,8 +1,31 @@
 \section{Discussion}
 \label{sec:discussion}
 
-\subsection{The period gap}
-\label{sec:period_gap}
+% \subsection{The period gap}
+% \label{sec:period_gap}
+
+The results presented above indicate that stars of spectral type ranging from
+late G to late K follow a braking law that changes over time.
+These results provide further evidence for `stalled' rotational evolution of K
+dwarfs, like that observed in open clusters \citep{curtis2019} and reproduced
+by models that vary angular momentum transport between stellar core and
+envelope with time and mass \citep{spada2019}.
+
+Our results indicate that, at young ages, stellar rotation period decreases
+with mass.
+This is probably because lower-mass stars with deeper convection zones have
+stronger magnetic fields, larger Alfven radii and therefore experience greater
+angular momentum loss rate.
+According to the \citet{spada2019} models, there is minimal transportation of
+angular momentum from the surface to the core of the star at these young ages,
+so the surface slows down but the core keeps spinning rapidly.
+At intermediate ages, rotation periods appear constant with mass, and at late
+ages rotation period increases with mass for GK dwarfs.
+The explanation for this phenomenon, according to the \citet{spada2019}
+models, is that lower-mass stars are still braking more efficiently at these
+intermediate and old ages but their cores are more tightly coupled with their
+envelopes, so angular momentum resurfaces and prevents the stellar envelopes
+from spinning-down rapidly.
 
 The origin of the rotation period gap, first identified by
 \citet{mcquillan2013} and visible in figures \ref{fig:age_cut} and
@@ -12,68 +35,108 @@ This gap can be seen as an under-density of points between the 0.7-1.0 and
 of constant gyrochronal age of around 1.1 Gyr \citep[according to the
 gyrochronology relation of][]{angus2019}, as shown in figure
 \ref{fig:dispersion_period_teff}.
-
 Several explanations for the gap's origin have been proposed, including a
 discontinuous star formation history \citep{mcquillan2013, davenport2017,
-davenport2018}, a rapid change in magnetic field structure
-\citep{reinhold2019}, and erroneous rotation period measurements that are
-incorrect by a factor of two \citep{koen2018}.
-The latter explanation can be ruled out because stars below the gap have
-smaller velocity dispersions than the stars above the gap, indicating that
-they are kinematically younger \citep{mcquillan2013, davenport2018}, as
-evident in figures \ref{fig:age_cut} and \ref{fig:dispersion_period_teff}.
-
+davenport2018} and a change in magnetic field structure causing a brief period
+where rotational variability is reduced and rotation periods cannot be
+measured \citep{reinhold2019}.
+Our results indicate there might be a slight difference in rotational
+evolution below and above the gap.
+Stars below the gap appear to be in the regime where wind-braking is dominant
+(rotation period decreases with increasing mass at a given age) and stars
+above the gap are in a regime where rotational coupling is dominant (rotation
+period increases with increasing mass at a given age).
+This can be seen in figures \ref{fig:age_cut} and \ref{fig:vplot}.
 For stars below the gap, in the 0.7-1.0 Gyr age range shown in figure
 \ref{fig:age_cut}, velocity dispersion is relatively constant as a function of
 temperature, however above the gap, in the 1.0-1.5 Gyr age range and older,
 velocity dispersion increases with \teff.
-The coolest stars in the 1.0-1.5 Gyr age range have the same velocity
-dispersion as the mid-temperature stars in the age range above, and the
-hottest stars in the age range above {\it that}, which indicates that the
-period-\teff\ relations are {\it flat} at rotation periods between $\sim$15-25
-days, for 5500 K $<$ \teff\ $<$ 4000 K.
-Below the gap, velocity dispersion within a given period range appears to {\it
-decrease} with decreasing temperature.
+In figure \ref{fig:age_cut}, velocity dispersion within a given period range
+appears to {\it decrease} with decreasing temperature below the gap.
 The opposite appears to be true above the gap.
+This suggests that perhaps stars transition from a wind braking regime to a
+rotational coupling regime as they pass across the gap.
+However, it is unclear how this process could {\it create} the gap.
+A gap could be created if stars rapidly lose angular momentum over a short
+period of time, leading to a dearth of stars in the gap.
+However, a sudden redistribution of angular momentum from the core to the
+surface, should cause stellar rotation periods to {\it decrease}, not
+increase.
+In addition, this theory is not supported by observations of the NGC 6811
+cluster whose K dwarf members have already undergone stalled braking below and
+before they reach the gap.
+The gap may be associated with a wind braking-rotational coupling transition,
+however our results only provide weak evidence for this, so we can only
+speculate until more data become available.
 
-The gap may be positioned at a significant Rossby number/age at which stellar
-magnetic dynamos go through a transition.
-Perhaps before the age of 1.1 Gyr, or at Rossby numbers less than ???,
-magnetic braking is more efficient for stars with deeper convection zones.
-Once stars reach this critical age or Rossby number their magnetic fields
-undergo some transition, which produces the gap in the rotation period-\teff\
-plane and after this transition, magnetic braking efficiency no longer
-increases with decreasing mass.
-Of course, it may be a coincidence that the gyrochronology relations seem to
-only flatten off above the period gap and we lack a sufficient quantity of
-data to do more than speculate here.
-New rotation periods from the \ktwo\ and \tess\ missions may be able to
-validate or rule out this hypothesis in the future.
+% The \citet{spada2019} models do predict that stars transition from a regime
+% where wind-braking is dominant to a regime where rotational coupling is
+% domimant at different times for different masses.
+% However, these models are based on observations of NGC 6811, whose K dwarfs
+% already show signs of stalling by 1.1 Gyr.
+% For stellar masses of 0.7 M$_\odot$, this transition takes place at $\sim$ 1
+% Gyr.
+% It happens at 500 Myr for 0.9 M$_\odot$ and 5 Gyr for 0.5 M$_\odot$
+% \citep[see][for details]{spada2019}.
+% We propose a new theory for the origin of the rotation gap as the transition
+% between the wind-braking and rotational coupling dominated regimes.
+% The gap could be caused by rapidly transitioning across the gap
+% as
 
-In the $\sim$ 1.1 Gyr NGC 6811 cluster, the rotation periods of mid-K dwarfs
-are faster than expected; their rotational evolution appears to have stalled,
-and they have similar rotation periods to the 650 Myr Praesepe cluster
-\citep{curtis2019}.
-The rotation periods of the K dwarfs in NGC 6811 are plotted in figure
-\ref{fig:dispersion_period_teff}.
-Although NGC 6811's G dwarfs fall on the 1.1 Gyr gyrochronology model, the K
-dwarfs lie only a little above the 0.65 Gyr gyrochronology model.
-NGC 6811 straddles the rotation period gap: its G dwarfs lie above it and its
-K dwarfs lie below it.
-This cluster may be the `missing link' that connects two epoch of stellar
-spin-down.
-However, figure \ref{fig:age_cut} indicates that the Praesepe gyrochronology
-model is, on average, a {\it good} model for stars younger than $\sim$1 Gyr
-% and this model has a very different shape to the NGC 6811 cluster.
-suggesting that stars in the field follow the period-color/\teff\ relation of
-Praesepe, at least up to around 1 Gyr.
-We do not see strong evidence of K dwarf stalling in the field.
-% , however without more observations of middle-aged open clusters it : an
-% early stage where the period-\teff\ relation for cool dwarfs has a negative
-% slope and a late stage where it has a positive slope.
-% In this case the period gap may delineate the transition between these two
-% regimes and is the point at which stellar magnetic dynamos likely undergo a
-% dramatic structural shift at an age of $\sim$ 1.1 Gyr.
+% These results are extremely tentative and should be interpreted with caution:
+% more data are needed to confirm this behavior.
+
+% For stars below the gap, in the 0.7-1.0 Gyr age range shown in figure
+% \ref{fig:age_cut}, velocity dispersion is relatively constant as a function of
+% temperature, however above the gap, in the 1.0-1.5 Gyr age range and older,
+% velocity dispersion increases with \teff.
+% The coolest stars in the 1.0-1.5 Gyr age range have the same velocity
+% dispersion as the mid-temperature stars in the age range above, and the
+% hottest stars in the age range above {\it that}, which indicates that the
+% period-\teff\ relations are {\it flat} at rotation periods between $\sim$15-25
+% days, for 5500 K $<$ \teff\ $<$ 4000 K.
+% Below the gap, velocity dispersion within a given period range appears to {\it
+% decrease} with decreasing temperature.
+% The opposite appears to be true above the gap.
+
+% The gap may be positioned at a significant Rossby number/age at which stellar
+% magnetic dynamos go through a transition.
+% Perhaps before the age of 1.1 Gyr, or at Rossby numbers less than ???,
+% magnetic braking is more efficient for stars with deeper convection zones.
+% Once stars reach this critical age or Rossby number their magnetic fields
+% undergo some transition, which produces the gap in the rotation period-\teff\
+% plane and after this transition, magnetic braking efficiency no longer
+% increases with decreasing mass.
+% Of course, it may be a coincidence that the gyrochronology relations seem to
+% only flatten off above the period gap and we lack a sufficient quantity of
+% data to do more than speculate here.
+% New rotation periods from the \ktwo\ and \tess\ missions may be able to
+% validate or rule out this hypothesis in the future.
+
+% In the $\sim$ 1.1 Gyr NGC 6811 cluster, the rotation periods of mid-K dwarfs
+% are faster than expected; their rotational evolution appears to have stalled,
+% and they have similar rotation periods to the 650 Myr Praesepe cluster
+% \citep{curtis2019}.
+% The rotation periods of the K dwarfs in NGC 6811 are plotted in figure
+% \ref{fig:dispersion_period_teff}.
+% Although NGC 6811's G dwarfs fall on the 1.1 Gyr gyrochronology model, the K
+% dwarfs lie only a little above the 0.65 Gyr gyrochronology model.
+% NGC 6811 straddles the rotation period gap: its G dwarfs lie above it and its
+% K dwarfs lie below it.
+% This cluster may be the `missing link' that connects two epoch of stellar
+% spin-down.
+% However, figure \ref{fig:age_cut} indicates that the Praesepe gyrochronology
+% model is, on average, a {\it good} model for stars younger than $\sim$1 Gyr
+% % and this model has a very different shape to the NGC 6811 cluster.
+% suggesting that stars in the field follow the period-color/\teff\ relation of
+% Praesepe, at least up to around 1 Gyr.
+% We do not see strong evidence of K dwarf stalling in the field.
+% % , however without more observations of middle-aged open clusters it : an
+% % early stage where the period-\teff\ relation for cool dwarfs has a negative
+% % slope and a late stage where it has a positive slope.
+% % In this case the period gap may delineate the transition between these two
+% % regimes and is the point at which stellar magnetic dynamos likely undergo a
+% % dramatic structural shift at an age of $\sim$ 1.1 Gyr.
 
 % \subsection{Caveats}
 % \label{sec:caveats}
