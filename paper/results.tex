@@ -2,129 +2,129 @@
 \section{Results}
 \label{sec:results}
 
-\subsection{Velocity dispersion of coeval groups}
-\label{sec:age_cut}
+% \subsection{Velocity dispersion of coeval groups}
+% \label{sec:age_cut}
 
-To explore the relationship between rotation period, \teff\ and age for field
-K dwarfs, we calculated gyrochronal ages using dereddened \Gaia\ photometry
-($G$, $G_{BP}$ and $G_{RP}$) and rotation periods from \citet{mcquillan2014}.
-We used the \citet{angus2019} gyrochronology relation which is a simple,
-separable relation in \gcolor\ color and age, calibrated using the
-period-color relation of Praesepe and the period-age relation of Praesepe and
-the Sun.
-The large number of Praesepe members with precise rotation periods from the
-\ktwo\ mission \citep{howell2014, douglas2017, rebull2017}, spanning spectral
-types F through early M, makes it a good cluster for calibrating the
-period-color relation of stars at young ages.
-However, this is an extremely simple model and although it accurately
-describes the rotation periods of F and G stars up to around 2.5 Gyr (the age
-of NGC 6819 -- the oldest cluster with available rotation periods), it
-over-predicts the rotation periods of K dwarfs in the 1.1 Gyr NGC 6811
-cluster.
-These gyrochronal ages are shown on a \gaia\ color-magnitude diagram (CMD) in
-figure \ref{fig:age_gradient}.
-The stars with old gyrochronal ages, plotted in yellow hues, predominantly lie
-along the upper edge of the MS, where stellar evolution models predict old
-stars to be, however the majority of these `old' stars are bluer than \gcolor\
-$\sim$ 1.5 dex.
-This suggests that either old M dwarfs are missing from the \mct\ catalog, or
-the \citet{angus2019} gyrochronology relation under-predicts the ages of
-low-mass stars.
-Given that lower-mass stars stay active for longer than higher-mass stars
-\citep[\eg][]{west2011}, and are therefore more likely to have measurable
-rotation periods at old ages, the latter scenario seems more likely.
+% To explore the relationship between rotation period, \teff\ and age for field
+% K dwarfs, we calculated gyrochronal ages using dereddened \Gaia\ photometry
+% ($G$, $G_{BP}$ and $G_{RP}$) and rotation periods from \citet{mcquillan2014}.
+% We used the \citet{angus2019} gyrochronology relation which is a simple,
+% separable relation in \gcolor\ color and age, calibrated using the
+% period-color relation of Praesepe and the period-age relation of Praesepe and
+% the Sun.
+% The large number of Praesepe members with precise rotation periods from the
+% \ktwo\ mission \citep{howell2014, douglas2017, rebull2017}, spanning spectral
+% types F through early M, makes it a good cluster for calibrating the
+% period-color relation of stars at young ages.
+% However, this is an extremely simple model and although it accurately
+% describes the rotation periods of F and G stars up to around 2.5 Gyr (the age
+% of NGC 6819 -- the oldest cluster with available rotation periods), it
+% over-predicts the rotation periods of K dwarfs in the 1.1 Gyr NGC 6811
+% cluster.
+% These gyrochronal ages are shown on a \gaia\ color-magnitude diagram (CMD) in
+% figure \ref{fig:age_gradient}.
+% The stars with old gyrochronal ages, plotted in yellow hues, predominantly lie
+% along the upper edge of the MS, where stellar evolution models predict old
+% stars to be, however the majority of these `old' stars are bluer than \gcolor\
+% $\sim$ 1.5 dex.
+% This suggests that either old M dwarfs are missing from the \mct\ catalog, or
+% the \citet{angus2019} gyrochronology relation under-predicts the ages of
+% low-mass stars.
+% Given that lower-mass stars stay active for longer than higher-mass stars
+% \citep[\eg][]{west2011}, and are therefore more likely to have measurable
+% rotation periods at old ages, the latter scenario seems more likely.
 
-To further explore the relationship between rotation period, \teff\ and age,
-we first removed high and low velocity outliers by performing 3$\sigma$
-sigma-clipping on the \vb\ velocities.
-Without sigma-clipping, we found that a small number of high velocity
-outliers at the low-temperature end of our sample substantially raised the
-velocity dispersion for cooler stars.
-We then selected groups of stars within different gyrochronal age ranges and
-calculated the standard deviation of \vb\ velocities (\sigmavb), as a function
-of effective temperature for each age group.
-Ages were calculated using dereddened \gaia\ \gcolor\ color, however
-throughout this paper we show rotation periods as a function of effective
-temperature, \teff, because it is easier to divide stars into bins of roughly
-equal numbers in \teff-space than in color-space.
+% To further explore the relationship between rotation period, \teff\ and age,
+% we first removed high and low velocity outliers by performing 3$\sigma$
+% sigma-clipping on the \vb\ velocities.
+% Without sigma-clipping, we found that a small number of high velocity
+% outliers at the low-temperature end of our sample substantially raised the
+% velocity dispersion for cooler stars.
+% We then selected groups of stars within different gyrochronal age ranges and
+% calculated the standard deviation of \vb\ velocities (\sigmavb), as a function
+% of effective temperature for each age group.
+% Ages were calculated using dereddened \gaia\ \gcolor\ color, however
+% throughout this paper we show rotation periods as a function of effective
+% temperature, \teff, because it is easier to divide stars into bins of roughly
+% equal numbers in \teff-space than in color-space.
 
-\begin{figure}
-  \caption{
-Top: rotation period vs effective temperature for stars in the \mct\
-    catalog.
-    The full catalog, with subgiants and visual binaries removed is shown in
-    grey, and stars selected to be in different age groups (between \tmin\ and
-    \tmax\ K) are overlayed in color.
-These age groups were selected using the \citet{angus2019} gyrochronology
-    relation.
-The legend in the center of the figure lists the age range, in Gyr, of each
-    group.
-Bottom: velocity dispersion vs effective temperature for each age
-    group.
-The color of the line corresponds to the color of the group shown in the top
-    panel.
-If the gyrochronal model were correct at all ages, and the stars in each group
-    were the same age across temperatures, the velocity dispersion would be
-    constant as a function of \teff.
-However, the velocity dispersions of the oldest age groups increase with
-    \teff, indicating the \citet{angus2019} gyrochronology model underpredicts
-    the the ages of late-K dwarfs relative to the ages of late G and early K
-    dwarfs at old ages.
-% An alternative explanation could be that the gyrochronology relation is
-%     correct and {\it mass-dependent heating} is responsible for the greater
-%     velocity dispersions of cooler stars.
-}
-  \centering
-    \includegraphics[width=1\textwidth]{age_cut}
-\label{fig:age_cut}
-\end{figure}
-The top panel of figure \ref{fig:age_cut} shows the full \mct\ sample
-(excluding visual binaries and subgiants) in grey, with coeval groups
-\citep[according to the][relation]{angus2019} shown in color.
-The color of the points corresponds to the age ranges specified in the legend
-(in Gyr), which also apply to the lines in the lower panel.
-The bottom panel shows the velocity dispersion, \sigmavb\ of each age group,
-as a function of effective temperature.
-% We only included stars within a temperature range of 5000 - 3500 K in our
-% analysis, as hotter stars are more likely to have stopped magnetic braking
-% \citep{vansaders2016}, which could bias the results.
-% Late M dwarfs were not included in our analysis because such faint stars
-% cannot be observed at large heights above the plane (because of the low
-% galactic latitude of the \kepler\ field, stars at high-Z are more distant),
-% which introduces a mass-dependent velocity bias: cooler populations of stars
-% are skewed towards lower velocity dispersions.
-% The coolest temperature bins in the lower panel of figure \ref{fig:age_cut}
-% have low velocity dispersions, indicating that this effect may already become
-% important at temperatures lower than $\sim$ 4000 K.
-Overall, figure \ref{fig:age_cut} shows that velocity dispersion increases
-with gyrochronal age across all temperatures, implying that both velocity
-dispersion and rotation period increases with age as expected.
-The flat velocity dispersion of young stars as a function of temperature
-shows that the Praesepe-calibrated gyrochronology relation accurately predicts
-the relative ages of {\it young} field stars.
-% To our knowledge, no gyrochronology relation has previously been demonstrated to
-% correctly predict ages (either relative or absolute) for such cool or such
-% young field stars.
-% This is not particularly remarkable however, since these young stars are a
-% similar age to the Praesepe cluster, which was used to calibrate the
-% period-color relation.
-% However, if the stars in each selected age group had the {\it same} age across
-% the temperature range, their velocity dispersion would be a constant function
-% of \teff.
-If \citet{angus2019} gyrochronology relation worked at all ages and
-temperatures, the bottom panel of figure \ref{fig:age_cut} would show a flat
-relationship between velocity dispersion and \teff at all ages.
-However, velocity dispersion {\it increases} as a function of temperature for
-old stars, meaning the \citet{angus2019} gyrochronology relation either
-under-predicts the ages of old, late-K dwarfs, or over-predicts the ages of
-old early-K and late-G dwarfs\footnote{Since \vb\ velocity dispersion only
-provides relative and not absolute ages, it is difficult to tell whether the
-ages of cool stars are being under-predicted, the ages of hot stars being are
-over-predicted, or both.}.
-This suggests that the relationship between rotation period and photometric
-color or \teff\ flattens out over time, and possibly even inverts.
-% The lines of constant age (isochrones) sweeping diagonally upwards in the top
-% panel of figure \ref{fig:age_cut} are too steeply sloped at old ages.
+% \begin{figure}
+%   \caption{
+% Top: rotation period vs effective temperature for stars in the \mct\
+%     catalog.
+%     The full catalog, with subgiants and visual binaries removed is shown in
+%     grey, and stars selected to be in different age groups (between \tmin\ and
+%     \tmax\ K) are overlayed in color.
+% These age groups were selected using the \citet{angus2019} gyrochronology
+%     relation.
+% The legend in the center of the figure lists the age range, in Gyr, of each
+%     group.
+% Bottom: velocity dispersion vs effective temperature for each age
+%     group.
+% The color of the line corresponds to the color of the group shown in the top
+%     panel.
+% If the gyrochronal model were correct at all ages, and the stars in each group
+%     were the same age across temperatures, the velocity dispersion would be
+%     constant as a function of \teff.
+% However, the velocity dispersions of the oldest age groups increase with
+%     \teff, indicating the \citet{angus2019} gyrochronology model underpredicts
+%     the the ages of late-K dwarfs relative to the ages of late G and early K
+%     dwarfs at old ages.
+% % An alternative explanation could be that the gyrochronology relation is
+% %     correct and {\it mass-dependent heating} is responsible for the greater
+% %     velocity dispersions of cooler stars.
+% }
+%   \centering
+%     \includegraphics[width=1\textwidth]{age_cut}
+% \label{fig:age_cut}
+% \end{figure}
+% The top panel of figure \ref{fig:age_cut} shows the full \mct\ sample
+% (excluding visual binaries and subgiants) in grey, with coeval groups
+% \citep[according to the][relation]{angus2019} shown in color.
+% The color of the points corresponds to the age ranges specified in the legend
+% (in Gyr), which also apply to the lines in the lower panel.
+% The bottom panel shows the velocity dispersion, \sigmavb\ of each age group,
+% as a function of effective temperature.
+% % We only included stars within a temperature range of 5000 - 3500 K in our
+% % analysis, as hotter stars are more likely to have stopped magnetic braking
+% % \citep{vansaders2016}, which could bias the results.
+% % Late M dwarfs were not included in our analysis because such faint stars
+% % cannot be observed at large heights above the plane (because of the low
+% % galactic latitude of the \kepler\ field, stars at high-Z are more distant),
+% % which introduces a mass-dependent velocity bias: cooler populations of stars
+% % are skewed towards lower velocity dispersions.
+% % The coolest temperature bins in the lower panel of figure \ref{fig:age_cut}
+% % have low velocity dispersions, indicating that this effect may already become
+% % important at temperatures lower than $\sim$ 4000 K.
+% Overall, figure \ref{fig:age_cut} shows that velocity dispersion increases
+% with gyrochronal age across all temperatures, implying that both velocity
+% dispersion and rotation period increases with age as expected.
+% The flat velocity dispersion of young stars as a function of temperature
+% shows that the Praesepe-calibrated gyrochronology relation accurately predicts
+% the relative ages of {\it young} field stars.
+% % To our knowledge, no gyrochronology relation has previously been demonstrated to
+% % correctly predict ages (either relative or absolute) for such cool or such
+% % young field stars.
+% % This is not particularly remarkable however, since these young stars are a
+% % similar age to the Praesepe cluster, which was used to calibrate the
+% % period-color relation.
+% % However, if the stars in each selected age group had the {\it same} age across
+% % the temperature range, their velocity dispersion would be a constant function
+% % of \teff.
+% If \citet{angus2019} gyrochronology relation worked at all ages and
+% temperatures, the bottom panel of figure \ref{fig:age_cut} would show a flat
+% relationship between velocity dispersion and \teff at all ages.
+% However, velocity dispersion {\it increases} as a function of temperature for
+% old stars, meaning the \citet{angus2019} gyrochronology relation either
+% under-predicts the ages of old, late-K dwarfs, or over-predicts the ages of
+% old early-K and late-G dwarfs\footnote{Since \vb\ velocity dispersion only
+% provides relative and not absolute ages, it is difficult to tell whether the
+% ages of cool stars are being under-predicted, the ages of hot stars being are
+% over-predicted, or both.}.
+% This suggests that the relationship between rotation period and photometric
+% color or \teff\ flattens out over time, and possibly even inverts.
+% % The lines of constant age (isochrones) sweeping diagonally upwards in the top
+% % panel of figure \ref{fig:age_cut} are too steeply sloped at old ages.
 
 \subsection{The period-\teff\ relations, revealed}
 \label{sec:the_reveal}
@@ -151,50 +151,66 @@ color or \teff\ flattens out over time, and possibly even inverts.
     \includegraphics[width=1\textwidth]{vplot}
 \label{fig:vplot}
 \end{figure}
-Figure \ref{fig:dispersion_period_teff} shows rotation period vs. \teff\ for
-our sample, coloured by (\vb) velocity dispersion, where \sigmavb\ was
-calculated for groups of stars over a grid in $\log_{10}$(period) and
-temperature.
+Figure \ref{fig:vplot} shows rotation period versus effective temperature for
+the \mct\ sample, coloured by the standard deviation of their (\vb)
+velocities, where \sigmavb\ was calculated for groups of stars over a grid in
+$\log_{10}$(period) and temperature.
 If we assume that mass dependent heating does not strongly affect this sample
 and \vb\ at low galactic latitudes is an unbiased tracer of \vz, then \vb\
 velocity dispersion can be interpreted as an age proxy and stars plotted in a
-similar color in figure \ref{fig:dispersion_period_teff} are similar ages.
-Interpreted this way, lines of constant age (isochrones) appear to follow the
-shape of the Praesepe-based gyrochronology model (black solid and dotted
-lines) at young ages.
+similar color in figure \ref{fig:vplot} are similar ages.
+
+Overall, figure \ref{fig:vplot} shows that velocity dispersion increases with
+gyrochronal age across all temperatures, implying that both velocity
+dispersion and rotation period increases with age as expected.
+Lines of constant age (isochrones) appear to follow the shape of the
+Praesepe-based gyrochronology model (black dotted line) at young ages.
 However, at older ages it appears that the relation between rotation period
 and \teff\ flattens out, until eventually rotation period {\it decreases} with
 decreasing effective temperature at a given age.
 
-The shape of the period-\teff\ relations at old ages appears to follow the
-shape of the upper detection edge.
-The `M dwarf dip' \citep{vansaders2018}, a feature of the \mct\ rotation
-period catalog characterized by a dearth of slowly rotating M dwarfs between
-$\sim$3750 and 4250 K, is reflected in the lines of constant velocity
-dispersion (and presumed age) in the top panel of figure
-\ref{fig:dispersion_period_teff}.
-If the shape of the upper edge of rotation period measurements is created by a
-detection limit, it could indicate the rotation periods at which stars of
-different temperatures become relatively inactive (and their rotation periods
-therefore become undetectable).
-% Once inactive, stars would have little photometric variability induced by
-% star spots and their rotation periods would be difficult to measure, so may
-% not feature in the \mct\ catalog.
-If so, figure \ref{fig:dispersion_period_teff} suggests that stars cooler than
-$\sim$4500 K stay active longer than stars hotter than $\sim$4500 on average.
+Figure \ref{fig:masses_with_models} shows the same as figure \ref{fig:vplot},
+however mass is plotted on the x-axis instead of temperature and the models
+are those of \citet{spada2019}.
+The masses of these stars are taken from the \kepler\ input catalog
+\citep{KIC}.
+The \citet{spada2019} models appear to qualitatively agree with the data:
+their rotation period-\teff\ relation flattens out over time and eventually
+inverts over a narrow range of temperatures.
+The models reproduce the `dip' feature seen in the data.
 
-% The groups of stars with the largest velocity dispersions are cooler than 4500
-% K, presumably because cooler stars remain active for longer, and their
-% rotation periods can therefore be measured at older ages.
+% Each star is assigned the same velocity dispersion as in figure
+% \ref{fig:vplot}, and because stars in the same temperature group are not
+% necessarily in the same mass group, which is why stars of the same mass and period do not nece
 
-The velocity dispersions of the coolest stars may be affected by a selection
-bias -- these extremely faint stars are more difficult to detect at larger
-distances, larger heights above the plane, and therefore larger velocities.
-It is possible that some high velocity stars of temperatures cooler than
-$\sim$4000 K are missing from this sample, and the velocity dispersions may
-therefore appear lower than they truly are.
-This could be why the velocity dispersion appears to decrease towards the
-right of figure \ref{fig:dispersion_period_teff}.
+% The shape of the period-\teff\ relations at old ages appears to follow the
+% shape of the upper detection edge.
+% The `M dwarf dip' \citep{vansaders2018}, a feature of the \mct\ rotation
+% period catalog characterized by a dearth of slowly rotating M dwarfs between
+% $\sim$3750 and 4250 K, is reflected in the lines of constant velocity
+% dispersion (and presumed age) in the top panel of figure \ref{fig:vplot}.
+% If the shape of the upper edge of rotation period measurements is created by a
+% detection limit, it could indicate the rotation periods at which stars of
+% different temperatures become relatively inactive (and their rotation periods
+% therefore become undetectable).
+% % Once inactive, stars would have little photometric variability induced by
+% % star spots and their rotation periods would be difficult to measure, so may
+% % not feature in the \mct\ catalog.
+% If so, figure \ref{fig:dispersion_period_teff} suggests that stars cooler than
+% $\sim$4500 K stay active longer than stars hotter than $\sim$4500 on average.
+
+% % The groups of stars with the largest velocity dispersions are cooler than 4500
+% % K, presumably because cooler stars remain active for longer, and their
+% % rotation periods can therefore be measured at older ages.
+
+% The velocity dispersions of the coolest stars may be affected by a selection
+% bias -- these extremely faint stars are more difficult to detect at larger
+% distances, larger heights above the plane, and therefore larger velocities.
+% It is possible that some high velocity stars of temperatures cooler than
+% $\sim$4000 K are missing from this sample, and the velocity dispersions may
+% therefore appear lower than they truly are.
+% This could be why the velocity dispersion appears to decrease towards the
+% right of figure \ref{fig:dispersion_period_teff}.
 
 \begin{figure}
   \caption{

@@ -95,7 +95,7 @@ def interval_sigma_clip(interval, x, y, nsigma=3):
     """
 
     nints = int((max(x) - min(x)) / interval)
-    intervals =
+    # intervals =
 
     full_mask = []
     n = 0

@@ -34,6 +34,21 @@ approximate the division between single stars and visual binaries.
 All stars above this line were removed from the sample.
 Subgiants were also removed by eliminating stars brighter than 6th magnitude
 in \gaia\ G-band.
+
+The dwarf stars in the \mct\ sample are shown on a \gaia\ color-magnitude
+diagram (CMD) in figure \ref{fig:age_gradient}.
+The stars are colored by their gyrochronal age, calculated using the
+\citep{angus2019} gyrochronology relation.
+The stars with old gyrochronal ages, plotted in yellow hues, predominantly lie
+along the upper edge of the MS, where stellar evolution models predict old
+stars to be, however the majority of these `old' stars are bluer than \gcolor\
+$\sim$ 1.5 dex.
+This suggests that either old M dwarfs are missing from the \mct\ catalog, or
+the \citet{angus2019} gyrochronology relation under-predicts the ages of
+low-mass stars.
+Given that lower-mass stars stay active for longer than higher-mass stars
+\citep[\eg][]{west2011}, and are therefore more likely to have measurable
+rotation periods at old ages, the latter scenario seems more likely.
 \begin{figure}
   \caption{
 Dereddened MS \kepler\ stars with \mct\ rotation periods on the \gaia\ CMD.
@@ -114,14 +129,15 @@ sample, we selected late K and M dwarfs observed by both \kepler\ and \gaia,
 whose MS lifetimes exceed around 11 Gyrs and are therefore representative of
 the initial mass function.
 We could not perform this analysis on the \mct\ sample, because only stars
-with {\it detectable} rotation periods are included in it.
-Since lower-mass stars stay active for longer it is likely that the oldest
-stars in this sample have low masses.
+with {\it detectable} rotation periods are included in it and since lower-mass
+stars stay active for longer it is likely that the oldest stars in this sample
+have low masses.
 We selected all \kepler\ targets with dereddened \gaia\ \gcolor\ colors
 greater than 1.2 (corresponding to an effective temperature $\lesssim$
 4800 K) and absolute \gaia\ $G$-band magnitudes $<$ 4.
 We also eliminated visual binaries by removing stars above a 6th order
-polynomial, fit to the MS on the \gaia\ CMD.
+polynomial, fit to the MS on the \gaia\ CMD (similar to the one shown in
+figure \ref{fig:age_gradient}).
 We then applied the quality cuts described above in section
 \ref{sec:the_data}.
 To search for evidence of mass-dependent heating we calculated the (\vb)
@@ -132,18 +148,19 @@ These high velocity outliers may be very old late K and M dwarfs, or they
 result from using \vb\ instead of \vz, which introduces additional velocity
 scatter.
 
-Figure \ref{fig:vb_vs_teff} shows velocity and velocity dispersion
-as a function of effective temperature (calculated by transforming dereddened
-\gaia\ colors using equation \ref{eq:curtis}).
+Figure \ref{fig:vb_vs_teff} shows velocity and velocity dispersion as a
+function of effective temperature \footnote{calculated by transforming
+dereddened \gaia\ colors using equation \ref{eq:curtis}.} for the K and M
+\kepler\ dwarf sample.
 Velocity dispersion very slightly {\it decreases} with decreasing temperature,
 the opposite of the trend expected for mass-dependent heating, however the
 slope is only inconsistent with zero at the 1.3 $\sigma$ level.
 This trend may be due to a selection bias: cooler stars are fainter and
 therefore typically closer, with smaller heights above the galactic plane and
 smaller velocities.
-The essential point is that we do not find evidence for mass-dependent heating
-acting on stars in the \kepler\ field, meaning \sigmavb\ {\it can} be used as
-an age proxy.
+The essential point however, is that we do not see evidence for mass-dependent
+heating acting on stars in the \kepler\ field, indicating that \sigmavb\ {\it
+can} be used as an age proxy.
 We also examined the {\it vertical} velocities of the 537 stars in this sample
 with RV measurements.
 Again, we found no evidence for mass-dependent heating: the slope of the
@@ -212,3 +229,22 @@ Pink stars were not included in velocity dispersion calculations as they were
 % dispersion differences between groups.
 % In other words, (\vb) velocity dispersion is a reliable age proxy for the
 % \mct\ sample.
+
+To explore the relationship between rotation period, \teff\ and age, we
+removed high and low velocity outliers from the \mct\ sample by performing
+3$\sigma$ sigma-clipping on the \vb\ velocities.
+Without sigma-clipping, we found that a small number of high velocity
+outliers at the low-temperature end of our sample substantially raised the
+velocity dispersion for cooler stars, however the overall trends remained the
+same.
+We also limited the sample to temperatures in the range 5500 K $<$ \teff\ $<$
+3500 K to avoid biases caused by the selection function at the faint, cool
+end, and binarity or weakened braking \citep{vansaders2016} at the hot end.
+
+% We then selected groups of stars within different gyrochronal age ranges and
+% calculated the standard deviation of \vb\ velocities (\sigmavb), as a function
+% of effective temperature for each age group.
+% Ages were calculated using dereddened \gaia\ \gcolor\ color, however
+% throughout this paper we show rotation periods as a function of effective
+% temperature, \teff, because it is easier to divide stars into bins of roughly
+% equal numbers in \teff-space than in color-space.

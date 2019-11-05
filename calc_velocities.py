@@ -35,7 +35,7 @@ def calc_vb(pandas_df, nsamples=1000):
     pm_b = np.array(vels.pm_b.value)
 
     gal = c_samples.galactic
-    v_b = (gal.pm_l * gal.distance).to(u.km/u.s, u.dimensionless_angles())
+    v_b = (gal.pm_b * gal.distance).to(u.km/u.s, u.dimensionless_angles())
     return pm_b, np.array(v_b.value)
 
 
