@@ -49,6 +49,11 @@ low-mass stars.
 Given that lower-mass stars stay active for longer than higher-mass stars
 \citep[\eg][]{west2011}, and are therefore more likely to have measurable
 rotation periods at old ages, the latter scenario seems more likely.
+The \citep{angus2019} gyrochronology relation is a simple polynomial model,
+fit to the period-color relation of Praesepe.
+Since this relation predicts that the oldest stars in the \mct\ sample are
+late-G and early-K dwarfs, it is probably under-predicting the ages of late-K
+and early-M dwarfs.
 \begin{figure}
   \caption{
 Dereddened MS \kepler\ stars with \mct\ rotation periods on the \gaia\ CMD.
@@ -57,6 +62,9 @@ We excluded visual binaries by removing stars above the dashed line.
     age, according to the
     \citet{angus2019} gyrochronology relation.
     A general age gradient is visible across the main sequence.
+    Since the \citet{angus2019} relation predicts that the oldest stars in
+    the \mct\ sample are late-G and early-K dwarfs, it is probably
+    under-predicting the ages of late-K and early-M dwarfs.
 }
   \centering
     \includegraphics[width=1\textwidth]{age_gradient_combo}
@@ -103,15 +111,15 @@ dispersion depends on both age and mass, so cannot be interpreted as a simple
 age proxy.
 Secondly, since stars in the \kepler\ field have a range of galactic
 latitudes, using \vb\ as a stand-in for \vz\ may not be equally valid for all
-stars, introducing a velocity bias for high latitude stars (which are more
+stars, and introduce a velocity bias for high latitude stars (which are more
 likely to be cooler and older).
 In this section we demonstrate that neither of these problems seem to be a
 significant issue for our data.
 
 If lower-mass stars experience greater velocity changes when gravitationally
-perturbed and are dynamically heated more efficiently than higher-mass stars,
-velocity dispersion would be a function of {\it both} age and mass and cannot
-be straightforwardly interpreted as an age proxy.
+perturbed, and are dynamically heated more efficiently than higher-mass stars,
+velocity dispersion would be a function of both age {\it and} mass and cannot
+be interpreted as a straightforward age proxy.
 So, in order to establish whether \sigmavb\ can be used as an age proxy, we
 searched for signs of mass-dependent heating within the \kepler\ field.
 Mass-dependent dynamical heating has not been unambiguously observed in the
@@ -120,18 +128,17 @@ stellar age.
 Less massive stars do indeed have larger velocity dispersions, however they
 are also older on average.
 This mass-age degeneracy is highly reduced in M dwarfs because their
-main-sequence lifetimes are longer than the age of the Universe, however no
-evidence for mass-dependent heating has been found in M dwarfs
+main-sequence lifetimes are longer than the age of the Universe, and no
+evidence for mass-dependent heating has previously been found in M dwarfs
 \citep[\eg][]{faherty2009, newton2016}.
 
-To investigate whether mass-dependent heating could be acting on the \kepler\
-sample, we selected late K and M dwarfs observed by both \kepler\ and \gaia,
-whose MS lifetimes exceed around 11 Gyrs and are therefore representative of
-the initial mass function.
-We could not perform this analysis on the \mct\ sample, because only stars
-with {\it detectable} rotation periods are included in it and since lower-mass
-stars stay active for longer it is likely that the oldest stars in this sample
-have low masses.
+To further investigate whether mass-dependent heating could be acting on the
+\kepler\ sample, we selected late K and M dwarfs observed by both \kepler\ and
+\gaia, whose MS lifetimes exceed around 11 Gyrs and are therefore
+representative of the initial mass function\footnote{We could not perform this
+analysis on the \mct\ sample, because it only includes stars with {\it
+detectable} rotation periods, and since lower-mass stars stay active for
+longer it is likely that it contains a strong mass-age correlation.}.
 We selected all \kepler\ targets with dereddened \gaia\ \gcolor\ colors
 greater than 1.2 (corresponding to an effective temperature $\lesssim$
 4800 K) and absolute \gaia\ $G$-band magnitudes $<$ 4.
@@ -159,11 +166,11 @@ This trend may be due to a selection bias: cooler stars are fainter and
 therefore typically closer, with smaller heights above the galactic plane and
 smaller velocities.
 The essential point however, is that we do not see evidence for mass-dependent
-heating acting on stars in the \kepler\ field, indicating that \sigmavb\ {\it
-can} be used as an age proxy.
-We also examined the {\it vertical} velocities of the 537 stars in this sample
-with RV measurements.
-Again, we found no evidence for mass-dependent heating: the slope of the
+heating acting on stars in the \kepler\ field, indicating that velocity
+dispersion {\it can} be used as an age proxy.
+This analysis was performed using \vb\ but we also examined the {\it vertical}
+velocities of the 537 stars in this sample with RV measurements.
+Again, no evidence was found for mass-dependent heating: the slope of the
 velocity dispersion-temperature relation was consistent with zero.
 
 At a galactic latitude of zero, $v_b=v_z$, however for increasing values of
