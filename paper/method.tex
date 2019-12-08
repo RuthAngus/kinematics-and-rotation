@@ -173,21 +173,59 @@ latitudes we downloaded stellar data from the \Gaia\ Universe Model Snapshot
 (GUMS) simulation -- a simulated \Gaia\ catalog \citep{robin2012}.
 We downloaded stars from four pointings in the \kepler\ field with galactic
 latitudes of around 5\degrees, 10\degrees, 15\degrees, and 20\degrees, out to
-a limiting magnitude of 16 dex.
+a limiting magnitude of 16 dex, and calculated their \vz\ and \vb\ velocities.
+The relationship between \vz\ and \vb\ is close to 1:1, with \vz\ greater than
+\vb\ by around 4.5 kms$^{-1}$ at $b=5$, due to the Sun's own motion in the
+Galaxy.
+We subtracted this offset and examined the residuals of the \vz\-\vb\
+relationship to investigate the variance as a function of Galactic latitude.
 We found that \vb\ is drawn from a heavy-tailed distribution, centered on \vz,
 with a standard deviation (calculated as 1.5 $\times$ the median absolute
 deviation) that increased with increasing $b$.
+Figure \ref{fig:vb_vz} shows how \vz\ transforms to \vb\ over a range of
+Galactic latitudes.
 The standard deviation of \vz-\vb\ was around 3kms$^{-1}$ at $b \sim 5^\circ
 $, 4kms${^-1}$ at 10$^\circ$, 6kms${^-1}$ at 15$^\circ$, and 9kms${^-1}$ at
 20$^\circ$.
+Figure \ref{fig:vb_vz} shows the differences between \vz\ and \vb\ velocities
+over different Galactic latitudes.
+Kernel Density Estimates (KDEs) are shown as solid black lines and Gaussian
+fits are shown as dashed blue lines.
+The \vb\-\vz\ residuals are close to Gaussian, with slightly heavy tails, and
+the variance increases with increasing Galactic latitude.
+\begin{figure}
+  \caption{
+This figure demonstrates the relationship between \vb\ and \vz\, after
+    subtracting a straight-line-fit, for stars in
+    the \kepler\ field, based on the GUMS simulation.
+The panels show a kernel density estimator (KDE) (black solid line) for
+    the \vz-\vb\ residuals of stars in the GUMS simulation at four different
+    Galactic latitudes.
+Blue dashed lines show Gaussian fits to these KDEs.
+The distributions are close to Gaussians, but with slightly heavy tails.
+The standard deviations of the Gaussian fits increase with Galactic latitude.
+This figure illustrates the fact using \vb\ instead of \vz\ artificially
+    increases the velocity dispersion, especially at high latitudes.
+}
+  \centering
+    \includegraphics[width=1\textwidth]{vb_vz}
+\label{fig:vb_vz}
+\end{figure}
+
 Since we are concerned with velocity {\it dispersions}, rather than velocities
-themselves, we also compared the \vb\ and \vz\ velocity dispersions for stars
-downloaded from the GUMS simulation.
+themselves, we also compared the \vb\ and \vz\ velocity dispersions as a
+function of temperature for
+stars downloaded from the GUMS simulation.
 For stars at galactic latitudes of 15\degrees\ or less, \sigmavb\ was
 consistent with $\sigma_{v{\bf z}}$, within uncertainties, however, at higher
 latitudes the two quantities became significantly different.
 For this reason we proceeded by only including stars with galactic latitudes
 less than 15\degrees\ in our analysis.
+Although it seems that the transformation between \vz\ and \vb\ does not {\it
+strongly} affect our results, we cannot rule out the possibility that it
+introduces systematic biases into the velocity dispersions we present here.
+In \gaia\ DR3, RVs will be available for most stars in this sample, providing
+an opportunity to validate (or correct) the results presented here.
 
 % Since we use \vb, not \vz\ in our analysis, it is possible that the sample
 % selection function could influence our results.
@@ -202,7 +240,6 @@ less than 15\degrees\ in our analysis.
 % Again however, since the relationship between \sigmavb\ and \teff\ is
 % positively, not negatively correlated for cool stars in the \kepler\ field,
 % this effect is probably too small to influence our results.
-
 
 \begin{figure}
   \caption{
@@ -248,3 +285,15 @@ end, and binarity or weakened braking \citep{vansaders2016} at the hot end.
 % throughout this paper we show rotation periods as a function of effective
 % temperature, \teff, because it is easier to divide stars into bins of roughly
 % equal numbers in \teff-space than in color-space.
+
+In this paper, we do not attempt to convert velocity dispersion (\sigmavb)
+into an age via an age-velocity dispersion relation (AVR)
+\citep[\eg][]{holmberg2009}.
+Although it seems \sigmavb\ can be used to roughly rank stars by age, a more
+careful analysis will be needed to calculate absolute ages.
+For example, the velocity distributions could be modeled as a mixture of
+Gaussians in order to account for the additional velocity dispersion caused by
+the \vz-\vb\ transformation.
+The RVs of most of these stars will become available in \Gaia\ DR3, allowing
+calculations of \vz, which can be used to calculate more reliable ages via an
+AVR.
