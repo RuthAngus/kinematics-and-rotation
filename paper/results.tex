@@ -129,28 +129,17 @@
 \subsection{The period-\teff\ relations, revealed}
 \label{sec:the_reveal}
 
-\begin{figure}
-  \caption{
-      Top: Rotation period vs effective temperature for stars in the \mct\
-    sample, colored by the velocity dispersions of stars calculated over a
-    grid in $\log_{10}$(period) and \teff.
-    Bottom: the velocity dispersions of groups of stars, shown as a solid
-    grid for clarity.
-    The hatched area indicates the temperature regime where selection biases
-    could play an important role, so these velocity dispersions should be
-    interpreted with caution.
-    The black solid lines on both panels show a 1.1 Gyr isochrone, calculated
-    with the \citet{angus2019} gyrochronology relation, which roughly traces
-    the rotation period gap.
-    The black dashed lines show a 650 Myr isochrone, indicating the location
-    and shape of the Praesepe cluster (to which this gyrochronology model was
-    calibrated).
-    The black points show the 1.1 Gyr NGC 6811 open cluster.
-}
-  \centering
-    \includegraphics[width=1\textwidth]{vplot}
-\label{fig:vplot}
-\end{figure}
+To explore the relationship between rotation period, \teff\ and velocity
+dispersion, we first removed high and low velocity outliers from the \mct\
+sample by performing 3$\sigma$ sigma-clipping on the \vb\ velocities.
+Without sigma-clipping, we found that a small number of high velocity
+outliers at the low-temperature end of our sample substantially raised the
+velocity dispersion for cooler stars, however the overall trends remain the
+same with, or without sigma-clipping.
+We also limited the sample to temperatures in the range 5500 K $<$ \teff\ $<$
+3500 K to avoid biases caused by the selection function at the faint, cool
+end, and binarity or weakened braking \citep{vansaders2016} at the hot end.
+
 Figure \ref{fig:vplot} shows rotation period versus effective temperature for
 the \mct\ sample, coloured by the standard deviation of their (\vb)
 velocities, where \sigmavb\ was calculated for groups of stars over a grid in
@@ -159,9 +148,33 @@ If we assume that mass dependent heating does not strongly affect this sample
 and \vb\ at low galactic latitudes is an unbiased tracer of \vz, then \vb\
 velocity dispersion can be interpreted as an age proxy and stars plotted in a
 similar color in figure \ref{fig:vplot} are similar ages.
-
+\begin{figure}
+  \caption{
+    Top: Rotation period vs effective temperature for stars in the \mct\
+    sample, colored by the velocity dispersions of stars calculated over a
+    grid in $\log_{10}$(period) and \teff.
+    Black lines show isochrones that project the rotation-color relation of
+    Praesepe to longer rotation periods over time \citep{angus2019}.
+    These isochrones do not appear to reflect the evolution of field stars at
+    long rotation periods/old ages: they do not trace lines of constant
+    velocity dispersion.
+    Isochrones are plotted at 0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyrs in both top
+    and bottom panels.
+    Bottom: Same as top panel with rotation period vs {\it mass}
+    \citep[from the Kepler Input Catalog][]{brown2011}.
+    White lines show isochrones from a model that includes mass and
+    age-dependent angular momentum transport between the core and envelope
+    \citep{spada2019}.
+    Qualitatively, these isochrones appear to reflect the evolution of field
+    stars at long rotation periods/old ages: they trace lines of constant
+    velocity dispersion.
+}
+  \centering
+    \includegraphics[width=1\textwidth]{main_figure}
+\label{fig:main_figure}
+\end{figure}
 Overall, figure \ref{fig:vplot} shows that velocity dispersion increases with
-gyrochronal age across all temperatures, implying that both velocity
+rotation period across all temperatures, implying that both velocity
 dispersion and rotation period increases with age as expected.
 Lines of constant age (isochrones) appear to follow the shape of the
 Praesepe-based gyrochronology model (black dotted line) at young ages.
