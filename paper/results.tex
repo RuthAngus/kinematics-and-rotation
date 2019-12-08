@@ -1,5 +1,5 @@
 % word limit: 500
-\section{Results}
+\section{Results and Discussion}
 \label{sec:results}
 
 % \subsection{Velocity dispersion of coeval groups}
@@ -186,11 +186,37 @@ Figure \ref{fig:masses_with_models} shows the same as figure \ref{fig:vplot},
 however mass is plotted on the x-axis instead of temperature and the models
 are those of \citet{spada2019}.
 The masses of these stars are taken from the \kepler\ input catalog
-\citep{KIC}.
+\citep{brown2011}.
 The \citet{spada2019} models appear to qualitatively agree with the data:
 their rotation period-\teff\ relation flattens out over time and eventually
 inverts over a narrow range of temperatures.
-The models reproduce the `dip' feature seen in the data.
+
+These results indicate that stars of spectral type ranging from late G to late
+K follow a braking law that changes over time.
+In particular, the relationship between rotation period and effective
+temperature appears to flatten out and eventually invert.
+These results provide further evidence for `stalled' rotational evolution of K
+dwarfs, like that observed in open clusters \citep{curtis2019} and reproduced
+by models that vary angular momentum transport between stellar core and
+envelope with time and mass \citep{spada2019}.
+
+The velocity dispersions of stars in the \mct\ sample provide the following
+picture of rotational evolution.
+At young ages, stellar rotation period decreases with mass, likely because
+lower-mass stars with deeper convection zones have stronger magnetic fields,
+larger Alfv\'en radii and therefore experience greater angular momentum loss
+rate.
+According to the \citet{spada2019} model, there is minimal transportation of
+angular momentum from the surface to the core of the star at these young ages,
+so the surface slows down but the core keeps spinning rapidly.
+At intermediate ages, rotation period is constant with mass, and at late ages
+rotation period {\it increases} with mass for GK dwarfs.
+The explanation for this, according to the \citet{spada2019} model, is that
+lower-mass stars are still braking more efficiently at these intermediate and
+old ages but their cores are more tightly coupled to their envelopes, allowing
+angular momentum transport between the two interior layers.
+Angular momentum resurfaces and prevents the stellar envelopes from
+spinning-down rapidly.
 
 % Each star is assigned the same velocity dispersion as in figure
 % \ref{fig:vplot}, and because stars in the same temperature group are not
@@ -225,26 +251,26 @@ The models reproduce the `dip' feature seen in the data.
 % This could be why the velocity dispersion appears to decrease towards the
 % right of figure \ref{fig:dispersion_period_teff}.
 
-\begin{figure}
-  \caption{
-    Similar to figure \ref{fig:vplot}, with mass instead of \teff\ on the
-    x-axis.
-    Masses are from the \kepler\ input catalog.
-    The white lines show the \citet{spada2019} rotational evolution models at
-    0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyr, where age increases with rotation
-    period.
-    These models include age and mass-dependent coupling between the stellar
-    core and envelope.
-    The oldest models (4 and 4.57 Gyrs), at the largest rotation periods, show
-    an inversion at $\sim$0.7-0.5 M$_\odot$, where rotation period briefly
-    decreases with decreasing mass.
-    A similar phenomenon is visible in the velocity dispersions of field stars
-    shown as colored points in the background of this figure.
-}
-  \centering
-    \includegraphics[width=1\textwidth]{masses_with_models}
-\label{fig:masses_with_models}
-\end{figure}
+% \begin{figure}
+%   \caption{
+%     Similar to figure \ref{fig:vplot}, with mass instead of \teff\ on the
+%     x-axis.
+%     Masses are from the \kepler\ input catalog.
+%     The white lines show the \citet{spada2019} rotational evolution models at
+%     0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyr, where age increases with rotation
+%     period.
+%     These models include age and mass-dependent coupling between the stellar
+%     core and envelope.
+%     The oldest models (4 and 4.57 Gyrs), at the largest rotation periods, show
+%     an inversion at $\sim$0.7-0.5 M$_\odot$, where rotation period briefly
+%     decreases with decreasing mass.
+%     A similar phenomenon is visible in the velocity dispersions of field stars
+%     shown as colored points in the background of this figure.
+% }
+%   \centering
+%     \includegraphics[width=1\textwidth]{masses_with_models}
+% \label{fig:masses_with_models}
+% \end{figure}
 
 % \subsection{The period gap}
 % \label{sec:period_gap}
