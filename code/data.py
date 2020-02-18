@@ -29,10 +29,10 @@ plt.rcParams.update(plotpar)
 
 
 print("Load McQuillan data")
-mc = pd.read_csv("Table_1_Periodic.txt")
+mc = pd.read_csv("../Table_1_Periodic.txt")
 
 print("Loading Gaia catalog")
-with fits.open("kepler_dr2_1arcsec.fits") as data:
+with fits.open("../kepler_dr2_1arcsec.fits") as data:
     gaia = pd.DataFrame(data[1].data, dtype="float64")
 
 gaia_mc = pd.merge(mc, gaia, on="kepid", how="left")

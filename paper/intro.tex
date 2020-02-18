@@ -7,9 +7,9 @@ Stars with significant convective envelopes ($\lesssim$ 1.3 M$_\odot$) have
 strong magnetic fields and slowly lose angular momentum via magnetic braking
 \citep[\eg][]{schatzman1962, weber1967, skumanich1972, kawaler1988,
 pinsonneault1989}.
-Although stars are typically born with random rotation periods, ranging from 1
-to 10 days, observations of young open clusters reveal that their rotation
-periods converge onto a unique sequence by $\sim$500-700 million years
+Although stars are born with random rotation periods, from 1 to 10 days,
+observations of young open clusters reveal that their rotation periods
+converge onto a unique sequence by $\sim$500-700 million years
 \citep[\eg][]{irwin2009, gallet2013}.
 After this time, the rotation period of a star is thought to be determined, to
 first order, by its color and age alone.
@@ -27,8 +27,8 @@ However, new photometric rotation periods made available by the \kepler\
 \citep[\eg][]{mcquillan2014, garcia2014, douglas2017, rebull2017, meibom2011,
 meibom2015, curtis2019} have revealed that rotational evolution is more
 complicated than previously thought.
-For example, the M dwarfs in the $\sim$ 650 Myr Praesepe cluster spin more
-slowly than the G dwarfs.
+For example, the early-to-mid M dwarfs in the $\sim$ 650 Myr Praesepe cluster
+spin more slowly than the G dwarfs.
 In theory this is because lower-mass stars have deeper convections zones which
 generate stronger magnetic fields and more efficient magnetic braking.
 However, in the 1.1 Gyr NGC 6811 cluster, late-K dwarfs rotate at the {\it
@@ -66,20 +66,22 @@ provide a gyrochronology calibration sample.
 \subsection{Using kinematics as an age proxy}
 
 Stars are thought to be born in the thin disk of the Milky Way (MW), orbiting
-the galaxy with a low out-of-plane, or vertical, velocity ($W$, or \vz),
+the Galaxy with a low out-of-plane, or vertical, velocity (\vz),
 just like the star-forming molecular gas observed in the disk today
 \citep[\eg][]{stark1989, stark2005, aumer2009, martig2014, aumer2016}.
 On average, the vertical velocities of stars increase over time
 \citep[\eg][]{nordstrom2004, holmberg2007, holmberg2009, aumer2009,
 casagrande2011}.
-Although the cause of dynamical heating is not well understood, interactions
-with giant molecular clouds, spiral arms and the galactic bar are thought to
-play an important role \citep[see][for a review of secular evolution in the
-MW]{sellwood2014}.
+Although the cause of vertical dynamical heating is not well understood,
+interactions with giant molecular clouds, spiral arms and the galactic bar are
+thought to play an important role \citep[see][for a review of secular
+evolution in the MW]{sellwood2014}.
 Although the velocity of any individual star will only provide a weak age
-constraint, the velocity {\it dispersion} of a {\it group} of stars can
-indicate whether, on average, that group is old or young relative to other
-groups.
+constraint because velocity is dependent on the position of a star in its
+orbit, the velocity {\it dispersion} of a {\it group} of stars can, in
+principle, average over this effect and indicate whether that group is old or
+young relative to other groups.
+Vertical velocity dispersion is thought to increase monotonically with age.
 In this work we compare the velocity dispersions of groups of field stars in
 the Galactic thin disk to ascertain which groups are older and which younger
 and draw conclusions based on the implied relative ages.
@@ -91,6 +93,9 @@ and draw conclusions based on the implied relative ages.
 % vertical
 Although {\it vertical} velocity, \vz, is a well-established age proxy, it can
 only be calculated with full 6-dimensional position and velocity information.
+In fact, with full 6D phase space and an assumed Galactic potential, it is
+possible to calculate vertical {\it action}, which may be an even better age
+indicator \citep{beane2018, ting2019}.
 Unfortunately most field stars with measured rotation periods do not have
 radial velocity (RV) measurements because they are relatively faint \kepler\
 targets ($\sim$12th-16th magnitudes).
@@ -98,22 +103,24 @@ For this reason, we used velocity in the direction of galactic latitude, \vb,
 to approximate \vz.
 The \kepler\ field is positioned at low galactic latitude
 (b=$\sim$5-20\degrees), so \vb\ is a close (although imperfect, see section
-\ref{sec:results}) approximation to \vz.
+\ref{sec:method}) approximation to \vz.
 Because we use \vb\ rather than \vz\, we cannot calculate absolute kinematic
-ages using an age-velocity dispersion relation (AVR).
+ages using a published age-velocity dispersion relation (AVR), but this could
+be addressed in follow-up work that also takes into account the Kepler
+selection function.
 However, regardless of direction, velocity dispersion is expected to
-monotonically increase over time, and can therefore be used to {\it rank}
-groups of stars by age.
+monotonically increase over time \citep[\eg][]{holmberg2009}, and can
+therefore be used to {\it rank} groups of stars by age.
 
 This paper is laid out as follows: in section \ref{sec:method} we describe our
-sample selection process and the methods used to calculated stellar
+sample selection process and the methods used to calculate stellar
 velocities.
 We also establish that \vb\ velocity dispersion, \sigmavb, can be used as an
 age proxy by demonstrating that neither mass-dependent heating nor the
-selection function seems to strongly affect on our sample.
+selection function is observed to strongly affect our sample.
 In section \ref{sec:results} we use kinematics to investigate the
 relationship between rotation period, age and color/\teff\ in the field and
-interpret our results in section \ref{sec:discussion}.
+interpret our results.
 % We show that the period-color relation of Praesepe is not applicable to
 % old stars in section \ref{sec:age_cut}, and reveal the true shape of the
 % period-color relations in section \ref{sec:the_reveal}.
@@ -123,8 +130,8 @@ interpret our results in section \ref{sec:discussion}.
 % We also tested the \citet{angus2019} gyrochronology relation, a separable
 % relation in color and age, calibrated using the period-color relation of
 % Praesepe (in \gaia\ \gcolor\ color) and the period-age relation of Praesepe
-% and the Sun.
-% The large number of Praesepe members with precise rotation periods from the
+% and the Sun.  The large number of Praesepe members with precise rotation
+% periods from the
 % \ktwo\ mission \citep{douglas2017, rebull2017}, spanning spectral types F
 % through early M, makes it a good cluster for calibrating the period-color
 % relation of stars at 650 Myrs.
