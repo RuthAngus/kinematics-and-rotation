@@ -104,7 +104,7 @@ w = np.linalg.solve(ATA, np.dot(AT, y))
 
 minb, maxb, extra = 0, 2.2, .27
 xs = np.linspace(minb, maxb, 1000)
-subcut = 5.5
+subcut = 4.
 
 m = (minb < x) * (x < maxb)
 m &= (y < np.polyval(w, x) - extra) + (subcut > y)
