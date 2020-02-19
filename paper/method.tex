@@ -37,14 +37,14 @@ in \gaia\ G-band.
 
 The dwarf stars in the \mct\ sample are shown on a \gaia\ color-magnitude
 diagram (CMD) in figure \ref{fig:age_gradient}.
-The stars are colored by their gyrochronal age, calculated using the
-\citet{angus2019} gyrochronology relation.
-The stars with old gyrochronal ages, plotted in yellow hues, predominantly lie
+In the bottom panel, the stars are colored by their gyrochronal age,
+calculated using the \citet{angus2019} gyrochronology relation.
+The stars with old gyrochronal ages, plotted in purple hues, predominantly lie
 along the upper edge of the MS, where stellar evolution models predict old
 stars to be, however the majority of these `old' stars are bluer than \gcolor\
 $\sim$ 1.5 dex.
-The lack of chronologically old M dwarfs suggests that either old M dwarfs are
-missing from the \mct\ catalog, or the \citet{angus2019} gyrochronology
+The lack of gyrochronologically old M dwarfs suggests that either old M dwarfs
+are missing from the \mct\ catalog, or the \citet{angus2019} gyrochronology
 relation under-predicts the ages of low-mass stars.
 Given that lower-mass stars stay active for longer than higher-mass stars
 \citep[\eg][]{west2011}, and are therefore more likely to have measurable
@@ -54,37 +54,33 @@ fit to the period-color relation of Praesepe.
 Since this relation predicts that the oldest stars in the \mct\ sample are
 late-G and early-K dwarfs, it is probably under-predicting the ages of late-K
 and early-M dwarfs.
-This is a common problem with gyrochronology models: since suitable calibrator
-stars are small in number, models cannot be completely calibrated across a
-broad range of parameter space.
-Plotting gyrochronal ages on a color-magnitude diagram reveals the
-deficiencies in the \citet{angus2019} model used to calculate them, however
-imperfections are expected given that no published gyrochronology model is
-thought to be perfectly calibrated.
+This is a typical feature of empirically calibrated gyrochronology models:
+since there are no (or at least very few) old M dwarfs with rotation periods,
+the models are poorly calibrated for these stars.
 \begin{figure}
   \caption{
-Dereddened MS \kepler\ stars with \mct\ rotation periods on the \gaia\ CMD.
-We excluded visual binaries by removing stars above the dashed line.
-    Points are colored by their gyrochronal
-    age, according to the
-    \citet{angus2019} gyrochronology relation.
+      Top: de-reddened MS \kepler\ stars with \mct\ rotation periods, plotted
+    on a \gaia\ CMD.
+    We removed visual binaries and subgiants from the sample by excluding
+    stars above the dashed lines.
+    Bottom: a zoom-in of the top panel, with stars colored by their
+    gyrochronal age \citep{angus2019}, instead of their rotation period.
     A general age gradient is visible across the main sequence.
     Since the \citet{angus2019} relation predicts that the oldest stars in
     the \mct\ sample are late-G and early-K dwarfs, it is probably
     under-predicting the ages of late-K and early-M dwarfs.
 }
   \centering
-    \includegraphics[width=1\textwidth]{age_gradient_combo}
+    % \includegraphics[width=1\textwidth]{age_gradient_combo}
+    \includegraphics[width=1\textwidth]{CMD_cuts_double}
 \label{fig:age_gradient}
 \end{figure}
 
 The {\tt Pyia} \citep{price-whelan_2018} and {\tt astropy} \citep{astropy2013,
 astropy2018} {\it Python} packages were used to calculate stellar velocities.
 {\tt Pyia} calculates velocity samples from the full \gaia\ uncertainty
-covariance matrix via Monte Carlo sampling.
-It therefore not only incorporates uncertainties on the \gaia\ positions
-parallaxes and proper motions, it also accounts for the {\it covariance}
-between these properties.
+covariance matrix via Monte Carlo sampling, thereby accounting for the
+ovariances between \gaia\ positions, parallaxes and proper motions.
 Stars with negative parallaxes, parallax signal-to-noise ratios less than 10,
 stars fainter than 16th magnitude, stars with absolute \vb\ uncertainties
 greater than 1 \kms\, and stars with galactic latitudes greater than
@@ -108,195 +104,194 @@ greater than 1 \kms\, and stars with galactic latitudes greater than
 % restricted our sample to temperatures between \tmin\ and 5000 K, \ie\ K
 % dwarfs.
 
-\subsection{Validating \vb\ dispersion as an age proxy}
-\label{sec:mass-dependent-heating}
+% \subsection{Validating \vb\ dispersion as an age proxy}
+% \label{sec:mass-dependent-heating}
 
-There are two main reasons why \vb\ velocity dispersion may not be a good age
-proxy.
-Firstly, mass-dependent heating may act on the sample, meaning that velocity
-dispersion depends on both age and mass, so cannot be interpreted as a simple
-age proxy.
-Secondly, since stars in the \kepler\ field have a range of galactic
-latitudes, using \vb\ as a stand-in for \vz\ may not be equally valid for all
-stars, and introduce a velocity bias for high latitude stars (which are more
-likely to be cooler and older).
-In this section we demonstrate that neither of these problems seem to be a
-significant issue for our data.
+% There are two main reasons why \vb\ velocity dispersion may not be a good age
+% proxy.
+% Firstly, mass-dependent heating may act on the sample, meaning that velocity
+% dispersion depends on both age and mass, so cannot be interpreted as a simple
+% age proxy.
+% Secondly, since stars in the \kepler\ field have a range of galactic
+% latitudes, using \vb\ as a stand-in for \vz\ may not be equally valid for all
+% stars, and introduce a velocity bias for high latitude stars (which are more
+% likely to be cooler and older).
+% In this section we demonstrate that neither of these problems seem to be a
+% significant issue for our data.
 
-If lower-mass stars experience greater velocity changes when gravitationally
-perturbed, and are dynamically heated more efficiently than higher-mass stars,
-velocity dispersion would be a function of both age {\it and} mass and cannot
-be interpreted as a straightforward age proxy.
-So, in order to establish whether \sigmavb\ can be used as an age proxy, we
-searched for signs of mass-dependent heating within the \kepler\ field.
-Mass-dependent dynamical heating has not been unambiguously observed in the
-galactic disk because of the strong anti-correlation between stellar mass and
-stellar age.
-Less massive stars do indeed have larger velocity dispersions, however they
-are also older on average.
-This mass-age degeneracy is highly reduced in M dwarfs because their
-main-sequence lifetimes are longer than the age of the Universe, and no
-evidence for mass-dependent heating has previously been found in M dwarfs
-\citep[\eg][]{faherty2009, newton2016}.
+% In order to establish whether \sigmavb\ can be used as an age proxy, we
+% searched for signs of mass-dependent heating within the \kepler\ field.
+% Mass-dependent dynamical heating may result from lower-mass stars experiencing
+% greater velocity changes when gravitationally perturbed than more massive
+% stars.
+% It has not been unambiguously observed in the galactic disk because of the
+% strong anti-correlation between stellar mass and stellar age.
+% Less massive stars do indeed have larger velocity dispersions, however they
+% are also older on average.
+% This mass-age degeneracy is highly reduced in M dwarfs because their
+% main-sequence lifetimes are longer than the age of the Universe, and no
+% evidence for mass-dependent heating has previously been found in M dwarfs
+% \citep[\eg][]{faherty2009, newton2016}.
 
-To further investigate whether mass-dependent heating could be acting on the
-\kepler\ sample, we selected late K and M dwarfs observed by both \kepler\ and
-\gaia, whose MS lifetimes exceed around 11 Gyrs and are therefore
-representative of the initial mass function\footnote{We could not perform this
-analysis on the \mct\ sample, because it only includes stars with {\it
-detectable} rotation periods, and since lower-mass stars stay active for
-longer it is likely that it contains a strong mass-age correlation.}.
-We selected all \kepler\ targets with dereddened \gaia\ \gcolor\ colors
-greater than 1.2 (corresponding to an effective temperature $\lesssim$
-4800 K) and absolute \gaia\ $G$-band magnitudes $<$ 4.
-We also eliminated visual binaries by removing stars above a 6th order
-polynomial, fit to the MS on the \gaia\ CMD (similar to the one shown in
-figure \ref{fig:age_gradient}).
-We then applied the quality cuts described above in section
-\ref{sec:the_data}.
-To search for evidence of mass-dependent heating we calculated the (\vb)
-velocity dispersion of stars in effective temperature bins.
-Sigma clipping was performed at the 3$\sigma$ level to remove high velocity
-outliers before calculating the standard deviation of stars in each bin.
-These high velocity outliers may be very old late K and M dwarfs, or they
-result from using \vb\ instead of \vz, which introduces additional velocity
-scatter.
+% To investigate whether mass-dependent heating could be acting on the \kepler\
+% sample, we selected late K and M dwarfs observed by both \kepler\ and \gaia,
+% whose MS lifetimes exceed around 11 Gyrs and are therefore representative of
+% the initial mass function.
+% We could not perform this analysis on the \mct\ sample, because it only
+% includes stars with {\it detectable} rotation periods, and since lower-mass
+% stars stay active for longer it is likely that it contains a strong mass-age
+% correlation.
+% We selected all \kepler\ targets with dereddened \gaia\ \gcolor\ colors
+% greater than 1.2 (corresponding to an effective temperature $\lesssim$
+% 4800 K) and absolute \gaia\ $G$-band magnitudes $<$ 4.
+% We also eliminated visual binaries by removing stars above a 6th order
+% polynomial, fit to the MS on the \gaia\ CMD (similar to the one shown in
+% figure \ref{fig:age_gradient}).
+% We then applied the quality cuts described above in section
+% \ref{sec:the_data}.
+% To search for evidence of mass-dependent heating we calculated the (\vb)
+% velocity dispersion of stars in effective temperature bins.
+% Sigma clipping was performed at the 3$\sigma$ level to remove high velocity
+% outliers before calculating the standard deviation of stars in each bin.
+% These high velocity outliers may be very old late K and M dwarfs, or they
+% result from using \vb\ instead of \vz, which introduces additional velocity
+% scatter.
 
-Figure \ref{fig:vb_vs_teff} shows velocity and velocity dispersion as a
-function of effective temperature \footnote{calculated by transforming
-dereddened \gaia\ colors using equation \ref{eq:curtis}.} for the K and M
-\kepler\ dwarf sample.
-Velocity dispersion very slightly {\it decreases} with decreasing temperature,
-the opposite of the trend expected for mass-dependent heating, however the
-slope is only inconsistent with zero at the 1.3 $\sigma$ level.
-This trend may be due to a selection bias: cooler stars are fainter and
-therefore typically closer, with smaller heights above the galactic plane and
-smaller velocities.
-The essential point however, is that we do not see evidence for mass-dependent
-heating acting on stars in the \kepler\ field, indicating that velocity
-dispersion {\it can} be used as an age proxy.
-This analysis was performed using \vb\ but we also examined the {\it vertical}
-velocities of the 537 stars in this sample with RV measurements.
-Again, no evidence was found for mass-dependent heating: the slope of the
-velocity dispersion-temperature relation was consistent with zero.
-\begin{figure}
-  \caption{
-      Top: Stellar velocity (\vb) as a function of \teff\ for
-      \kepler\ K and M dwarfs.
-Vertical lines indicate different \teff-groupings used to calculate velocity
-    dispersion.
-Pink stars were not included in velocity dispersion calculations as they were
-    either removed as outliers during a sigma clipping process, or they lie at
-    the sparcely populated, extremely cool end of the temperature range.
-    Velocity dispersion and \teff\ are slightly positively correlated, likely
-    due to a brightness-related selection bias, indicating that mass-dependent
-    heating does not significantly affect low-mass stars in the \kepler\
-    field.
-}
-  \centering
-    \includegraphics[width=1\textwidth]{vb_vs_teff}
-\label{fig:vb_vs_teff}
-\end{figure}
+% Figure \ref{fig:vb_vs_teff} shows velocity and velocity dispersion as a
+% function of effective temperature \footnote{calculated by transforming
+% dereddened \gaia\ colors using equation \ref{eq:curtis}.} for the K and M
+% \kepler\ dwarf sample.
+% Velocity dispersion very slightly {\it decreases} with decreasing temperature,
+% the opposite of the trend expected for mass-dependent heating, however the
+% slope is only inconsistent with zero at the 1.3 $\sigma$ level.
+% This trend may be due to a selection bias: cooler stars are fainter and
+% therefore typically closer, with smaller heights above the galactic plane and
+% smaller velocities.
+% The essential point however, is that we do not see evidence for mass-dependent
+% heating acting on stars in the \kepler\ field, indicating that velocity
+% dispersion {\it can} be used as an age proxy.
+% This analysis was performed using \vb\ but we also examined the {\it vertical}
+% velocities of the 537 stars in this sample with RV measurements.
+% Again, no evidence was found for mass-dependent heating: the slope of the
+% velocity dispersion-temperature relation was consistent with zero.
+% \begin{figure}
+%   \caption{
+%       Top: Stellar velocity (\vb) as a function of \teff\ for
+%       \kepler\ K and M dwarfs.
+% Vertical lines indicate different \teff-groupings used to calculate velocity
+%     dispersion.
+% Pink stars were not included in velocity dispersion calculations as they were
+%     either removed as outliers during a sigma clipping process, or they lie at
+%     the sparcely populated, extremely cool end of the temperature range.
+%     Velocity dispersion and \teff\ are slightly positively correlated, likely
+%     due to a brightness-related selection bias, indicating that mass-dependent
+%     heating does not significantly affect low-mass stars in the \kepler\
+%     field.
+% }
+%   \centering
+%     \includegraphics[width=1\textwidth]{vb_vs_teff}
+% \label{fig:vb_vs_teff}
+% \end{figure}
 
-Having found no strong evidence for mass-dependent heating, we next tested
-the validity of \vb\ as a proxy for \vz\ in more detail.
-At a galactic latitude, $b$, of zero, $v_b=v_z$, however for increasing values
-of $b$, this equivalence becomes an approximation that grows noisier with $b$.
-To test the validity of the \vb$\sim$\vz\ approximation over a range of
-latitudes we downloaded stellar data from the \Gaia\ Universe Model Snapshot
-(GUMS) simulation -- a simulated \Gaia\ catalog \citep{robin2012}.
-We downloaded stars from four pointings in the \kepler\ field with galactic
-latitudes of around 5\degrees, 10\degrees, 15\degrees, and 20\degrees, out to
-a limiting magnitude of 16 dex, and calculated their \vz\ and \vb\ velocities.
-The relationship between \vz\ and \vb\ is close to 1:1, with \vz\ greater than
-\vb\ by around 4.5 kms$^{-1}$ at $b=5$, due to the Sun's own motion in the
-Galaxy.
-We subtracted this offset and examined the residuals of the \vz\ -- \vb\
-relationship to investigate the variance as a function of Galactic latitude.
-We found that \vb\ is drawn from a heavy-tailed distribution, centered on \vz,
-with standard deviation increasing with $b$ (see figure \ref{fig:vb_vz}).
-The standard deviation of \vz-\vb\ was around 3kms$^{-1}$ at $b \sim 5^\circ
-$, 4kms$^{-1}$ at 10$^\circ$, 6kms$^{-1}$ at 15$^\circ$, and 9kms$^{-1}$ at
-20$^\circ$.
+% Having found no strong evidence for mass-dependent heating, we next tested
+% the validity of \vb\ as a proxy for \vz\ in more detail.
+% At a galactic latitude, $b$, of zero, $v_b=v_z$, however for increasing values
+% of $b$, this equivalence becomes an approximation that grows noisier with $b$.
+% To test the validity of the \vb$\sim$\vz\ approximation over a range of
+% latitudes we downloaded stellar data from the \Gaia\ Universe Model Snapshot
+% (GUMS) simulation -- a simulated \Gaia\ catalog \citep{robin2012}.
+% We downloaded stars from four pointings in the \kepler\ field with galactic
+% latitudes of around 5\degrees, 10\degrees, 15\degrees, and 20\degrees, out to
+% a limiting magnitude of 16 dex, and calculated their \vz\ and \vb\ velocities.
+% The relationship between \vz\ and \vb\ is close to 1:1, with \vz\ greater than
+% \vb\ by around 4.5 kms$^{-1}$ at $b=5$, due to the Sun's own motion in the
+% Galaxy.
+% We subtracted this offset and examined the residuals of the \vz\ -- \vb\
+% relationship to investigate the variance as a function of Galactic latitude.
+% We found that \vb\ is drawn from a heavy-tailed distribution, centered on \vz,
+% with standard deviation increasing with $b$ (see figure \ref{fig:vb_vz}).
+% The standard deviation of \vz-\vb\ was around 3kms$^{-1}$ at $b \sim 5^\circ
+% $, 4kms$^{-1}$ at 10$^\circ$, 6kms$^{-1}$ at 15$^\circ$, and 9kms$^{-1}$ at
+% 20$^\circ$.
 
-% Figure \ref{fig:vb_vz} shows the differences between \vz\ and \vb\ velocities
-% over different Galactic latitudes.
-% Kernel Density Estimates (KDEs) are shown as solid black lines and Gaussian
-% fits are shown as dashed blue lines.
-% The \vb\-\vz\ residuals are close to Gaussian, with slightly heavy tails, and
-% the variance increases with increasing Galactic latitude.
-\begin{figure}
-  \caption{
-This figure demonstrates the variance in the relationship between \vb\ and
-    \vz\ for stars in the \kepler\ field, based on the GUMS simulation.
-The panels show a kernel density estimator (KDE) (black solid line) for
-    the \vz -- \vb\ residuals of stars in the GUMS simulation at four
-    different Galactic latitudes.
-Blue dashed lines show Gaussian fits to these KDEs.
-The distributions are close to Gaussian, with slightly heavy tails.
-The standard deviations of the Gaussian fits increase with Galactic latitude.
-This figure illustrates how using \vb\ instead of \vz\ artificially
-    increases velocity dispersion, especially at high latitudes.
-}
-  \centering
-    \includegraphics[width=1\textwidth]{vb_vz}
-\label{fig:vb_vz}
-\end{figure}
+% % Figure \ref{fig:vb_vz} shows the differences between \vz\ and \vb\ velocities
+% % over different Galactic latitudes.
+% % Kernel Density Estimates (KDEs) are shown as solid black lines and Gaussian
+% % fits are shown as dashed blue lines.
+% % The \vb\-\vz\ residuals are close to Gaussian, with slightly heavy tails, and
+% % the variance increases with increasing Galactic latitude.
+% \begin{figure}
+%   \caption{
+% This figure demonstrates the variance in the relationship between \vb\ and
+%     \vz\ for stars in the \kepler\ field, based on the GUMS simulation.
+% The panels show a kernel density estimator (KDE) (black solid line) for
+%     the \vz -- \vb\ residuals of stars in the GUMS simulation at four
+%     different Galactic latitudes.
+% Blue dashed lines show Gaussian fits to these KDEs.
+% The distributions are close to Gaussian, with slightly heavy tails.
+% The standard deviations of the Gaussian fits increase with Galactic latitude.
+% This figure illustrates how using \vb\ instead of \vz\ artificially
+%     increases velocity dispersion, especially at high latitudes.
+% }
+%   \centering
+%     \includegraphics[width=1\textwidth]{vb_vz}
+% \label{fig:vb_vz}
+% \end{figure}
 
-Since we are concerned with velocity {\it dispersions}, rather than velocities
-themselves, we also compared the \vb\ and \vz\ velocity dispersions as a
-function of temperature for
-stars downloaded from the GUMS simulation.
-For stars at galactic latitudes of 15\degrees\ or less, \sigmavb\ was
-consistent with $\sigma_{v{\bf z}}$, within uncertainties, however, at higher
-latitudes the two quantities became significantly different.
-For this reason we proceeded by only including stars with galactic latitudes
-less than 15\degrees\ in our analysis.
-Although it seems that the transformation between \vz\ and \vb\ does not {\it
-strongly} affect our results, we cannot rule out the possibility that it
-introduces systematic biases into the velocity dispersions we present here.
-In \gaia\ DR3, RVs will be available for most stars in this sample, providing
-an opportunity to validate (or correct) the results presented here.
+% Since we are concerned with velocity {\it dispersions}, rather than velocities
+% themselves, we also compared the \vb\ and \vz\ velocity dispersions as a
+% function of temperature for
+% stars downloaded from the GUMS simulation.
+% For stars at galactic latitudes of 15\degrees\ or less, \sigmavb\ was
+% consistent with $\sigma_{v{\bf z}}$, within uncertainties, however, at higher
+% latitudes the two quantities became significantly different.
+% For this reason we proceeded by only including stars with galactic latitudes
+% less than 15\degrees\ in our analysis.
+% Although it seems that the transformation between \vz\ and \vb\ does not {\it
+% strongly} affect our results, we cannot rule out the possibility that it
+% introduces systematic biases into the velocity dispersions we present here.
+% In \gaia\ DR3, RVs will be available for most stars in this sample, providing
+% an opportunity to validate (or correct) the results presented here.
 
-% Since we use \vb, not \vz\ in our analysis, it is possible that the sample
-% selection function could influence our results.
-% For example, higher-mass stars tend to be younger and reside closer to the
-% galactic disk mid-plane (low galactic latitudes).
-% Since \vb\ is only similar to \vz\ at low latitudes, this could mean that
-% lower-mass stars typically have greater velocity dispersions due to .
-% \teff\ and galactic latitude, $b$,
-% could result in
-% Stars at higher latitudes have additional velocity components in the ${\bf x}$
-% and ${\bf y}$ directions, which could increase \vb\ but not \vz.
-% Again however, since the relationship between \sigmavb\ and \teff\ is
-% positively, not negatively correlated for cool stars in the \kepler\ field,
-% this effect is probably too small to influence our results.
+% % Since we use \vb, not \vz\ in our analysis, it is possible that the sample
+% % selection function could influence our results.
+% % For example, higher-mass stars tend to be younger and reside closer to the
+% % galactic disk mid-plane (low galactic latitudes).
+% % Since \vb\ is only similar to \vz\ at low latitudes, this could mean that
+% % lower-mass stars typically have greater velocity dispersions due to .
+% % \teff\ and galactic latitude, $b$,
+% % could result in
+% % Stars at higher latitudes have additional velocity components in the ${\bf x}$
+% % and ${\bf y}$ directions, which could increase \vb\ but not \vz.
+% % Again however, since the relationship between \sigmavb\ and \teff\ is
+% % positively, not negatively correlated for cool stars in the \kepler\ field,
+% % this effect is probably too small to influence our results.
 
-% Figure \ref{fig:vb_vs_teff} indicates that mass-dependent heating does not
-% strongly affect the \mct\ sample of rotating \kepler\ stars.
-% For this reason, we assume that age difference is the major cause of velocity
-% dispersion differences between groups.
-% In other words, (\vb) velocity dispersion is a reliable age proxy for the
-% \mct\ sample.
+% % Figure \ref{fig:vb_vs_teff} indicates that mass-dependent heating does not
+% % strongly affect the \mct\ sample of rotating \kepler\ stars.
+% % For this reason, we assume that age difference is the major cause of velocity
+% % dispersion differences between groups.
+% % In other words, (\vb) velocity dispersion is a reliable age proxy for the
+% % \mct\ sample.
 
-Because of the noisy relationship between \vb\ and \vz\, in this paper we do
-not attempt to convert velocity dispersion (\sigmavb) into an age via an
-age-velocity dispersion relation (AVR) \citep[\eg][]{holmberg2009}.
-Although it seems \sigmavb\ can be used to roughly rank stars by age, a more
-careful analysis that includes formal modeling of the \vb\ -- \vz\
-relationship will be needed to calculate absolute ages.
-% For example, the velocity distributions could be modeled as a mixture of
-% Gaussians in order to account for the additional velocity dispersion caused by
-% the \vz-\vb\ transformation.
-The RVs of most of these stars will become available in \Gaia\ DR3, allowing
-calculations of \vz, which can be used to calculate more reliable ages via an
-AVR.
+% Because of the noisy relationship between \vb\ and \vz\, in this paper we do
+% not attempt to convert velocity dispersion (\sigmavb) into an age via an
+% age-velocity dispersion relation (AVR) \citep[\eg][]{holmberg2009}.
+% Although it seems \sigmavb\ can be used to roughly rank stars by age, a more
+% careful analysis that includes formal modeling of the \vb\ -- \vz\
+% relationship will be needed to calculate absolute ages.
+% % For example, the velocity distributions could be modeled as a mixture of
+% % Gaussians in order to account for the additional velocity dispersion caused by
+% % the \vz-\vb\ transformation.
+% The RVs of most of these stars will become available in \Gaia\ DR3, allowing
+% calculations of \vz, which can be used to calculate more reliable ages via an
+% AVR.
 
 
-% We then selected groups of stars within different gyrochronal age ranges and
-% calculated the standard deviation of \vb\ velocities (\sigmavb), as a function
-% of effective temperature for each age group.
-% Ages were calculated using dereddened \gaia\ \gcolor\ color, however
-% throughout this paper we show rotation periods as a function of effective
-% temperature, \teff, because it is easier to divide stars into bins of roughly
-% equal numbers in \teff-space than in color-space.
+% % We then selected groups of stars within different gyrochronal age ranges and
+% % calculated the standard deviation of \vb\ velocities (\sigmavb), as a function
+% % of effective temperature for each age group.
+% % Ages were calculated using dereddened \gaia\ \gcolor\ color, however
+% % throughout this paper we show rotation periods as a function of effective
+% % temperature, \teff, because it is easier to divide stars into bins of roughly
+% % equal numbers in \teff-space than in color-space.

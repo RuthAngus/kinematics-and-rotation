@@ -117,12 +117,17 @@ sample by performing 3$\sigma$ sigma-clipping on the \vb\ velocities.
 Without sigma-clipping, we found that a small number of high velocity
 outliers at the low-temperature end of our sample substantially raised the
 velocity dispersion for cooler stars, however the overall trends remain the
-same with, or without sigma-clipping.
+same without sigma-clipping.
 We also limited the sample to temperatures in the range 5500 K $<$ \teff\ $<$
 3500 K to avoid biases caused by the selection function at the faint, cool
 end, and binarity or weakened braking \citep{vansaders2016} at the hot end.
-Finally, we removed stars with short rotation periods by cutting out stars
-with gyrochronal ages less than 0.5 Gyr.
+Finally, we removed stars with rotation periods shorter than the bulk of
+periods, since this area of the period-\teff\ diagram is sparsely populated.
+We removed rapid rotators by cutting out stars with gyrochronal ages less than
+0.5 Gyr, because a 0.5 Gyr gyrochrone\footnote{A gyrochrone is a
+gyrochronological isochrone, or a line of constant age in period-\teff, or
+period-color space.} traces the bottom edge of the main population of rotation
+periods.
 After these cuts, 6879 stars were included in the sample.
 
 The top panel of figure \ref{fig:vplot} shows rotation period versus effective
@@ -138,20 +143,20 @@ similar color in figure \ref{fig:vplot} are similar ages.
     Top: Rotation period vs effective temperature for stars in the \mct\
     sample, colored by the velocity dispersions of stars calculated over a
     grid in $\log_{10}$(period) and \teff.
-    Black lines show isochrones from a gyrochronology model that projects the
+    Black lines show gyrochrones from a gyrochronology model that projects the
     rotation-color relation of
     Praesepe to longer rotation periods over time \citep{angus2019}.
-    These isochrones do not appear to reflect the evolution of field stars at
+    These gyrochrones do not appear to reflect the evolution of field stars at
     long rotation periods/old ages: they do not trace lines of constant
     velocity dispersion.
-    Isochrones are plotted at 0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyrs in both top
+    Gyrochrones are plotted at 0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyrs in both top
     and bottom panels.
     Bottom: Same as top panel with rotation period vs {\it mass}
     \citep[from the Kepler Input Catalog][]{brown2011}.
-    White lines show isochrones from a model that includes mass and
+    White lines show gyrochrones from a model that includes mass and
     age-dependent angular momentum transport between the core and envelope
     \citep{spada2019}.
-    Qualitatively, these isochrones reflect the evolution of field
+    Qualitatively, these gyrochrones reflect the evolution of field
     stars at long rotation periods/old ages: they trace lines of constant
     velocity dispersion by reproducing periods of `stalled' rotational
     evolution for K-dwarfs.
@@ -161,30 +166,30 @@ similar color in figure \ref{fig:vplot} are similar ages.
 \label{fig:vplot}
 \end{figure}
 Overall, figure \ref{fig:vplot} shows that velocity dispersion increases with
-rotation period across all temperatures, implying that both velocity
-dispersion and rotation period increases with age as expected.
-Black lines show isochrones from the \citep{angus2019} gyrochronology model,
+rotation period across all temperatures, implying that rotation period
+increases with age as expected.
+Black lines show gyrochrones from the \citet{angus2019} gyrochronology model,
 which projects the rotation-color relation of Praesepe to longer rotation
 periods over time.
-These isochrones are plotted at 0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyrs.
-At the youngest ages, these isochrones seem to describe the data well: the
-palest yellow (youngest) stars with the lowest velocity dispersions all fall
-close to the 0.5 Gyr isochrone.
+These gyrochrones are plotted at 0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyrs.
+At the youngest ages, these gyrochrones describe the data well: the palest
+yellow (youngest) stars with the lowest velocity dispersions all fall close to
+the 0.5 Gyr gyrochrone.
 % Lines of constant age (isochrones) appear to follow the shape of the
 % Praesepe-based gyrochronology model (black dotted line) at young ages.
 % However, at older ages it appears that the relation between rotation period
 % and \teff\ flattens out, until eventually rotation period {\it decreases} with
 % decreasing effective temperature at a given age.
-However, although the 0.5 Gyr and 1 Gyr isochrones do appear to trace constant
-velocity dispersion/age among the field stars, by 1.5 Gyrs the isochrones
+However, although the 0.5 Gyr and 1 Gyr gyrochrones also trace constant
+velocity dispersion/age among the field stars, by 1.5 Gyrs the gyrochrones
 start to {\it cross} different velocity dispersion regimes.
-For example, the 1.5 Gyr isochrone lies on top of stars with velocity
+For example, the 1.5 Gyr gyrochrone lies on top of stars with velocity
 dispersions of around 10-11 kms$^{-1}$ at 5000-5500K and stars with $\sim$15
 \kms\ velocity dispersions at 4000-4500K.
-The isochrones older than 1.5 Gyr also cross a range of velocity dispersions.
+The gyrochrones older than 1.5 Gyr also cross a range of velocity dispersions.
 If these were true isochrones however, they should follow lines of constant
 velocity dispersion.
-At ages older than around 1 Gyr, it appears that isochrones should have a more
+At ages older than around 1 Gyr, it appears that gyrochrones should have a more
 flattened, or even inverted relationship between rotation period and effective
 temperature than these Praesepe-based models.
 % For late K-dwarfs older than around 1 Gyr, it appears that lower-mass stars
@@ -194,9 +199,9 @@ temperature than these Praesepe-based models.
 
 The bottom panel of figure \ref{fig:vplot} shows velocity dispersion as a
 function of rotation period and {\it mass}, obtained from the Kepler Input
-Catalog \citep{brown2011}, with isochrones from the \citep{spada2019}
+Catalog \citep{brown2011}, with gyrochrones from the \citep{spada2019}
 gyrochronology model shown as white lines.
-These isochrones are also plotted at 0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyrs.
+These gyrochrones are also plotted at 0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyrs.
 Although these models do not trace lines of constant velocity dispersion at
 0.5 and 1 Gyr, they do appear to reproduce trends in the data at ages of 1.5
 Gyr and older.
@@ -215,10 +220,13 @@ by models that vary angular momentum transport between stellar core and
 envelope with time and mass \citep{spada2019}.
 The velocity dispersions of stars in the \mct\ sample provide the following
 picture of rotational evolution.
-At young ages, stellar rotation period decreases with mass, likely because
-lower-mass stars with deeper convection zones have stronger magnetic fields,
-larger Alfv\'en radii and therefore experience greater angular momentum loss
-rate.
+At young ages \citep[younger than around 1 Gyr but still old enough to be on
+the main sequence and have transitioned from the `I' sequence to the `C'
+sequence ][]{barnes2003}, stellar rotation period decreases with increasing
+mass.
+This is likely because lower-mass stars with deeper convection zones have
+stronger magnetic fields, larger Alfv\'en radii and therefore experience
+greater angular momentum loss rate.
 According to the \citet{spada2019} model, there is minimal transportation of
 angular momentum from the surface to the core of the star at these young ages,
 so the surface slows down but the core keeps spinning rapidly.
@@ -247,7 +255,7 @@ massive stars.
 \label{sec:gap}
 
 There is a sharp gap in the population of rotation periods, which lies just
-above the 1 Gyr isochrone in the upper panel of figure \ref{fig:vplot}, whose
+above the 1 Gyr gyrochrone in the upper panel of figure \ref{fig:vplot}, whose
 origin is unknown and is the subject of much speculation \citep{mcquillan2014,
 davenport2018, reinhold2019}.
 The Praesepe-based model appears to be valid below the gap but not above.
@@ -256,7 +264,7 @@ connection) the gap may indeed separate a young regime where stellar cores are
 decoupled from their envelopes from an old regime where these layers are more
 tightly coupled.
 If so, this could indicate that the phenomenon responsible for changing the
-shape of isochrones in rotation-\teff\ space is related to the phenomenon that
+shape of gyrochrones in rotation-\teff\ space is related to the phenomenon that
 produces the gap.
 
 \begin{figure}
@@ -290,7 +298,8 @@ Stars were separated into these three groups using \citet{angus2019}
 gyrochronology models, according to the scheme shown in the legend.
 Only stars cooler than 5000 K are included in the bottom panel in order to
 isolate populations above and below the period gap, which only extends up to a
-temperature of $\sim$4600 K.
+temperature of $\sim$4600 K in our sample \citep[Although][found that the gap
+extends to temperatures as hot as 6000 K]{davenport2017}.
 In general, velocity dispersion increases with rotation period because both
 quantities increase with age.
 There is a smooth transition in velocity dispersion between stars with
@@ -299,23 +308,222 @@ suggesting that these groups are part of the same galactic population.
 Previously, only the overall velocity dispersions of all stars above and below
 the gap have been compared, leading to the assumption that these groups belong
 to two distinct populations \citep{mcquillan2014}.
-The velocity dispersion of stars with rotation periods shorter than the lower
-edge of the rotation period distribution (green triangles) is relatively
-large.
-This is an indication that many of these are synchronized binaries.
-The rotation periods of stars in synchronized binaries are tidally locked to
-the orbital period of the binary system and since synchronized binaries have
-short orbital periods this can produce old, seemingly isolated stars, with
-short rotation periods.
+On the other hand, the velocity dispersions of stars with rotation periods
+shorter than the lower edge of the rotation period distribution (green
+triangles) are not significantly smaller than the, presumed older,
+orange-colored stars.
+% This is an indication that many of these are synchronized binaries.
+% The rotation periods of stars in synchronized binaries are tidally locked to
+% the orbital period of the binary system and since synchronized binaries have
+% short orbital periods this can produce old, seemingly isolated stars, with
+% short rotation periods.
 The large velocity dispersions of the most rapidly rotating stars indicates
 that some fraction of these stars are old but rotating rapidly, and therefore
 likely to be synchronized binaries.
+% Given the strong correlation between binary fraction and primary mass
+% \citep[\eg][]{price-whelan2020}, and the fact that M dwarfs take longer to
+% transition from the `I` (rapidly rotating) sequence to the `C' (slowly
+% rotating) sequence, it is likely that
 Figure \ref{fig:gap} indicates that there is an increased probability of stars
 with rotation periods less than $\sim$10 days being synchronized binaries.
 This result is in agreement with a recent study which found that a large
 fraction of visual binaries were rapid rotators, and the probability of a star
-being a synchronized binary system substantially increased at rotation periods
-of around 7 days \citep{simonian2019}.
+being a synchronized binary system substantially increased below rotation
+periods of around 7 days \citep{simonian2019}.
+
+\subsection{Validating \vb\ dispersion as an age proxy}
+\label{sec:mass-dependent-heating}
+
+There are two main reasons why \vb\ velocity dispersion may not be a good age
+proxy.
+Firstly, mass-dependent heating may act on the sample, meaning that velocity
+dispersion depends on both age and mass, so cannot be interpreted as a simple
+age proxy.
+Secondly, since stars in the \kepler\ field have a range of galactic
+latitudes, using \vb\ as a stand-in for \vz\ may not be equally valid for all
+stars, and introduce a velocity bias for high latitude stars (which are more
+likely to be cooler and older).
+In this section we demonstrate that neither of these problems seem to be a
+significant issue for our data.
+
+In order to establish whether \sigmavb\ can be used as an age proxy, we
+searched for signs of mass-dependent heating within the \kepler\ field.
+Mass-dependent dynamical heating may result from lower-mass stars experiencing
+greater velocity changes when gravitationally perturbed than more massive
+stars.
+It has not been unambiguously observed in the galactic disk because of the
+strong anti-correlation between stellar mass and stellar age.
+Less massive stars do indeed have larger velocity dispersions, however they
+are also older on average.
+This mass-age degeneracy is highly reduced in M dwarfs because their
+main-sequence lifetimes are longer than the age of the Universe, and no
+evidence for mass-dependent heating has previously been found in M dwarfs
+\citep[\eg][]{faherty2009, newton2016}.
+
+To investigate whether mass-dependent heating could be acting on the \kepler\
+sample, we selected late K and M dwarfs observed by both \kepler\ and \gaia,
+whose MS lifetimes exceed around 11 Gyrs and are therefore representative of
+the initial mass function.
+We could not perform this analysis on the \mct\ sample, because it only
+includes stars with {\it detectable} rotation periods, and since lower-mass
+stars stay active for longer it is likely that it contains a strong mass-age
+correlation.
+We selected all \kepler\ targets with dereddened \gaia\ \gcolor\ colors
+greater than 1.2 (corresponding to an effective temperature $\lesssim$
+4800 K) and absolute \gaia\ $G$-band magnitudes $<$ 4.
+We also eliminated visual binaries by removing stars above a 6th order
+polynomial, fit to the MS on the \gaia\ CMD (similar to the one shown in
+figure \ref{fig:age_gradient}).
+We then applied the quality cuts described above in section
+\ref{sec:the_data}.
+To search for evidence of mass-dependent heating we calculated the (\vb)
+velocity dispersion of stars in effective temperature bins.
+Sigma clipping was performed at 3$\sigma$ to remove high and low velocity
+outliers before calculating the standard deviation of stars in each bin.
+These extreme velocity outliers may be very old late K and M dwarfs, or they
+result from using \vb\ instead of \vz, which introduces additional velocity
+scatter.
+
+Figure \ref{fig:vb_vs_teff} shows velocity and velocity dispersion as a
+function of effective temperature \footnote{calculated by transforming
+dereddened \gaia\ colors using equation \ref{eq:curtis}.} for the K and M
+\kepler\ dwarf sample.
+Velocity dispersion very slightly {\it decreases} with decreasing temperature,
+the opposite of the trend expected for mass-dependent heating, however the
+slope is only inconsistent with zero at 1.3 $\sigma$.
+This trend may be due to a selection bias: cooler stars are fainter and
+therefore typically closer, with smaller heights above the galactic plane and
+smaller velocities.
+The essential point however, is that we do not see evidence for mass-dependent
+heating acting on stars in the \kepler\ field, indicating that velocity
+dispersion {\it can} be used as an age proxy (with the caveat that there is
+still a chance, albeit a small one, that the opposing effects of the selection
+function and mass-dependent heating are working to cancel each other out).
+This analysis was performed using \vb\ but we also examined the {\it vertical}
+velocities of the 537 stars in this sample with RV measurements.
+Again, no evidence was found for mass-dependent heating: the slope of the
+velocity dispersion-temperature relation was consistent with zero.
+\begin{figure}
+  \caption{
+      Top: Stellar velocity (\vb) as a function of \teff\ for
+      \kepler\ K and M dwarfs.
+Vertical lines indicate different \teff-groupings used to calculate velocity
+    dispersion.
+Pink stars were not included in velocity dispersion calculations as they were
+    either removed as outliers during a sigma clipping process, or they lie at
+    the sparcely populated, extremely cool end of the temperature range.
+    Velocity dispersion and \teff\ are slightly positively correlated, likely
+    due to a brightness-related selection bias, indicating that mass-dependent
+    heating does not significantly affect low-mass stars in the \kepler\
+    field.
+}
+  \centering
+    \includegraphics[width=1\textwidth]{vb_vs_teff}
+\label{fig:vb_vs_teff}
+\end{figure}
+
+Having found no strong evidence for mass-dependent heating, we next tested
+the validity of \vb\ as a proxy for \vz\ in more detail.
+At a galactic latitude, $b$, of zero, $v_b=v_z$, however for increasing values
+of $b$, this equivalence becomes an approximation that grows noisier with $b$.
+To test the validity of the \vb$\sim$\vz\ approximation over a range of
+latitudes we downloaded stellar data from the \Gaia\ Universe Model Snapshot
+(GUMS) simulation -- a simulated \Gaia\ catalog \citep{robin2012}.
+We downloaded stars from four pointings in the \kepler\ field with galactic
+latitudes of around 5\degrees, 10\degrees, 15\degrees, and 20\degrees, out to
+a limiting magnitude of 16 dex, and calculated their \vz\ and \vb\ velocities.
+The relationship between \vz\ and \vb\ is close to 1:1, with \vz\ greater than
+\vb\ by around 4.5 kms$^{-1}$ at $b=5$, due to the Sun's own motion in the
+Galaxy.
+We subtracted this offset and examined the residuals of the \vz\ -- \vb\
+relationship to investigate the variance as a function of Galactic latitude.
+We found that \vb\ is drawn from a heavy-tailed distribution, centered on \vz,
+with standard deviation increasing with $b$ (see figure \ref{fig:vb_vz}).
+The standard deviation of \vz-\vb\ was around 3kms$^{-1}$ at $b \sim 5^\circ
+$, 4kms$^{-1}$ at 10$^\circ$, 6kms$^{-1}$ at 15$^\circ$, and 9kms$^{-1}$ at
+20$^\circ$.
+
+% Figure \ref{fig:vb_vz} shows the differences between \vz\ and \vb\ velocities
+% over different Galactic latitudes.
+% Kernel Density Estimates (KDEs) are shown as solid black lines and Gaussian
+% fits are shown as dashed blue lines.
+% The \vb\-\vz\ residuals are close to Gaussian, with slightly heavy tails, and
+% the variance increases with increasing Galactic latitude.
+\begin{figure}
+  \caption{
+This figure demonstrates the variance in the relationship between \vb\ and
+    \vz\ for stars in the \kepler\ field, based on the GUMS simulation.
+The panels show a kernel density estimator (KDE) (black solid line) for
+    the \vz -- \vb\ residuals of stars in the GUMS simulation at four
+    different Galactic latitudes.
+Blue dashed lines show Gaussian fits to these KDEs.
+The distributions are close to Gaussian, with slightly heavy tails.
+The standard deviations of the Gaussian fits increase with Galactic latitude.
+This figure illustrates how using \vb\ instead of \vz\ artificially
+    increases velocity dispersion, especially at high latitudes.
+}
+  \centering
+    \includegraphics[width=1\textwidth]{vb_vz}
+\label{fig:vb_vz}
+\end{figure}
+
+Since we are concerned with velocity {\it dispersions}, rather than velocities
+themselves, we also compared the \vb\ and \vz\ velocity dispersions as a
+function of temperature for
+stars downloaded from the GUMS simulation.
+For stars at galactic latitudes of 15\degrees\ or less, \sigmavb\ was
+consistent with $\sigma_{v{\bf z}}$, within uncertainties, however, at higher
+latitudes the two quantities became significantly different.
+For this reason we proceeded by only including stars with galactic latitudes
+less than 15\degrees\ in our analysis.
+Although we find that the transformation between \vz\ and \vb\ does not {\it
+strongly} affect our results, we cannot rule out the possibility that it
+introduces systematic biases into the velocity dispersions we present here.
+In \gaia\ DR3, RVs will be available for most stars in this sample, providing
+an opportunity to validate (or correct) the results presented here, and to
+work in action-space, rather than velocity-space.
+
+% Since we use \vb, not \vz\ in our analysis, it is possible that the sample
+% selection function could influence our results.
+% For example, higher-mass stars tend to be younger and reside closer to the
+% galactic disk mid-plane (low galactic latitudes).
+% Since \vb\ is only similar to \vz\ at low latitudes, this could mean that
+% lower-mass stars typically have greater velocity dispersions due to .
+% \teff\ and galactic latitude, $b$,
+% could result in
+% Stars at higher latitudes have additional velocity components in the ${\bf x}$
+% and ${\bf y}$ directions, which could increase \vb\ but not \vz.
+% Again however, since the relationship between \sigmavb\ and \teff\ is
+% positively, not negatively correlated for cool stars in the \kepler\ field,
+% this effect is probably too small to influence our results.
+
+% Figure \ref{fig:vb_vs_teff} indicates that mass-dependent heating does not
+% strongly affect the \mct\ sample of rotating \kepler\ stars.
+% For this reason, we assume that age difference is the major cause of velocity
+% dispersion differences between groups.
+% In other words, (\vb) velocity dispersion is a reliable age proxy for the
+% \mct\ sample.
+
+Because of the noisy relationship between \vb\ and \vz\, in this paper we do
+not attempt to convert velocity dispersion (\sigmavb) into an age via an
+age-velocity dispersion relation (AVR) \citep[\eg][]{holmberg2009}.
+Although we find that \sigmavb\ can be used to rank groups of stars by age, a
+more careful analysis that includes formal modeling of the \vb\ -- \vz\
+relationship will be needed to calculate absolute ages.
+% For example, the velocity distributions could be modeled as a mixture of
+% Gaussians in order to account for the additional velocity dispersion caused by
+% the \vz-\vb\ transformation.
+The RVs of most of these stars will become available in \Gaia\ DR3, allowing
+calculations of \vz, which can be used to calculate more reliable ages via an
+AVR and suitable modeling of the selection function.
+
+% We then selected groups of stars within different gyrochronal age ranges and
+% calculated the standard deviation of \vb\ velocities (\sigmavb), as a function
+% of effective temperature for each age group.
+% Ages were calculated using dereddened \gaia\ \gcolor\ color, however
+% throughout this paper we show rotation periods as a function of effective
+% temperature, \teff, because it is easier to divide stars into bins of roughly
+% equal numbers in \teff-space than in color-space.
 
 % We calculated the overall velocity dispersions of stars as a function of
 % rotation period and gyrochronal age.
