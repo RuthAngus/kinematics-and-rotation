@@ -14,12 +14,39 @@ DR2 catalog of parallaxes, proper motions and apparent magnitudes.
 Reddening and extinction from dust was calculated for each star using the
 Bayestar dust map implemented in the {\tt dustmaps} {\it Python} package
 \citep{green2018}, and {\tt astropy} \citep{astropy2013}.
-We estimated effective temperatures from dereddened \Gaia\ \gcolor\ color,
-using an 8th-order polynomial relation calibrated using .... stars
-\racomment{ask Jason for details}.
+
+For this work, we used the precise \textit{Gaia} DR2 photometric color,
+$G_{\rm BP} - G_{\rm RP}$, to estimate \teff\ for the Kepler rotators.
+Curtis \etal\ (2020, in prep) combined \teff s for nearby, unreddened field
+stars from benchmark samples, including FGK stars characterized with
+high-resolution optical spectroscopy \citep{brewer2016}, M dwarfs
+characterized with low-resolution optical and near-infrared spectroscopy
+\citep{mann2015}, and K and M dwarfs characterized with interferometry and
+bolometric flux analyses \citep{boyajian2012}.
+This empirical color--temperature relation is valid over the color range $0.55
+< (G_{\rm BP} - G_{\rm RP})_0 < 3.20$, corresponding to $6470 < T_{\rm eff} <
+3070$~K.
+The dispersion about the relation implies a high precision of 50~K. Using
+these benchmark data enable us to accurately estimate \teff\ for cool dwarfs
+\citep[\eg][]{rabus2019}, and allows to correct for interstellar reddening at
+all temperatures\footnote{The color--temperature relation is described in
+detail in the Appendix of, and the formula is provided in Table 4 of, Curtis
+\etal\ (2020, in prep).}.
+The equation we used to calculate photometric temperatures is,
 \begin{equation}
-    \mathrm{T_{eff}} = 8960 -4802C + 1931C^2 -2446C^3 + 2669C^4 - 1324C^5 +
-    301C^6 - 26C^7,
+    \mathrm{T_{eff}} = -416.585 + 39780.0C -84190.5C^2 + 85203.9C^3
+    -48225.9C^4 + 15598.5C^5 -2694.76C^6 + 192.865C^7,
+% Jason's updated parameters:
+% −416.585
+% 39780.0
+% −84190.5
+% 85203.9
+% −48225.9
+% 15598.5
+% −2694.76
+% 192.865
+    % \mathrm{T_{eff}} = 8960 -4802C + 1931C^2 -2446C^3 + 2669C^4 - 1324C^5 +
+    % 301C^6 - 26C^7,
 % 8959.8112335205078, -4801.5566310882568, 1931.4756631851196,
 %           -2445.9980716705322, 2669.0248055458069, -1324.0671020746231,
 %           301.13205924630165, -25.923997443169355]
@@ -27,10 +54,11 @@ using an 8th-order polynomial relation calibrated using .... stars
 \end{equation}
 where C is \gaia\ \gcolor.
 
-Visual binaries and subgiants were removed from the sample by applying cuts to
-the color-magnitude diagram (CMD), shown in figure \ref{fig:age_gradient}.
+Photometric binaries and subgiants were removed from the sample by applying
+cuts to the color-magnitude diagram (CMD), shown in figure
+\ref{fig:age_gradient}.
 A 6th-order polynomial was fit to the main sequence and raised by 0.27 dex to
-approximate the division between single stars and visual binaries.
+approximate the division between single stars and photometrci binaries.
 All stars above this line were removed from the sample.
 Subgiants were also removed by eliminating stars brighter than 6th magnitude
 in \gaia\ G-band.
@@ -61,7 +89,7 @@ the models are poorly calibrated for these stars.
   \caption{
       Top: de-reddened MS \kepler\ stars with \mct\ rotation periods, plotted
     on a \gaia\ CMD.
-    We removed visual binaries and subgiants from the sample by excluding
+    We removed photometric binaries and subgiants from the sample by excluding
     stars above the dashed lines.
     Bottom: a zoom-in of the top panel, with stars colored by their
     gyrochronal age \citep{angus2019}, instead of their rotation period.
