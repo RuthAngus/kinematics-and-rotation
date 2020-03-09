@@ -36,6 +36,7 @@ with fits.open("../kepler_dr2_1arcsec.fits") as data:
     gaia = pd.DataFrame(data[1].data, dtype="float64")
 
 gaia_mc = pd.merge(mc, gaia, on="kepid", how="left")
+print(len(gaia_mc), "stars")
 
 # S/N cuts
 sn = gaia_mc.parallax.values/gaia_mc.parallax_error.values
@@ -43,6 +44,17 @@ sn = gaia_mc.parallax.values/gaia_mc.parallax_error.values
 m = (sn > 10)
 m &= (gaia_mc.parallax.values > 0) * np.isfinite(gaia_mc.parallax.values)
 m &= gaia_mc.astrometric_excess_noise.values < 5
+print(len(gaia_mc.iloc[m]), "stars after S/N cuts")
+
+# Jason's wide binary cuts
+# m &= gaia_mc.astrometric_excess_noise.values > 0
+# m &= gaia_mc.astrometric_excess_noise_sig.values > 6
+
+# Jason's short-period binary cuts
+# m &= radial_velocity_error < 4
+# print(len(gaia_mc.iloc[m]), "stars after Jason's binary cuts")
+# assert 0
+
 gaia_mc = gaia_mc.iloc[m]
 
 print("Loading Dustmaps")
@@ -57,6 +69,7 @@ ebv, flags = bayestar(coords, mode='percentile', pct=[16., 50., 84.],
 
 # Calculate Av
 Av_bayestar = 2.742 * ebv
+print(np.shape(Av_bayestar), "shape")
 Av = Av_bayestar[:, 1]
 Av_errm = Av - Av_bayestar[:, 0]
 Av_errp = Av_bayestar[:, 2] - Av
@@ -111,6 +124,12 @@ m &= (y < np.polyval(w, x) - extra) + (subcut > y)
 flag = np.zeros(len(gaia_mc))
 flag[~m] = np.ones(len(flag[~m]))
 gaia_mc["flag"] = flag
+
+test = gaia_mc.iloc[gaia_mc.flag.values == 1]
+plt.plot(gaia_mc.bp_dered - gaia_mc.rp_dered, gaia_mc.abs_G, ".", alpha=.1)
+plt.plot(test.bp_dered - test.rp_dered, test.abs_G, ".", alpha=.1)
+plt.ylim(10, 1)
+plt.savefig("test")
 
 # Calculate photometric Teff
 teffs = bprp_to_teff(gaia_mc.bp_dered - gaia_mc.rp_dered)
@@ -188,4 +207,4 @@ gaia_mc["v_dec"] = vdec.value
 gaia_mc["v_b"] = v_b
 
 print("Saving file")
-gaia_mc.to_csv("gaia_mc4.csv")
+gaia_mc.to_csv("gaia_mc5.csv")

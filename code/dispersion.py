@@ -1,6 +1,7 @@
 import numpy as np
 from tqdm import trange
 import scipy.stats as sps
+import astropy.stats as aps
 import matplotlib.pyplot as plt
 
 
@@ -288,3 +289,44 @@ def err_on_sample_std_dev(std_dev_of_distribution, n):
 
     sig = std_dev_of_distribution
     return 1./(2*sig) * np.sqrt(2*sig**4/(n-1))
+
+# Calculate tangential distance.
+def tan_dist(x1, y1, x2, y2):
+    return np.sqrt((x1 - x2)**2 + (y1 - y2)**2)
+
+
+# Find N nearest points
+def n_nearest_points(x1, y1, x2, y2, z2, N):
+    td = tan_dist(x1, y1, x2, y2)
+    inds = np.argsort(td)
+    return x2[inds[:N]], y2[inds[:N]], z2[inds[:N]]
+
+
+def make_bin(x1, y1, x2, y2, z2, xrange, yrange):
+    dx, dy = xrange/2., yrange/2.
+    xlower, xupper = x1 - dx, x1 + dx
+    ylower, yupper = y1 - dy, y1 + dy
+
+    m = (xlower < x2) * (x2 < xupper) * (ylower < y2) * (y2 < yupper)
+    return x2[m], y2[m], z2[m]
+
+
+# Run on each star
+def calc_dispersion_nearest(x, y, z, N):
+
+    dispersions = np.zeros(len(x))
+    for i in trange(len(x)):
+        nx, ny, nz = n_nearest_points(x[i], y[i], x, y, z, N)
+        dispersions[i] = 1.5*aps.median_absolute_deviation(nz, ignore_nan=True)
+
+    return dispersions
+
+
+def calc_dispersion_bins(x, y, z, xrange, yrange):
+
+    dispersions = np.zeros(len(x))
+    for i in trange(len(x)):
+        nx, ny, nz = make_bin(x[i], y[i], x, y, z, xrange, yrange)
+        dispersions[i] = 1.5*aps.median_absolute_deviation(nz, ignore_nan=True)
+
+    return dispersions
