@@ -1,7 +1,7 @@
 *png
 *csv
 *fits
-*pdf
+*.pdf
 .ipynb_checkpoints
 __pycache__
 mcquillan
