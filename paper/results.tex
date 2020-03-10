@@ -118,9 +118,9 @@ Without sigma-clipping, we found that a small number of high velocity
 outliers at the low-temperature end of our sample substantially raised the
 velocity dispersion for cooler stars, however the overall trends remain the
 same without sigma-clipping.
-We also limited the sample to temperatures in the range 5500 K $<$ \teff\ $<$
-3500 K to avoid biases caused by the selection function at the faint, cool
-end, and binarity or weakened braking \citep{vansaders2016} at the hot end.
+% We also limited the sample to temperatures in the range 6000 K $<$ \teff\ $<$
+% 3500 K to avoid biases caused by the selection function at the faint, cool
+% end, and binarity or weakened braking \citep{vansaders2016} at the hot end.
 Finally, we removed stars with rotation periods shorter than the bulk of
 periods, since this area of the period-\teff\ diagram is sparsely populated.
 We removed rapid rotators by cutting out stars with gyrochronal ages less than
@@ -147,7 +147,7 @@ similar color in figure \ref{fig:vplot} are similar ages.
     rotation-color relation of
     Praesepe to longer rotation periods over time \citep{angus2019}.
     These gyrochrones do not appear to reflect the evolution of field stars at
-    long rotation periods/old ages: they do not trace lines of constant
+    long rotation periods/old ages because they do not trace lines of constant
     velocity dispersion.
     Gyrochrones are plotted at 0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyr in both top
     and bottom panels.
@@ -167,7 +167,7 @@ similar color in figure \ref{fig:vplot} are similar ages.
 \end{figure}
 Overall, figure \ref{fig:vplot} shows that velocity dispersion increases with
 rotation period across all temperatures, implying that rotation period
-increases with age as expected.
+increases with age, as expected.
 This result is insensitive to the choice of bin position and size.
 Black lines show gyrochrones from the \citet{angus2019} gyrochronology model,
 which projects the rotation-color relation of Praesepe to longer rotation
@@ -188,8 +188,8 @@ For example, the 1.5 Gyr gyrochrone lies on top of stars with velocity
 dispersions of around 10-11 kms$^{-1}$ at 5000-5500K and stars with $\sim$15
 \kms\ velocity dispersions at 4000-4500K.
 The gyrochrones older than 1.5 Gyr also cross a range of velocity dispersions.
-If these were true isochrones however, they should follow lines of constant
-velocity dispersion.
+If these were true isochrones they would follow lines of constant velocity
+dispersion.
 At ages older than around 1 Gyr, it appears that gyrochrones should have a more
 flattened, or even inverted relationship between rotation period and effective
 temperature than these Praesepe-based models.
@@ -200,15 +200,18 @@ temperature than these Praesepe-based models.
 
 The bottom panel of figure \ref{fig:vplot} shows velocity dispersion as a
 function of rotation period and {\it mass}, \citep[from][]{berger2020}, with
-gyrochrones from the \citep{spada2019} gyrochronology model shown as white
-lines.
-Each point is assigned the same color as in the top panel, so bin outlines
-appear smeared-out because temperature does not convert directly to mass.
+gyrochrones from the \citep{spada2019} model shown in white.
 These gyrochrones are also plotted at 0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyr.
-The \citet{spada2019} models trace lines of constant velocity dispersion, and
-reproduce the trends in the data at all ages.
-These models qualitatively agree with the data: the rotation period-\teff/mass
-relation flattens out over time and eventually inverts.
+Each point plotted in the top panel also appears in the bottom panel with the
+same color.
+Because velocity dispersion was calculated in bins of \teff, not mass, bin
+outlines are clearly visible in the top panel but appear smeared-out in the
+bottom panel.
+In the bottom panel of figure \ref{fig:vplot}, the \citet{spada2019} models
+{\it do} trace lines of constant velocity dispersion, and reproduce the trends
+in the data at all ages.
+These models qualitatively agree with the data and reproduces the apparent
+flattening and inversion in the rotation period-\teff/mass relations.
 
 The results shown in figure \ref{fig:vplot} indicate that stars of spectral
 type ranging from late G to late K ($\sim$5500-3500 K) follow a braking law
