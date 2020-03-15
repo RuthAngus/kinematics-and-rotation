@@ -14,12 +14,13 @@ Bayestar dust map implemented in the {\tt dustmaps} {\it Python} package
 
 For this work, we used the precise \textit{Gaia} DR2 photometric color,
 $G_{\rm BP} - G_{\rm RP}$, to estimate \teff\ for the Kepler rotators.
-Curtis \etal\ (2020, in prep) combined effective temperature measurements for
-nearby, unreddened field stars in benchmark samples, including FGK stars
-characterized with high-resolution optical spectroscopy \citep{brewer2016}, M
-dwarfs characterized with low-resolution optical and near-infrared
-spectroscopy \citep{mann2015}, and K and M dwarfs characterized with
-interferometry and bolometric flux analyses \citep{boyajian2012}.
+To calibrate this relation, Curtis \etal\ (2020, in prep) combined effective
+temperature measurements for nearby, unreddened field stars in benchmark
+samples, including FGK stars characterized with high-resolution optical
+spectroscopy \citep{brewer2016}, M dwarfs characterized with low-resolution
+optical and near-infrared spectroscopy \citep{mann2015}, and K and M dwarfs
+characterized with interferometry and bolometric flux analyses
+\citep{boyajian2012}.
 This empirical color--temperature relation is valid over the color range $0.55
 < (G_{\rm BP} - G_{\rm RP})_0 < 3.20$, corresponding to $6470 < T_{\rm eff} <
 3070$~K.
@@ -61,8 +62,8 @@ A 6th-order polynomial was fit to the main sequence and raised by 0.27 dex to
 approximate the division between single stars and photometric binaries (shown
 as the curved dashed line in figure \ref{fig:age_gradient}).
 All stars above this line were removed from the sample.
-Subgiants were also removed by eliminating stars brighter than 4th magnitude
-in \gaia\ G-band.
+Subgiants were also removed by eliminating stars brighter than 4th absolute
+magnitude in \gaia\ G-band.
 
 The rotation periods of the dwarf stars in the \mct\ sample are shown on a
 \gaia\ color-magnitude diagram (CMD) in the top panel of figure
@@ -77,23 +78,25 @@ The lack of gyrochronologically old M dwarfs suggests that either old M dwarfs
 are missing from the \mct\ catalog, or the \citet{angus2019} gyrochronology
 relation under-predicts the ages of low-mass stars.
 Given that lower-mass stars stay active for longer than higher-mass stars
-\citep[\eg][]{west2011, kiman2019}, and are therefore more likely to have
-measurable rotation periods at old ages, the latter scenario seems likely.
+\citep[\eg][]{west2008, newton2017, kiman2019}, and are therefore more likely
+to have measurable rotation periods at old ages, the latter scenario seems
+likely.
 However, it is also possible that the rotation periods of the oldest early M
 dwarfs are so long that they are not measurable with Kepler data.
 Ground-based rotation period measurements of mid and late M dwarfs indicate
 that there is an upper limit to the rotation periods of {\it late} M dwarfs of
-around 140 days \citep{newton2016, newton2017, newton2018}, which is much
+around 140 days \citep{newton2016, newton2018}, which is much
 longer than the longest rotation periods measured in the \mct\ sample (around
 70 days).
-The apparent lack of old ages for M dwarfs in figure \ref{fig:age_gradient}
-may be caused by a combination of ages being underestimated by a poorly
-calibrated model, and rotation period detection bias.
+The apparent lack of old gyro-ages for M dwarfs in figure
+\ref{fig:age_gradient} may be caused by a combination of ages being
+underestimated by a poorly calibrated model, and rotation period detection
+bias.
 The \citet{angus2019} gyrochronology relation is a simple polynomial model,
 fit to the period-color relation of Praesepe.
-Inaccuracies are a typical feature of empirically calibrated gyrochronology
-models: since there are no (or at least very few) old M dwarfs with rotation
-periods, the models are poorly calibrated for these stars.
+Inaccuracies at low masses are a typical feature of empirically calibrated
+gyrochronology models: since there are no (or at least very few) old M dwarfs
+with rotation periods, the models are poorly calibrated for these stars.
 \begin{figure}
   \caption{
       Top: de-reddened MS \kepler\ stars with \mct\ rotation periods, plotted
