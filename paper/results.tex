@@ -5,10 +5,10 @@
 \label{sec:the_reveal}
 
 To explore the relationship between rotation period, effective temperature
-(\teff ) and velocity dispersion, we calculated \sigmavb \footnote{\sigmavb
-was calculated as 1.5$\times$ the median absolute deviation, to mitigate
-sensitivity to outliers.} for groups of stars with similar rotation periods
-and temperatures, and presumed similar age.
+(\teff ) and velocity dispersion, we calculated \sigmavb \footnote{\sigmavb\
+was calculated as 1.5$\times$ the median absolute deviation of velocities, to
+mitigate sensitivity to outliers.} for groups of stars with similar rotation
+periods and temperatures, and presumed similar age.
 The top panel of figure \ref{fig:vplot} shows rotation period versus effective
 temperature for the \mct\ sample, coloured by \sigmavb, where \sigmavb\ was
 calculated for groups of stars over a grid in $\log_{10}$(period) and
@@ -97,8 +97,9 @@ These results provide further evidence for `stalled' surface rotational
 evolution of K dwarfs, like that observed in open clusters \citep{curtis2019}
 and reproduced by models that vary angular momentum transport between stellar
 core and envelope with time and mass \citep{spada2019}.
-The velocity dispersions of stars in the \mct\ sample provide the following
-picture of rotational evolution.
+
+The velocity dispersions of stars in the \mct\ sample, shown in figure
+\ref{fig:vplot}, provide the following picture of rotational evolution.
 At young ages \citep[younger than around 1 Gyr but still old enough to be on
 the main sequence and have transitioned from the `I' sequence to the `C'
 sequence ][]{barnes2003}, stellar rotation period {\it decreases} with {\it
@@ -131,16 +132,22 @@ macgregor1991, denissenkov2010, gallet2013}.
 In such models, the angular momenta of the radiative core and convective
 envelope are permitted to evolve separately once a radiative core develops on
 the pre-main sequence.
-A core-envelope decoupling phase in the early angular momentum history of
-stars is required in order to reproduce observations of young clusters and
-star forming regions \citep[\eg][]{irwin2007, bouvier2008, denissenkov2010,
-spada2011, reiners2012} and has become an established element of theoretical
-gyrochronology models.
-The \citet{lanzafame2015} gyrochronology model quantified the mass-dependence
-of the core-envelope coupling timescale and this model was fit to open-cluster
-observations in \citet{spada2019}, including new rotation period measurements
-for stars down to M$\sim$0.6M$_\odot$ in the NGC 6811 cluster
-\citep{curtis2019}.
+A decoupled core and envelope is required to reproduce observations of young
+clusters and star forming regions \citep[\eg][]{irwin2007, bouvier2008,
+denissenkov2010, spada2011, reiners2012} and has become an established element
+of theoretical gyrochronology models.
+During this phase, angular momentum transport between radiative core and
+convective envelope is reduced.
+Over time, models increase the efficiency of angular momentum transport
+between the core and envelope in order to reproduce the close-to solid body
+rotation observed for the Sun \citep[\eg][]{thompson1996}.
+The core-envelope coupling timescale affects the predicted surface rotation
+periods of young and intermediate-age stars and is usually constrained using
+observations of open clusters.
+The \citet{lanzafame2015} gyrochronology model uses a mass-dependent
+core-envelope coupling timescale, and \citet{spada2019} fit this model to
+open-cluster observations, including new rotation period measurements for
+K dwarfs in the NGC 6811 cluster \citep{curtis2019}.
 A similar mass-dependent core-envelope coupling timescale was also found to
 explain the observed lithium depletion trends in open clusters by an
 independent study \citep{somers2016}.
@@ -151,14 +158,18 @@ Among the proposed mechanisms are magneto-hydrodynamical waves resulting from
 various magnetic field geometries, and gravity waves \citep[see,
 \eg][]{charbonneau1993, ruediger1996, spruit2002, talon2003, spada2010,
 brun2011, oglethorpe2013}.
+% These different processes may make subtly different predictions for the
+% rotational evolution of stars, and could potentially be tested with the large
+% number of field stars with measured ages and rotation periods which could be
+% provided by kinematic ages for the \mct\ sample.
 
 Figure \ref{fig:vplot} reveals another phenomenon of magnetic evolution:
 K and M dwarfs remain magnetically active for longer than G dwarfs.
 The mass dependence of magnetic activity lifetimes has been demonstrated
-previously \citep[\eg][]{west2008, newton2017, kiman2019}.
-If the detectability of a rotation period is considered to be a magnetic
-activity proxy, then our results provide further evidence for a mass-dependent
-activity lifetime.
+previously \citep[\eg][]{west2008, newton2017, kiman2019}, and if the
+detectability of a rotation period is considered to be a magnetic activity
+proxy, then our results provide further evidence for a mass-dependent activity
+lifetime.
 Figure \ref{fig:vplot} shows that the groups of stars with the largest
 velocity dispersions are cooler than 4500 K.
 This implies that the oldest stars with detectable rotation periods, are
@@ -173,9 +184,9 @@ and high Galactic latitude stars, following the method described in section
 \ref{sec:method}.
 We then compared these velocity dispersions to the velocity dispersions of
 stars in the \mct\ sample.
-If the rotation periods of G stars are only detectable when they are young,
-G stars with measured periods should have smaller velocity dispersions than
-the overall \kepler\ field.
+If the rotation periods of G stars are only detectable when they are young, G
+stars with measured periods should have smaller velocity dispersions than G
+stars in the overall \kepler\ field.
 We calculated the ratio of \sigmavb\ for the entire \Kepler\ sample to
 \sigmavb\ for stars with rotation periods published in \mct, as a function of
 \teff\ (see figure \ref{fig:compare}).
@@ -192,8 +203,8 @@ periods have a similar age distribution to the overall Kepler population which
 suggests that the oldest K and M dwarfs are represented in the \mct\ sample.
 This result bolsters the evidence that M dwarf rotation periods are measurable
 at older ages than G dwarf rotation periods.
-G stars become magnetically inactive and have fewer active surface regions
-{\it at a younger age than M dwarfs}.
+In other words, G stars become magnetically inactive and have fewer active
+surface regions {\it at a younger age than M dwarfs}.
 
 \begin{figure}
   \caption{
@@ -250,7 +261,8 @@ synchronized binaries.
 There is a sharp gap in the population of rotation periods (often called the
 \kepler\ period gap), which lies just above the 1 Gyr gyrochrone in the upper
 panel of figure \ref{fig:vplot}, whose origin is unknown and is the subject of
-much speculation \citep{mcquillan2014, davenport2018, reinhold2019}.
+much speculation \citep{mcquillan2014, davenport2017, davenport2018,
+reinhold2019, reinhold2020}.
 This gap was first identified by \mct, and roughly follows a line of constant
 gyrochronal age of around 1.1 Gyr \citep[according to the][gyrochronology
 relation]{angus2019}.
@@ -258,7 +270,7 @@ Several explanations for the gap's origin have been proposed, including a
 discontinuous star formation history \citep{mcquillan2013, davenport2017,
 davenport2018} and a change in magnetic field structure causing a brief period
 where rotational variability is reduced and rotation periods cannot be
-measured \citep{reinhold2019}.
+measured \citep{reinhold2019, reinhold2020}.
 
 The top panel of figure \ref{fig:vplot} suggests that the \citet{angus2019},
 Praesepe-based gyrochronology model is valid below the gap but not above.
@@ -290,17 +302,17 @@ temperature of $\sim$4600 K in our sample, although \citet{davenport2017}
 found that the gap extends to temperatures as hot as 6000 K.
 In general, velocity dispersion increases with rotation period because both
 quantities increase with age.
-There is a smooth transition in velocity dispersion between stars with
-rotation periods below and above the gap (orange squares to blue circles),
-suggesting that these groups are part of the same Galactic population.
 Previously, only the overall velocity dispersions of all stars above and below
 the gap have been compared, leading to the assumption that these groups belong
 to two distinct populations \citep{mcquillan2014}.
-The smooth increase in velocity dispersion across the gap shown here suggests
-that stars above and below are part of the same stellar population.
-However, it does not rule out the possibility that a brief cessation of star
-formation in the Solar neighborhood, around one Gyr ago, may have caused this
-gap.
+However, figure \ref{fig:gap} shows a smooth increase in velocity dispersion
+with rotation period across the gap (from orange squares to blue circles),
+suggesting that these groups are part of the same Galactic population.
+% The smooth increase in velocity dispersion across the gap shown here suggests
+% that stars above and below are part of the same stellar population.
+This observation does not rule out the possibility that a brief cessation of
+star formation in the Solar neighborhood, around one Gyr ago, may have caused
+this gap, however.
 
 In the final part of our analysis, we investigated the potential for using
 kinematics to identify synchronized binaries in the \mct\ sample.
