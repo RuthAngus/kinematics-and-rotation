@@ -62,8 +62,14 @@ A 6th-order polynomial was fit to the main sequence and raised by 0.27 dex to
 approximate the division between single stars and photometric binaries (shown
 as the curved dashed line in figure \ref{fig:age_gradient}).
 All stars above this line were removed from the sample.
-Subgiants were also removed by eliminating stars brighter than 4th absolute
-magnitude in \gaia\ G-band.
+Potential subgiants were also removed by eliminating stars brighter than 4th
+absolute magnitude in \gaia\ G-band.
+This cut also removed a number of main sequence F stars from our sample,
+however these hot stars are not the focus of our gyrochronology study since
+their small convective zones inhibit the generation of a strong magnetic
+field.
+The removal of photometric binaries and evolved/hot stars reduced the total
+sample of around 34,000 stars by almost 10,000.
 
 The rotation periods of the dwarf stars in the \mct\ sample are shown on a
 \gaia\ color-magnitude diagram (CMD) in the top panel of figure
@@ -121,13 +127,13 @@ astropy2018} {\it Python} packages were used to calculate velocities for the
 {\tt Pyia} calculates velocity samples from the full \gaia\ uncertainty
 covariance matrix via Monte Carlo sampling, thereby accounting for the
 covariances between \gaia\ positions, parallaxes and proper motions.
-Stars with negative parallaxes, parallax signal-to-noise ratios less than 10,
-stars fainter than 16th magnitude, stars with absolute \vb\ uncertainties
-greater than 1 \kms\, and stars with galactic latitudes greater than
-15\degrees\ (justification provided in the appendix) were removed from the
-sample.
-Finally, we removed stars with rotation periods shorter than the main
-population of periods, since this area of the period-\teff\ diagram is
+Stars with negative parallaxes or parallax signal-to-noise ratios less than 10
+(around 3,000 stars), stars fainter than 16th magnitude (200 stars), stars
+with absolute \vb\ uncertainties greater than 1 \kms\ (1000 stars), and stars
+with galactic latitudes greater than 15\degrees\ (5500 stars, justification
+provided in the appendix) were removed from the sample.
+Finally, we removed almost 2000 stars with rotation periods shorter than the
+main population of periods, since this area of the period-\teff\ diagram is
 sparsely populated.
 We removed these rapid rotators by cutting out stars with gyrochronal ages
 less than 0.5 Gyr \citep[based on the][gyro-model]{angus2019}, because a 0.5
