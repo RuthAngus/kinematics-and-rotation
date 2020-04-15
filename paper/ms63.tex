@@ -316,49 +316,10 @@ DR2 catalog of parallaxes, proper motions and apparent magnitudes.
 Reddening and extinction from dust was calculated for each star using the
 Bayestar dust map implemented in the {\tt dustmaps} {\it Python} package
 \citep{green2018}, and {\tt astropy} \citep{astropy2013, astropy2018}.
-
 For this work, we used the precise \textit{Gaia} DR2 photometric color,
 $G_{\rm BP} - G_{\rm RP}$, to estimate \teff\ for the Kepler rotators.
-To calibrate this relation, Curtis \etal\ (2020, in prep) combined effective
-temperature measurements for nearby, unreddened field stars in benchmark
-samples, including FGK stars characterized with high-resolution optical
-spectroscopy \citep{brewer2016}, M dwarfs characterized with low-resolution
-optical and near-infrared spectroscopy \citep{mann2015}, and K and M dwarfs
-characterized with interferometry and bolometric flux analyses
-\citep{boyajian2012}.
-This empirical color--temperature relation is valid over the color range $0.55
-< (G_{\rm BP} - G_{\rm RP})_0 < 3.20$, corresponding to $6470 < T_{\rm eff} <
-3070$~K.
-The dispersion about the relation implies a high precision of 50~K.
-These benchmark data enable us to accurately estimate \teff\ for cool dwarfs
-\citep[\eg][]{rabus2019}, and allows us to correct for interstellar reddening
-at all temperatures\footnote{The color--temperature relation is described in
-detail in the Appendix of, and the formula is provided in Table 4 of, Curtis
-\etal\ (2020, in prep).}.
-The equation we used to calculate photometric temperatures from Gaia \gcolor\
-color is a seventh-order polynomial with coefficients given in table
-\ref{tab:coeffs}.
-\begin{table}[h!]
-  \begin{center}
-      \caption{
-          Coefficient values for the 7th-order polynomial used to estimate
-      \teff\ from \Gaia\ \gcolor\ color, calibrated in Curtis \etal\ (2020, in
-      prep).}
-    \label{tab:coeffs}
-    \begin{tabular}{l|c} % <-- Alignments: 1st column left and 2nd middle, with vertical lines in between
-        (\gcolor\ ) exponent & Coefficient  \\
-      \hline
-      $0$ & -416.585 \\
-      $1$ & 39780.0  \\
-      $2$ & -84190.5 \\
-      $3$ & 85203.9  \\
-      $4$ & -48225.9 \\
-      $5$ & 15598.5  \\
-      $6$ & -2694.76 \\
-      $7$ & 192.865  \\
-    \end{tabular}
-  \end{center}
-\end{table}
+\racomment{The calibration of this relation is described Curtis \etal\ (2020,
+in prep) and briefly summarized in the Appendix of this paper.}
 
 Photometric binaries and subgiants were removed from the \mct\ sample by
 applying cuts to the color-magnitude diagram (CMD), shown in figure
@@ -888,7 +849,7 @@ Gaia} Data Processing and Analysis Consortium (DPAC,
 Funding for the DPAC has been provided by national institutions, in particular
 the institutions participating in the {\it Gaia} Multilateral Agreement.
 
-\section{Appendix: Validating \vb\ dispersion as an age proxy}
+\section{Appendix A: Validating \vb\ dispersion as an age proxy}
 \label{sec:mass-dependent-heating}
 
 The conclusions drawn in this paper depend on the assumption that velocity
@@ -1047,6 +1008,52 @@ age-velocity dispersion relation (AVR) \citep[\eg][]{holmberg2009}.
 Although we find that \sigmavb\ can be used to rank groups of stars by age, a
 more careful analysis that includes formal modeling of the \vb\ -- \vz\
 relationship will be needed to calculate absolute ages.
+
+\section{Appendix B: Photometric temperatures}
+
+For this work, we used the precise \textit{Gaia} DR2 photometric color,
+$G_{\rm BP} - G_{\rm RP}$, to estimate \teff\ for the Kepler rotators.
+To calibrate this relation, Curtis \etal\ (2020, in prep) combined effective
+temperature measurements for nearby, unreddened field stars in benchmark
+samples, including FGK stars characterized with high-resolution optical
+spectroscopy \citep{brewer2016}, M dwarfs characterized with low-resolution
+optical and near-infrared spectroscopy \citep{mann2015}, and K and M dwarfs
+characterized with interferometry and bolometric flux analyses
+\citep{boyajian2012}.
+This empirical color--temperature relation is valid over the color range $0.55
+< (G_{\rm BP} - G_{\rm RP})_0 < 3.20$, corresponding to $6470 < T_{\rm eff} <
+3070$~K.
+The dispersion about the relation implies a high precision of 50~K.
+These benchmark data enable us to accurately estimate \teff\ for cool dwarfs
+\citep[\eg][]{rabus2019}, and allows us to correct for interstellar reddening
+at all temperatures\footnote{The color--temperature relation is described in
+detail in the Appendix of, and the formula is provided in Table 4 of, Curtis
+\etal\ (2020, in prep).}.
+The equation we used to calculate photometric temperatures from Gaia \gcolor\
+color is a seventh-order polynomial with coefficients given in table
+\ref{tab:coeffs}.
+\begin{table}[h!]
+  \begin{center}
+      \caption{
+          Coefficient values for the 7th-order polynomial used to estimate
+      \teff\ from \Gaia\ \gcolor\ color, calibrated in Curtis \etal\ (2020, in
+      prep).}
+    \label{tab:coeffs}
+    \begin{tabular}{l|c} % <-- Alignments: 1st column left and 2nd middle, with vertical lines in between
+        (\gcolor\ ) exponent & Coefficient  \\
+      \hline
+      $0$ & -416.585 \\
+      $1$ & 39780.0  \\
+      $2$ & -84190.5 \\
+      $3$ & 85203.9  \\
+      $4$ & -48225.9 \\
+      $5$ & 15598.5  \\
+      $6$ & -2694.76 \\
+      $7$ & 192.865  \\
+    \end{tabular}
+  \end{center}
+\end{table}
+
 
 %% For this sample we use BibTeX plus aasjournals.bst to generate the
 %% the bibliography. The sample63.bib file was populated from ADS. To
