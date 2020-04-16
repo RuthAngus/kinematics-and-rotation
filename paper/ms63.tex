@@ -156,10 +156,16 @@ Science, 813 Santa Barbara Street, Pasadena, CA 91101, USA}
 The rotational evolution of cool dwarfs is poorly constrained after $\sim$1-2
 Gyr due to a lack of precise ages and rotation periods for old main-sequence
 stars.
-In this work, we use the velocity dispersions of groups of low-mass \kepler\
-dwarfs as an age proxy, to reveal the temperature-dependent rotational
-evolution of these stars, and demonstrate that kinematic ages could be a
-useful tool for calibrating gyrochronology in future.
+\racomment{
+In this work, we use velocity dispersion as an age proxy, to reveal the
+temperature-dependent rotational evolution of low-mass \kepler\ dwarfs and
+demonstrate that kinematic ages could be a useful tool for calibrating
+gyrochronology in future.
+}
+% In this work, we use the velocity dispersions of groups of low-mass \kepler\
+% dwarfs as an age proxy, to reveal the temperature-dependent rotational
+% evolution of these stars, and demonstrate that kinematic ages could be a
+% useful tool for calibrating gyrochronology in future.
 We find that a linear gyrochronology model, calibrated to fit the
 period--\teff\ relationship of the Praesepe cluster, does not apply to stars
 older than around 1 Gyr.
@@ -551,7 +557,14 @@ roughly follows a line of constant Rossby number.
 Consequently, like the \citet{angus2019} model, the \citet{barnes2010}
 gyrochrones do not reproduce the data explored here and do not have the
 flexibility to capture mass and time-variable rotational evolution.
-Although it seems that the period-\teff\ relations follow lines of constant
+
+The lack of flexibility that is baked-in to these empirical gyrochronology
+models should not be seen as a failing of gyrochronologists: with a paucity of
+calibration data for old stars all one can do is fit simple relations to young
+stars and extrapolate to old ages.
+Naturally however, in this era of precise space-based photometry, new data are
+revealing flaws in our old models (which no one ever thought were perfect),
+and are providing opportunities to improve them.
 }
 
 The velocity dispersions of stars in the \mct\ sample, shown in figure
@@ -566,7 +579,8 @@ greater angular momentum loss rate \citep[\eg][]{schatzman1962, kraft1967,
 parker1970, kawaler1988, charbonneau2010}.
 This aligns with the current assumptions about stellar spin-down, dynamo
 theory, and the gyrochronology paradigm that has been in place for decades
-\citep[\eg][]{skumanich1972, noyes1984, kawaler1988, barnes2003, angus2019}.
+\citep[\eg][]{skumanich1972, noyes1984, kawaler1988, barnes2003, barnes2010,
+angus2019}.
 According to the \citet{spada2019} model, the radiative cores and convective
 envelopes of stars are decoupled at these young ages, \ie\ transportation of
 angular momentum from the surface to the core of the star is reduced, so the
@@ -628,24 +642,26 @@ proxy, then our results provide further evidence for a mass-dependent activity
 lifetime.
 Figure \ref{fig:vplot} shows that the groups of stars with the largest
 velocity dispersions are cooler than 4500 K.
-This implies that the oldest stars with detectable rotation periods, are
+This implies that the oldest stars with detectable rotation periods are
 cooler than 4500 K, \ie\ these-low mass stars stay active longer than more
 massive stars.
-To investigate this idea further, we compared the velocity dispersions of
-stars with measured rotation periods, to the velocity dispersions of the
-overall \kepler\ sample.
-We calculated the velocity dispersions for all stars in the \kepler\ field,
+
+\racomment{
+    To investigate this idea further, we compared the velocity dispersions of
+stars with {\it measured rotation periods} to the velocity dispersions of the
+entire \kepler\ sample.
+If, for example, the rotation periods of G stars are only detectable when they
+are young, G stars with {\it measured periods} should have smaller velocity
+dispersions than {\it all} G stars, because they are younger on average.
+We calculated the velocity dispersions for all stars in the \kepler\ field
 after removing visual binaries, subgiants, stars fainter than 16th magnitude,
 and high Galactic latitude stars, following the method described in section
 \ref{sec:method}.
-We then compared these velocity dispersions to the velocity dispersions of
-stars in the \mct\ sample.
-If the rotation periods of G stars are only detectable when they are young, G
-stars with measured periods should have smaller velocity dispersions than G
-stars in the overall \kepler\ field.
-We calculated the ratio of \sigmavb\ for the entire \Kepler\ sample to
-\sigmavb\ for stars with rotation periods published in \mct, as a function of
-\teff\ (see figure \ref{fig:compare}).
+We then compared these velocity dispersions, as a function of
+\teff, to the velocity dispersions of stars with {\it measured} rotation
+periods \citep[\ie\ stars that appear in table 1 of][]{mcquillan2014}.
+We show the ratio of total \sigmavb\ to McQuillan-\sigmavb\ as a
+function of \teff\ in figure \ref{fig:compare}.}
 A larger ratio means the rotating star sample is {\it younger}, on average,
 than the overall \Kepler\ population, and a ratio of 1 means that the rotating
 stars have the {\it same} age distribution as the overall Kepler sample.
