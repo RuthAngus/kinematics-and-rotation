@@ -163,9 +163,9 @@ useful tool for calibrating gyrochronology in future.
 We find that a linear gyrochronology model, calibrated to fit the
 period--\teff\ relationship of the Praesepe cluster, does not apply to stars
 older than around 1 Gyr.
-Although late-K dwarfs spin more slowly than early-K and late-G dwarfs when
-they are young, at old ages we find that late-G and early-K dwarfs rotate at
-the {\it same rate} or faster than late-K dwarfs of the same age.
+Although late-K dwarfs spin more slowly than early-K dwarfs when they are
+    young, at old ages we find that late-K dwarfs rotate at the {\it same
+    rate} or faster than early-K dwarfs of the same age.
 This result agrees qualitatively with semi-empirical models that vary the rate
 of surface-to-core angular momentum transport as a function of time and mass.
 It also aligns with recent observations of stars in the NGC 6811 cluster,
@@ -487,7 +487,7 @@ these Praesepe-based models.
 The bottom panel of figure \ref{fig:vplot} shows velocity dispersion as a
 function of rotation period and {\it mass}, \citep[from][]{berger2020}, with
 gyrochrones from the \citet{spada2019} model shown in white.
-These gyrochrones are also plotted at 0.5, 1, 1.5, 2, 2.5, 4 and 4.57 Gyr.
+These gyrochrones are \racomment{plotted for the same ages as above.}
 Each point plotted in the top panel also appears in the bottom panel with the
 same color.
 Because velocity dispersion was calculated in bins of \teff, not mass, bin
@@ -509,10 +509,55 @@ evolution of K dwarfs, like that observed in open clusters \citep{curtis2019}
 and reproduced by models that vary angular momentum transport between stellar
 core and envelope with time and mass \citep{spada2019}.
 
+\racomment{
+In the top panel of figure \ref{fig:vplot}, the \citet{angus2019}
+gyrochronology model is over-plotted for comparison.
+We used this model as an example, however all empirical gyrochronology models
+are similar in essence to the \citet{angus2019} relation and none is able to
+reproduce the observed velocity dispersions, or capture the evolving shape of
+the period-\teff\ relations.
+The \citet{angus2019} relation is a new fully-empirical gyrochronology
+relation, calibrated using recently measured rotation periods for members of
+the Praesepe cluster, which extend down to early M dwarfs \citep{rebull2017,
+douglas2017}.
+These are the oldest cluster M dwarfs with measured photometric rotation
+periods and the \citet{angus2019} model therefore encapsulates the behavior of
+these cool stars at Praesepe age.
+
+Alternatively, we could have chosen to compare our data with one of the many
+other available empirical gyrochronology models.
+For example, the \citet{barnes2003, barnes2007, meibom2011, angus2015}
+relations all have a functional form that was first introduced by
+\citet{barnes2003}: $\mathrm{P_{rot}} = t^n~a(B-V - c)^b$, where n, a, b and c
+are free parameters, and B and V are photometric magnitudes.
+These relations have been widely used in the literature, and are similar to
+the \citet{angus2019} relation in that they consist of a color-dependent term
+multiplied by an age-dependent term, \ie\ they are separable in color and age.
+None of these relations follow lines of constant velocity dispersion in figure
+\ref{fig:vplot} because they have a universal power-law index, $n$ (around
+0.5), which applies to stars of all masses and ages.
+They do not have the flexibility to capture the evolving period-color
+relationship seen in the data.
+The \citet{barnes2010} model has a different functional form: it uses Rossby
+number ($Ro = P_\mathrm{rot}/\tau$, where $\tau$ is the convective turnover
+time) to encode the mass-dependent evolution of rotation periods:
+$\frac{dP_\mathrm{rot}}{dt} \propto 1/Ro$.
+This simple relation neatly reproduces the rotation periods of young cluster
+stars, however, like the other empirical gyrochronology models, it does not
+reproduce the observed trends seen in the velocity dispersion data.
+It has a similar period-\teff\ relation to the Praesepe-based
+\citet{angus2019} model, because the period-\teff\ relation of Praesepe
+roughly follows a line of constant Rossby number.
+Consequently, like the \citet{angus2019} model, the \citet{barnes2010}
+gyrochrones do not reproduce the data explored here and do not have the
+flexibility to capture mass and time-variable rotational evolution.
+Although it seems that the period-\teff\ relations follow lines of constant
+}
+
 The velocity dispersions of stars in the \mct\ sample, shown in figure
 \ref{fig:vplot}, provide the following picture of rotational evolution.
 At young ages \citep[younger than around 1 Gyr but still old enough to be on
-the main sequence and have transitioned from the `I' sequence to the `C'
+the main sequence and have transitioned from the `C' sequence to the `I'
 sequence ][]{barnes2003}, stellar rotation period {\it decreases} with {\it
 increasing} mass.
 This is likely because lower-mass stars with deeper convection zones have
@@ -890,7 +935,7 @@ stars stay active for longer it is likely that it contains a strong mass-age
 correlation.
 We selected all \kepler\ targets with dereddened \gaia\ \gcolor\ colors
 greater than 1.2 (corresponding to an effective temperature $\lesssim$
-4800 K) and absolute \gaia\ $G$-band magnitudes $<$ 4.
+4800 K) and absolute \gaia\ $G$-band magnitudes $>$ 4.
 We also eliminated photometric binaries by removing stars above a 6th order
 polynomial, fit to the MS on the \gaia\ CMD (similar to the one shown in
 figure \ref{fig:age_gradient}).
@@ -1009,6 +1054,7 @@ Although we find that \sigmavb\ can be used to rank groups of stars by age, a
 more careful analysis that includes formal modeling of the \vb\ -- \vz\
 relationship will be needed to calculate absolute ages.
 
+\racomment{
 \section{Appendix B: Photometric temperatures}
 
 For this work, we used the precise \textit{Gaia} DR2 photometric color,
@@ -1021,8 +1067,8 @@ optical and near-infrared spectroscopy \citep{mann2015}, and K and M dwarfs
 characterized with interferometry and bolometric flux analyses
 \citep{boyajian2012}.
 This empirical color--temperature relation is valid over the color range $0.55
-< (G_{\rm BP} - G_{\rm RP})_0 < 3.20$, corresponding to $6470 < T_{\rm eff} <
-3070$~K.
+< (G_{\rm BP} - G_{\rm RP})_0 < 3.20$, corresponding to $3070 > T_{\rm eff} >
+6470$~K.
 The dispersion about the relation implies a high precision of 50~K.
 These benchmark data enable us to accurately estimate \teff\ for cool dwarfs
 \citep[\eg][]{rabus2019}, and allows us to correct for interstellar reddening
@@ -1053,7 +1099,7 @@ color is a seventh-order polynomial with coefficients given in table
     \end{tabular}
   \end{center}
 \end{table}
-
+}
 
 %% For this sample we use BibTeX plus aasjournals.bst to generate the
 %% the bibliography. The sample63.bib file was populated from ADS. To
