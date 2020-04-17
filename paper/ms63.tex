@@ -415,10 +415,11 @@ astropy2018} {\it Python} packages were used to calculate velocities for the
 covariance matrix via Monte Carlo sampling, thereby accounting for the
 covariances between \gaia\ positions, parallaxes and proper motions.
 Stars with negative parallaxes or parallax signal-to-noise ratios less than 10
-(around 3,000 stars), stars fainter than 16th magnitude (200 stars), stars
-with absolute \vb\ uncertainties greater than 1 \kms\ (1000 stars), and stars
-with galactic latitudes greater than 15\degrees\ (5500 stars, justification
-provided in the appendix) were removed from the sample.
+(around 3,000 stars), stars fainter than 16th magnitude \racomment{in \gaia\
+G-band} (200 stars), stars with absolute \vb\ uncertainties greater than 1
+\kms\ (1000 stars), and stars with galactic latitudes greater than 15\degrees\
+(5500 stars, justification provided in the appendix) were removed from the
+sample.
 Finally, we removed almost 2000 stars with rotation periods shorter than the
 main population of periods, since this area of the period-\teff\ diagram is
 sparsely populated.
@@ -427,6 +428,8 @@ less than 0.5 Gyr \citep[based on the][gyro-model]{angus2019}, because a 0.5
 Gyr gyrochrone\footnote{A gyrochrone is a gyrochronological isochrone, or a
 line of constant age in period-\teff, or period-color space.} traces the
 bottom edge of the main population of rotation periods.
+\racomment{These rapidly rotating stars are likely to be either very young
+stars, or synchronized binaries (see section \ref{sec:gap}).}
 After these cuts, around 13,000 stars out of the original $\sim$34,000 were
 included in the sample.
 
@@ -604,12 +607,13 @@ ages, the rotation periods of K dwarfs appear {\it constant} with mass, and at
 late ages rotation period {\it increases} with {\it increasing} mass.
 The interpretation of this, according to the \citet{spada2019} model, is that
 lower-mass stars are still braking more efficiently at these intermediate and
-old ages but their cores are more tightly coupled to their envelopes, allowing
-angular momentum transport between the two layers.
-Angular momentum resurfaces from the core and prevents the stellar envelopes
-from spinning-down rapidly, and this effect is strongest for late K-dwarfs
-with effective temperatures of $\sim$4000-4500K and masses $\sim$0.5-0.7
-M$_\odot$.
+old ages \racomment{compared to higher-mass stars}, but their cores are more
+tightly coupled to their envelopes, allowing angular momentum transport
+between the two layers.
+Angular momentum resurfaces \racomment{from the core} and prevents the stellar
+envelopes from spinning-down rapidly, and this effect is strongest for late
+K-dwarfs with effective temperatures of $\sim$4000-4500K and masses
+$\sim$0.5-0.7 M$_\odot$.
 
 A period of core-envelope decoupling in the evolution of cool dwarfs has been
 explored in theoretical models for decades \citep[\eg][]{endal1981,
@@ -621,8 +625,8 @@ A decoupled core and envelope is required to reproduce observations of young
 clusters and star forming regions \citep[\eg][]{irwin2007, bouvier2008,
 denissenkov2010, spada2011, reiners2012} and has become an established element
 of theoretical gyrochronology models.
-During this phase, angular momentum transport between radiative core and
-convective envelope is reduced.
+During this phase, angular momentum transport between the radiative core and
+the convective envelope is reduced.
 Over time, models increase the efficiency of angular momentum transport
 between the core and envelope in order to reproduce the close-to solid body
 rotation observed for the Sun \citep[\eg][]{thompson1996}.
@@ -648,42 +652,61 @@ brun2011, oglethorpe2013}.
 % number of field stars with measured ages and rotation periods which could be
 % provided by kinematic ages for the \mct\ sample.
 
-Figure \ref{fig:vplot} reveals another phenomenon of magnetic evolution:
-K and M dwarfs remain magnetically active for longer than G dwarfs.
+% Figure \ref{fig:vplot} reveals another phenomenon of magnetic evolution:
+% K and M dwarfs remain magnetically active for longer than G dwarfs.
+
+\racomment{
+In order to measure a rotation period at all, there must be some magnetically
+active regions (either bright plages or dark spots), of a reasonable size on
+the surface of a star.
+    The relatively sharp upper-edge of the rotation period distribution seen
+in figure \ref{fig:vplot} may therefore be caused by a finite active lifetime
+of stars.
 The mass dependence of magnetic activity lifetimes has been demonstrated
-previously \citep[\eg][]{west2008, newton2017, kiman2019}, and if the
-detectability of a rotation period is considered to be a magnetic activity
-proxy, then our results provide further evidence for a mass-dependent activity
-lifetime.
+previously \racomment{for M dwarfs} \citep[\eg][]{west2008, newton2017,
+kiman2019}, and if the detectability of a rotation period is considered to be
+a magnetic activity proxy, then our results provide further evidence for a
+{\it mass-dependent} activity lifetime.
 Figure \ref{fig:vplot} shows that the populations of stars with the largest
 velocity dispersions are cooler than 4500 K.
 This implies that the oldest stars with detectable rotation periods are
 cooler than 4500 K, \ie\ these-low mass stars stay active longer than more
 massive stars.
-\racomment{ Although later-type stars are known to remain active for longer,
-this result is not necessarily altogether expected.
-For example, \citet{matt2015}, found that the upper-envelope of the \kepler\
-rotation period distribution corresponds to a single-age population of around
-4 Gyr.
-Their gyrochronology model coincided with the upper-envelope at 4 Gyrs, and
-the natural conclusion was that stars with rotation periods near the
-upper-edge of the \mct\ rotation period distribution are all the same age.
-However, the velocity dispersion data presented in figure \ref{fig:vplot}
-indicate that the upper-envelope is {\it not} a single-age population, and
-that later-type stars are in fact older.
 }
+% a decrease in magnetic activity after stars exceed a certain age.
+% If so, it is possible that the ages of stars near this upper-edge represent
+% the activity lifetimes of stars.}
+% % We therefore assume that stars {\it with} measured rotation periods are,
+% on % average, more magnetically active than stars {\it without} measured
+% rotation % periods.
+% \citet{matt2015} found that a 4 Gyr gyrochrone, calculated with their model,
+% coincided with the upper-envelope at 4 Gyrs and concluded that the
+% upper-envelope of the \kepler\ rotation period distribution corresponds to a
+% single-age population of around 4 Gyr.
+% However, the velocity dispersion data presented in figure \ref{fig:vplot}
+% suggest that the activity lifetime of stars is mass-dependent.
+% In this case, stars near the upper-dge of the period distribution are not all
+% the same age that later-type stars are in fact older than earlier types.
+% }
 
 \racomment{
     To investigate this idea further, we compared the velocity dispersions of
 stars with {\it measured rotation periods} to the velocity dispersions of the
 entire \kepler\ sample.
-If, for example, the rotation periods of G stars are only detectable when they
-are young, G stars with {\it measured periods} should have smaller velocity
-dispersions than {\it all} G stars, because they are younger on average.
-We calculated the velocity dispersions for all stars in the \kepler\ field
-after removing visual binaries, subgiants, stars fainter than 16th magnitude,
-and high Galactic latitude stars, following the method described in section
-\ref{sec:method}.
+% We assumed that stars with measured rotation periods are more magnetically
+% active than stars without measured rotation periods.
+If stars with measured rotation periods are more magnetically active and
+younger than stars without rotation period measurements, they should also have
+smaller velocity dispersions.
+% This means that stars with measured rotation periods should be kinematically
+% younger on average than the entire \kepler\ sample.
+% they are young, because G stars are only magnetically active when they are
+% young, G stars with {\it measured periods} should have smaller velocity
+% dispersions than {\it all} G stars.
+To test this theory, we calculated the velocity dispersions for all stars in
+the \kepler\ field after removing visual binaries, subgiants, stars fainter
+than 16th magnitude, and high Galactic latitude stars, following the method
+described in section \ref{sec:method}.
 We then compared these velocity dispersions, as a function of
 \teff, to the velocity dispersions of stars with {\it measured} rotation
 periods \citep[\ie\ stars that appear in table 1 of][]{mcquillan2014}.
@@ -753,8 +776,8 @@ surface regions {\it at a younger age than M dwarfs}.
 \end{figure}
 
 In this section, we explored the kinematic properties of the \mct\ sample in
-more detail, investigating the velocity dispersions of stars either side of the
-\kepler\ period gap, and identifying rapidly rotating stars that may be
+more detail, investigating the velocity dispersions of stars on either side of
+the \kepler\ period gap, and identifying rapidly rotating stars that may be
 synchronized binaries.
 
 There is a sharp gap in the population of rotation periods (often called the
@@ -780,9 +803,13 @@ Although we do not provide an in-depth analysis here (and more data may be
 needed to confirm a connection) these data suggest that the gap may indeed
 separate a young regime where stellar cores are decoupled from their envelopes
 from an old regime where these layers are more tightly coupled.
-If so, this could indicate that the phenomenon responsible for changing the
-shape of gyrochrones in rotation-\teff\ space is related to the phenomenon that
-produces the gap.
+If so, this could indicate that \racomment{these phenomena are related, \ie\
+the process that is responsible for changing the shape of gyrochrones in
+rotation-\teff\ space is related to the process that produces the gap.
+% Of course this may just be a coincidence.
+% Alternatively, the fact that the gap is located near a changing stellar
+% evolution regime may be a coincidence.
+}
 
 An alternate explanation for the gap is that the \mct\ sample contains two
 distinct stellar populations: one young and one old.
