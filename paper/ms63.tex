@@ -546,6 +546,7 @@ All the available empirical gyrochronology models are similar in essence to
 the \citet{angus2019} relation and, like that relation, none is able to
 reproduce the observed velocity dispersions, or capture the evolving shape of
 the period-\teff\ relations.
+
 The \citet{angus2019} relation is a new fully-empirical gyrochronology
 relation, calibrated using recently measured rotation periods for members of
 the Praesepe cluster, which extend down to early M dwarfs \citep{rebull2017,
@@ -553,9 +554,8 @@ douglas2017}.
 These are the oldest cluster M dwarfs with measured photometric rotation
 periods and the \citet{angus2019} model therefore encapsulates the behavior of
 these cool stars at Praesepe age.
-
-Alternatively, we could have chosen to compare our data with one of the many
-other available empirical gyrochronology models.
+There are many other empirical gyrochronology models we could have chosen to
+compare with our data.
 For example, the \citet{barnes2003, barnes2007, mamajek2008, meibom2011,
 angus2015} relations all have a functional form that was first introduced by
 \citet{barnes2003}: $\mathrm{P_{rot}} = t^n~a(B-V - c)^b$, where n, a, b and c
@@ -564,7 +564,7 @@ These relations have been widely used in the literature, and are similar to
 the \citet{angus2019} relation in that they consist of a color-dependent term
 multiplied by an age-dependent term, \ie\ they are separable in color and age.
 None of these relations follow lines of constant velocity dispersion in figure
-\ref{fig:vplot} because they have a universal power-law index, $n$ (around
+\ref{fig:vplot} because they have a universal power-law index, $n$ ($\approx$
 0.5), which applies to stars of all masses and ages.
 They do not have the flexibility to capture the evolving period-color
 relationship seen in the data.
@@ -574,18 +574,18 @@ time) to encode the mass-dependent evolution of rotation periods:
 $\frac{dP_\mathrm{rot}}{dt} \propto 1/Ro$.
 This simple relation neatly reproduces the rotation periods of young cluster
 stars, however, like the other empirical gyrochronology models, it does not
-reproduce the observed trends seen in the velocity dispersion data.
-It has a similar period-\teff\ relation to the Praesepe-based
-\citet{angus2019} model, because the period-\teff\ relation of Praesepe
-roughly follows a line of constant Rossby number.
-Consequently, like the \citet{angus2019} model, the \citet{barnes2010}
-gyrochrones do not reproduce the data explored here and do not have the
-flexibility to capture mass and time-variable rotational evolution.
+reproduce the observed trends seen in the velocity dispersion data here.
+The \citet{barnes2010} model has a similar period-\teff\ relation to the
+Praesepe-based \citet{angus2019} model, because the period-\teff\ relation of
+Praesepe roughly follows a line of constant Rossby number.
+Consequently, like the \citet{angus2019} model, the \citet{barnes2010} model
+in its current form does not have the flexibility to capture the mass and
+time-variable rotational evolution revealed by the data explored here.
 
-The lack of flexibility that is baked-in to these empirical gyrochronology
-models should not be seen as a failing of gyrochronologists: with a paucity of
-calibration data for old stars all one can do is fit simple relations to young
-stars and extrapolate to old ages.
+The lack of flexibility in these empirical gyrochronology models should not be
+seen as a failing of gyrochronologists.
+With a lack of old calibration stars, the only possible approach has been to
+fit simple relations to young stars and extrapolate to old ages.
 Naturally however, in this era of precise space-based photometry, new data are
 revealing flaws in our old models (which no one ever thought were perfect),
 and are providing opportunities to improve them.
@@ -665,9 +665,15 @@ brun2011, oglethorpe2013}.
 In order to measure a rotation period at all, there must be some magnetically
 active regions (either bright plages or dark spots), of a reasonable size on
 the surface of a star.
-    The relatively sharp upper-edge of the rotation period distribution seen
-in figure \ref{fig:vplot} may therefore be caused by a finite active lifetime
-of stars.
+In other words, there is presumably some minimum magnetic activity level that
+is required in order to produce coherent light curve variability from which a
+rotation period can be confidently measured.
+The relatively sharp upper-edge of the rotation period distribution seen in
+figure \ref{fig:vplot} may be caused by a finite active lifetime of stars,
+\ie\ stars older than a critical age are no longer active enough to produce
+periodic, high-amplitude variability.
+The data presented in figure \ref{fig:vplot} indicate that this active
+lifetime is a function of stellar mass.
 The mass dependence of magnetic activity lifetimes has been demonstrated
 previously \racomment{for M dwarfs} \citep[\eg][]{west2008, newton2017,
 kiman2019}, and if the detectability of a rotation period is considered to be
@@ -675,9 +681,9 @@ a magnetic activity proxy, then our results provide further evidence for a
 {\it mass-dependent} activity lifetime.
 Figure \ref{fig:vplot} shows that the populations of stars with the largest
 velocity dispersions are cooler than 4500 K.
-This implies that the oldest stars with detectable rotation periods are
-cooler than 4500 K, \ie\ these-low mass stars stay active longer than more
-massive stars.
+This implies that \racomment{most of} the oldest stars with detectable
+rotation periods are cooler than 4500 K, \ie\ these-low mass stars stay active
+longer than more massive stars.
 }
 % a decrease in magnetic activity after stars exceed a certain age.
 % If so, it is possible that the ages of stars near this upper-edge represent
