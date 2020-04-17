@@ -160,7 +160,7 @@ stars.
 In this work, we use velocity dispersion as an age proxy, to reveal the
 temperature-dependent rotational evolution of low-mass \kepler\ dwarfs and
 demonstrate that kinematic ages could be a useful tool for calibrating
-gyrochronology in future.
+gyrochronology in the future.
 }
 % In this work, we use the velocity dispersions of groups of low-mass \kepler\
 % dwarfs as an age proxy, to reveal the temperature-dependent rotational
@@ -263,15 +263,29 @@ indication that stars formed dynamically ``hotter'' in the past
 \citep[e.g.,][]{bird2013}.
 In either case, the vertical velocity distribution is observed to depend
 significantly on stellar age.
-While the velocity of any individual star only provides a weak age constrain
-because its velocity depends on its current position in its orbit, the
-velocity {\it dispersion} of a {\it group} of stars indicates whether that
-group is old or young relative to other groups.
+While the velocity of any individual star only provides a weak age constraint
+\racomment{(if any at all)} because its velocity depends on its current
+position in its orbit, the velocity {\it dispersion} of a {\it population} of
+stars indicates whether that population is old or young relative to other
+populations.
 % Vertical velocity dispersion is thought to increase monotonically with age.
-In this work, we compare the velocity dispersions of groups of field stars in
-the Galactic thin disk to ascertain which groups are older and which younger,
-and draw conclusions about the rotational evolution of stars based on their
-implied relative ages.
+In this work, we compare the velocity dispersions of populations of field
+stars in the Galactic thin disk to ascertain which populations are older and
+which younger, and draw conclusions about the rotational evolution of stars
+based on their implied relative ages.
+
+\racomment{ Kinematic ages have been used to explore the evolution of cool
+dwarfs many times in the past, \citep[\eg][]{reid1995, gizis2000, west2004,
+west2006, schmidt2007, faherty2009, kiman2019}.
+For example, \citet{west2004, west2006} used the vertical distances of stars
+from the Galactic mid-plane as an age proxy, and found that the fraction of
+magnetically active M dwarfs decreases over time.
+\citet{faherty2009} used tangential velocities to infer the ages of M, L and T
+dwarfs, and showed that dwarfs with lower surface gravities tended to be
+kinematically younger, and \citet{kiman2019} used velocity dispersion as an
+age proxy to explore the evolution of H$\alpha$ equivalent width (a magnetic
+activity indicator), in M dwarfs.
+}
 
 Although {\it vertical} velocity, \vz, is an established age proxy, it can
 only be calculated with full 6-dimensional position and velocity information.
@@ -291,10 +305,11 @@ ages using a published age--velocity dispersion relation (AVR), calibrated with
 vertical velocity.
 In the future it may be possible to account for the differences between \vb\
 and \vz, or marginalize over missing RV measurements and the \kepler\
-selection function, in order to infer the absolute ages of groups of stars.
+selection function, in order to infer the absolute ages of populations of
+stars.
 Regardless of direction however, velocity dispersion is expected to
 monotonically increase over time \citep[\eg][]{holmberg2009}, and can
-therefore be used to {\it rank} groups of stars by age.
+therefore be used to {\it rank} populations of stars by age.
 
 This paper is laid out as follows: in section \ref{sec:method} we describe our
 sample selection process and the methods used to calculate stellar
@@ -424,8 +439,8 @@ included in the sample.
 To explore the relationship between rotation period, effective temperature
 (\teff ) and velocity dispersion, we calculated \sigmavb \footnote{\sigmavb\
 was calculated as 1.5$\times$ the median absolute deviation of velocities, to
-mitigate sensitivity to outliers.} for groups of stars with similar rotation
-periods and temperatures, and presumed similar age.
+mitigate sensitivity to outliers.} for populations of stars with similar
+rotation periods and temperatures, and presumed similar age.
 The top panel of figure \ref{fig:vplot} shows rotation period versus effective
 temperature for the \mct\ sample, coloured by \sigmavb, where \sigmavb\ was
 calculated for groups of stars over a grid in $\log_{10}$(period) and
@@ -532,8 +547,8 @@ these cool stars at Praesepe age.
 
 Alternatively, we could have chosen to compare our data with one of the many
 other available empirical gyrochronology models.
-For example, the \citet{barnes2003, barnes2007, meibom2011, angus2015}
-relations all have a functional form that was first introduced by
+For example, the \citet{barnes2003, barnes2007, mamajek2008, meibom2011,
+angus2015} relations all have a functional form that was first introduced by
 \citet{barnes2003}: $\mathrm{P_{rot}} = t^n~a(B-V - c)^b$, where n, a, b and c
 are free parameters, and B and V are photometric magnitudes.
 These relations have been widely used in the literature, and are similar to
@@ -576,11 +591,10 @@ increasing} mass.
 This is likely because lower-mass stars with deeper convection zones have
 stronger magnetic fields, larger Alfv\'en radii and therefore experience
 greater angular momentum loss rate \citep[\eg][]{schatzman1962, kraft1967,
-parker1970, kawaler1988, charbonneau2010}.
-This aligns with the current assumptions about stellar spin-down, dynamo
-theory, and the gyrochronology paradigm that has been in place for decades
-\citep[\eg][]{skumanich1972, noyes1984, kawaler1988, barnes2003, barnes2010,
-angus2019}.
+parker1970, kawaler1988, charbonneau2010, matt2012, matt2015}.
+% This aligns with the current assumptions about stellar spin-down, dynamo
+% theory, and the gyrochronology paradigm that has been in place for decades.
+% \citep[\eg][]{skumanich1972, noyes1984, kawaler1988, barnes2003, barnes2010}.
 According to the \citet{spada2019} model, the radiative cores and convective
 envelopes of stars are decoupled at these young ages, \ie\ transportation of
 angular momentum from the surface to the core of the star is reduced, so the
@@ -592,9 +606,10 @@ The interpretation of this, according to the \citet{spada2019} model, is that
 lower-mass stars are still braking more efficiently at these intermediate and
 old ages but their cores are more tightly coupled to their envelopes, allowing
 angular momentum transport between the two layers.
-Angular momentum resurfaces and prevents the stellar envelopes from
-spinning-down rapidly, and this effect is strongest for late K-dwarfs with
-effective temperatures of $\sim$4000-4500K and masses $\sim$0.5-0.7 M$_\odot$.
+Angular momentum resurfaces from the core and prevents the stellar envelopes
+from spinning-down rapidly, and this effect is strongest for late K-dwarfs
+with effective temperatures of $\sim$4000-4500K and masses $\sim$0.5-0.7
+M$_\odot$.
 
 A period of core-envelope decoupling in the evolution of cool dwarfs has been
 explored in theoretical models for decades \citep[\eg][]{endal1981,
@@ -640,11 +655,23 @@ previously \citep[\eg][]{west2008, newton2017, kiman2019}, and if the
 detectability of a rotation period is considered to be a magnetic activity
 proxy, then our results provide further evidence for a mass-dependent activity
 lifetime.
-Figure \ref{fig:vplot} shows that the groups of stars with the largest
+Figure \ref{fig:vplot} shows that the populations of stars with the largest
 velocity dispersions are cooler than 4500 K.
 This implies that the oldest stars with detectable rotation periods are
 cooler than 4500 K, \ie\ these-low mass stars stay active longer than more
 massive stars.
+\racomment{ Although later-type stars are known to remain active for longer,
+this result is not necessarily altogether expected.
+For example, \citet{matt2015}, found that the upper-envelope of the \kepler\
+rotation period distribution corresponds to a single-age population of around
+4 Gyr.
+Their gyrochronology model coincided with the upper-envelope at 4 Gyrs, and
+the natural conclusion was that stars with rotation periods near the
+upper-edge of the \mct\ rotation period distribution are all the same age.
+However, the velocity dispersion data presented in figure \ref{fig:vplot}
+indicate that the upper-envelope is {\it not} a single-age population, and
+that later-type stars are in fact older.
+}
 
 \racomment{
     To investigate this idea further, we compared the velocity dispersions of
@@ -942,9 +969,9 @@ evidence for mass-dependent heating has previously been found in M dwarfs
 \citep[\eg][]{faherty2009, newton2016}.
 
 To investigate whether mass-dependent heating could be acting on the \kepler\
-sample, we selected late K and M dwarfs observed by both \kepler\ and \gaia,
-whose MS lifetimes exceed around 11 Gyr and are therefore representative of
-the initial mass function.
+sample, we selected late K and early M dwarfs observed by both \kepler\ and
+\gaia, whose MS lifetimes exceed around 11 Gyr and are therefore
+representative of the initial mass function.
 We could not perform this analysis on the \mct\ sample, because it only
 includes stars with {\it detectable} rotation periods, and since lower-mass
 stars stay active for longer it is likely that it contains a strong mass-age
@@ -961,9 +988,9 @@ To search for evidence of mass-dependent heating we calculated the (\vb)
 velocity dispersion of stars in effective temperature bins.
 Sigma clipping was performed at 3$\sigma$ to remove high and low velocity
 outliers before calculating the standard deviation of stars in each bin.
-These extreme velocity outliers may be very old late K and M dwarfs, or they
-result from using \vb\ instead of \vz, which introduces additional velocity
-scatter.
+These extreme velocity outliers may be very old late K and early M dwarfs, or
+they result from using \vb\ instead of \vz, which introduces additional
+velocity scatter.
 
 Figure \ref{fig:vb_vs_teff} shows velocity and velocity dispersion as a
 function of effective temperature for the K and M \kepler\ dwarf sample.
@@ -1066,8 +1093,8 @@ work in action-space, rather than velocity-space.
 Because of the noisy relationship between \vb\ and \vz\, in this paper we do
 not attempt to convert velocity dispersion (\sigmavb) into an age via an
 age-velocity dispersion relation (AVR) \citep[\eg][]{holmberg2009}.
-Although we find that \sigmavb\ can be used to rank groups of stars by age, a
-more careful analysis that includes formal modeling of the \vb\ -- \vz\
+Although we find that \sigmavb\ can be used to rank populations of stars by
+age, a more careful analysis that includes formal modeling of the \vb\ -- \vz\
 relationship will be needed to calculate absolute ages.
 
 \racomment{
