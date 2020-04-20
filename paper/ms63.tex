@@ -208,9 +208,9 @@ converge onto a unique sequence by $\sim$500-700 million years
 \citep[\eg][]{irwin2009, gallet2013}.
 After this time, the rotation period of a star is thought to be determined, to
 first order, by its color and age alone.
-This is the principle behind gyrochronology, the method of inferring a
-star’s age from its rotation period \citep[\eg][]{barnes2003, barnes2007,
-barnes2010, meibom2011, meibom2015}.
+This is the principle behind gyrochronology, the method of inferring a star’s
+age from its rotation period \citep[\eg][]{skumanich1972, barnes2003,
+barnes2007, mamajek2008, barnes2010, meibom2011, meibom2015}.
 However, new photometric rotation periods made available by the \kepler\
 \citep{borucki2010} and \ktwo\ \citep{howell2014} missions
 \citep[\eg][]{mcquillan2014, garcia2014, douglas2017, rebull2017, meibom2011,
@@ -381,11 +381,11 @@ to have measurable rotation periods at old ages, the latter scenario seems
 likely.
 However, it is also possible that the rotation periods of the oldest early M
 dwarfs are so long that they are not measurable with Kepler data.
-Ground-based rotation period measurements of mid and late M dwarfs indicate
-that there is an upper limit to the rotation periods of {\it late} M dwarfs of
-around 140 days \citep{newton2016, newton2018}, which is much
-longer than the longest rotation periods measured in the \mct\ sample (around
-70 days).
+\racomment{Ground-based rotation period measurements of early M dwarfs
+(spectral types earlier than $\sim$ M2.5, \teff $\gtrsim$3500) indicate that
+there is an upper limit to their rotation periods of around 80 days
+\citep{newton2016, newton2018}, which is longer than the longest rotation
+periods measured for the early M dwarfs in the \mct\ sample (around 50 days).}
 The apparent lack of old gyro-ages for M dwarfs in figure
 \ref{fig:age_gradient} may be caused by a combination of ages being
 underestimated by a poorly calibrated model, and rotation period detection
@@ -537,60 +537,6 @@ evolution of K dwarfs, like that observed in open clusters \citep{curtis2019}
 and reproduced by models that vary angular momentum transport between stellar
 core and envelope with time and mass \citep{spada2019}.
 
-\racomment{
-In the top panel of figure \ref{fig:vplot}, the \citet{angus2019}
-gyrochronology model is plotted for comparison with the data.
-This model was chosen as an example but there are many other empirical
-gyrochronology models we could have used.
-All the available empirical gyrochronology models are similar in essence to
-the \citet{angus2019} relation and, like that relation, none is able to
-reproduce the observed velocity dispersions, or capture the evolving shape of
-the period-\teff\ relations.
-
-The \citet{angus2019} relation is a new fully-empirical gyrochronology
-relation, calibrated using recently measured rotation periods for members of
-the Praesepe cluster, which extend down to early M dwarfs \citep{rebull2017,
-douglas2017}.
-These are the oldest cluster M dwarfs with measured photometric rotation
-periods and the \citet{angus2019} model therefore encapsulates the behavior of
-these cool stars at Praesepe age.
-There are many other empirical gyrochronology models we could have chosen to
-compare with our data.
-For example, the \citet{barnes2003, barnes2007, mamajek2008, meibom2011,
-angus2015} relations all have a functional form that was first introduced by
-\citet{barnes2003}: $\mathrm{P_{rot}} = t^n~a(B-V - c)^b$, where n, a, b and c
-are free parameters, and B and V are photometric magnitudes.
-These relations have been widely used in the literature, and are similar to
-the \citet{angus2019} relation in that they consist of a color-dependent term
-multiplied by an age-dependent term, \ie\ they are separable in color and age.
-None of these relations follow lines of constant velocity dispersion in figure
-\ref{fig:vplot} because they have a universal power-law index, $n$ ($\approx$
-0.5), which applies to stars of all masses and ages.
-They do not have the flexibility to capture the evolving period-color
-relationship seen in the data.
-The \citet{barnes2010} model has a different functional form: it uses Rossby
-number ($Ro = P_\mathrm{rot}/\tau$, where $\tau$ is the convective turnover
-time) to encode the mass-dependent evolution of rotation periods:
-$\frac{dP_\mathrm{rot}}{dt} \propto 1/Ro$.
-This simple relation neatly reproduces the rotation periods of young cluster
-stars, however, like the other empirical gyrochronology models, it does not
-reproduce the observed trends seen in the velocity dispersion data here.
-The \citet{barnes2010} model has a similar period-\teff\ relation to the
-Praesepe-based \citet{angus2019} model, because the period-\teff\ relation of
-Praesepe roughly follows a line of constant Rossby number.
-Consequently, like the \citet{angus2019} model, the \citet{barnes2010} model
-in its current form does not have the flexibility to capture the mass and
-time-variable rotational evolution revealed by the data explored here.
-
-The lack of flexibility in these empirical models should not be seen as a
-failing of gyrochronology.
-With a paucity of old calibration stars, the only possible approach has been
-to fit simple relations to young stars and extrapolate to old ages.
-Naturally however, in this era of precise space-based photometry, new data are
-revealing flaws in our old models (which no one ever thought were perfect),
-and are providing opportunities to improve them.
-}
-
 The velocity dispersions of stars in the \mct\ sample, shown in figure
 \ref{fig:vplot}, provide the following picture of rotational evolution.
 At young ages \citep[younger than around 1 Gyr but still old enough to be on
@@ -660,6 +606,61 @@ brun2011, oglethorpe2013}.
 
 % Figure \ref{fig:vplot} reveals another phenomenon of magnetic evolution:
 % K and M dwarfs remain magnetically active for longer than G dwarfs.
+
+\racomment{
+In the top panel of figure \ref{fig:vplot}, the \citet{angus2019}
+gyrochronology model is plotted for comparison with the data.
+This model was chosen as an example but there are many other empirical
+gyrochronology models we could have used.
+All the available empirical gyrochronology models are similar in essence to
+the \citet{angus2019} relation and, like that relation, none is able to
+reproduce the observed velocity dispersions, or capture the evolving shape of
+the period-\teff\ relations.
+
+The \citet{angus2019} relation is a new fully-empirical gyrochronology
+relation, calibrated using recently measured rotation periods for members of
+the Praesepe cluster, which extend down to early M dwarfs \citep{rebull2017,
+douglas2017}.
+These are the oldest cluster M dwarfs with measured photometric rotation
+periods and the \citet{angus2019} model therefore encapsulates the behavior of
+these cool stars at Praesepe age.
+There are many other empirical gyrochronology models we could have chosen to
+compare with our data.
+For example, the \citet{barnes2003, barnes2007, mamajek2008, meibom2011,
+angus2015} relations all have a functional form that was first introduced by
+\citet{barnes2003}: $\mathrm{P_{rot}} = t^n~a(B-V - c)^b$, where n, a, b and c
+are free parameters, and B and V are photometric magnitudes.
+These relations have been widely used in the literature, and are similar to
+the \citet{angus2019} relation in that they consist of a color-dependent term
+multiplied by an age-dependent term, \ie\ they are separable in color and age.
+None of these relations follow lines of constant velocity dispersion in figure
+\ref{fig:vplot} because they have a universal power-law index, $n$ ($\approx$
+0.5), which applies to stars of all masses and ages.
+They do not have the flexibility to capture the evolving period-color
+relationship seen in the data.
+The \citet{barnes2010} model has a different functional form: it uses Rossby
+number ($Ro = P_\mathrm{rot}/\tau$, where $\tau$ is the convective turnover
+time) to encode the mass-dependent evolution of rotation periods:
+$\frac{dP_\mathrm{rot}}{dt} \propto 1/Ro$.
+This simple relation neatly reproduces the rotation periods of young cluster
+stars, however, like the other empirical gyrochronology models, it does not
+reproduce the observed trends seen in the velocity dispersion data here.
+The \citet{barnes2010} model has a similar period-\teff\ relation to the
+Praesepe-based \citet{angus2019} model, because the period-\teff\ relation of
+Praesepe roughly follows a line of constant Rossby number.
+Consequently, like the \citet{angus2019} model, the \citet{barnes2010} model
+in its current form does not have the flexibility to capture the mass and
+time-variable rotational evolution revealed by the data explored here.
+
+The lack of flexibility in these empirical models should not be seen as a
+failing of gyrochronology.
+With a paucity of old calibration stars, the only possible approach has been
+to fit simple relations to young stars and extrapolate to old ages.
+Naturally however, in this era of precise space-based photometry, new data are
+revealing flaws in our old models (which no one ever thought were perfect),
+and are providing opportunities to improve them.
+}
+
 
 \racomment{
 In order to measure a rotation period at all, there must be some magnetically
