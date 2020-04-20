@@ -268,7 +268,7 @@ indication that stars formed dynamically ``hotter'' in the past
 In either case, the vertical velocity distribution is observed to depend
 significantly on stellar age.
 While the velocity of any individual star only provides a weak age constraint
-\racomment{(if any at all)} because its velocity depends on its current
+\racomment{(if any at all)}, because its velocity depends on its current
 position in its orbit, the velocity {\it dispersion} of a {\it population} of
 stars indicates whether that population is old or young relative to other
 populations.
@@ -291,8 +291,9 @@ age proxy to explore the evolution of H$\alpha$ equivalent width (a magnetic
 activity indicator), in M dwarfs.
 }
 
-Although {\it vertical} velocity, \vz, is an established age proxy, it can
-only be calculated with full 6-dimensional position and velocity information.
+Although {\it vertical} velocity, \vz, is \racomment{a well-established} age
+proxy, it can only be calculated with full 6-dimensional position and velocity
+information.
 In fact, with full 6D phase space and an assumed Galactic potential, it is
 possible to calculate the dynamically-invariant vertical {\it action}, which may
 be an even better age indicator \citep{beane2018, ting2019}.
@@ -344,7 +345,7 @@ Bayestar dust map implemented in the {\tt dustmaps} {\it Python} package
 For this work, we used the precise \textit{Gaia} DR2 photometric color,
 $G_{\rm BP} - G_{\rm RP}$, to estimate \teff\ for the Kepler rotators.
 \racomment{The calibration of this relation is described Curtis \etal\ (2020,
-in prep) and briefly summarized in the Appendix of this paper.}
+in prep) and summarized in the Appendix of this paper.}
 
 Photometric binaries and subgiants were removed from the \mct\ sample by
 applying cuts to the color-magnitude diagram (CMD), shown in figure
@@ -432,10 +433,9 @@ less than 0.5 Gyr \citep[based on the][gyro-model]{angus2019}, because a 0.5
 Gyr gyrochrone\footnote{A gyrochrone is a gyrochronological isochrone, or a
 line of constant age in period-\teff, or period-color space.} traces the
 bottom edge of the main population of rotation periods.
-\racomment{These rapidly rotating stars are likely to be either very young
-stars, or synchronized binaries (see section \ref{sec:gap}).}
-After these cuts, around 13,000 stars out of the original $\sim$34,000 were
-included in the sample.
+\racomment{These rapid rotators are probably either very young stars, or
+synchronized binaries (see section \ref{sec:gap}).} After these cuts, around
+13,000 stars out of the original $\sim$34,000 were included in the sample.
 
 \section{Results and Discussion}
 \label{sec:results}
@@ -515,7 +515,7 @@ these Praesepe-based models.
 The bottom panel of figure \ref{fig:vplot} shows velocity dispersion as a
 function of rotation period and {\it mass}, \citep[from][]{berger2020}, with
 gyrochrones from the \citet{spada2019} model shown in white.
-These gyrochrones are \racomment{plotted for the same ages as above.}
+These gyrochrones are \racomment{plotted for the same ages described above.}
 Each point plotted in the top panel also appears in the bottom panel with the
 same color.
 Because velocity dispersion was calculated in bins of \teff, not mass, bin
@@ -582,10 +582,10 @@ Consequently, like the \citet{angus2019} model, the \citet{barnes2010} model
 in its current form does not have the flexibility to capture the mass and
 time-variable rotational evolution revealed by the data explored here.
 
-The lack of flexibility in these empirical gyrochronology models should not be
-seen as a failing of gyrochronologists.
-With a lack of old calibration stars, the only possible approach has been to
-fit simple relations to young stars and extrapolate to old ages.
+The lack of flexibility in these empirical models should not be seen as a
+failing of gyrochronology.
+With a paucity of old calibration stars, the only possible approach has been
+to fit simple relations to young stars and extrapolate to old ages.
 Naturally however, in this era of precise space-based photometry, new data are
 revealing flaws in our old models (which no one ever thought were perfect),
 and are providing opportunities to improve them.
@@ -616,7 +616,7 @@ lower-mass stars are still braking more efficiently at these intermediate and
 old ages \racomment{compared to higher-mass stars}, but their cores are more
 tightly coupled to their envelopes, allowing angular momentum transport
 between the two layers.
-Angular momentum resurfaces \racomment{from the core} and prevents the stellar
+Angular momentum surfaces \racomment{from the core} and prevents the stellar
 envelopes from spinning-down rapidly, and this effect is strongest for late
 K-dwarfs with effective temperatures of $\sim$4000-4500K and masses
 $\sim$0.5-0.7 M$_\odot$.
@@ -665,20 +665,24 @@ brun2011, oglethorpe2013}.
 In order to measure a rotation period at all, there must be some magnetically
 active regions (either bright plages or dark spots), of a reasonable size on
 the surface of a star.
-In other words, there is presumably some minimum magnetic activity level that
-is required in order to produce coherent light curve variability from which a
-rotation period can be confidently measured.
-The relatively sharp upper-edge of the rotation period distribution seen in
-figure \ref{fig:vplot} may be caused by a finite active lifetime of stars,
-\ie\ stars older than a critical age are no longer active enough to produce
-periodic, high-amplitude variability.
+In other words, some minimum magnetic activity level is presumably required to
+produce coherent light curve-variability, from which a rotation period can be
+confidently measured.
+In this case, the relatively sharp upper-edge of the rotation period
+distribution seen in figure \ref{fig:vplot} may be caused by a finite active
+lifetime of stars, \ie\ stars older than a critical age are no longer active
+enough to produce periodic, high-amplitude variability.
 The data presented in figure \ref{fig:vplot} indicate that this active
-lifetime is a function of stellar mass.
+lifetime is a function of stellar mass, because the velocity dispersions of
+stars along the upper edge of the rotation period distribution increase with
+decreasing mass.
+
 The mass dependence of magnetic activity lifetimes has been demonstrated
 previously \racomment{for M dwarfs} \citep[\eg][]{west2008, newton2017,
-kiman2019}, and if the detectability of a rotation period is considered to be
-a magnetic activity proxy, then our results provide further evidence for a
-{\it mass-dependent} activity lifetime.
+kiman2019}.
+If the detectability of a rotation period is considered to be a magnetic
+activity proxy, then our results provide further evidence for a {\it
+mass-dependent} activity lifetime.
 Figure \ref{fig:vplot} shows that the populations of stars with the largest
 velocity dispersions are cooler than 4500 K.
 This implies that \racomment{most of} the oldest stars with detectable
@@ -707,18 +711,18 @@ stars with {\it measured rotation periods} to the velocity dispersions of the
 entire \kepler\ sample.
 % We assumed that stars with measured rotation periods are more magnetically
 % active than stars without measured rotation periods.
-If stars with measured rotation periods are more magnetically active and
-younger than stars without rotation period measurements, they should also have
-smaller velocity dispersions.
+If stars with measured rotation periods are more magnetically active, and
+younger, than stars without rotation period measurements, they should also
+have smaller velocity dispersions.
 % This means that stars with measured rotation periods should be kinematically
 % younger on average than the entire \kepler\ sample.
 % they are young, because G stars are only magnetically active when they are
 % young, G stars with {\it measured periods} should have smaller velocity
 % dispersions than {\it all} G stars.
 To test this theory, we calculated the velocity dispersions for all stars in
-the \kepler\ field after removing visual binaries, subgiants, stars fainter
+the \kepler\ field (after removing visual binaries, subgiants, stars fainter
 than 16th magnitude, and high Galactic latitude stars, following the method
-described in section \ref{sec:method}.
+described in section \ref{sec:method}).
 We then compared these velocity dispersions, as a function of
 \teff, to the velocity dispersions of stars with {\it measured} rotation
 periods \citep[\ie\ stars that appear in table 1 of][]{mcquillan2014}.
