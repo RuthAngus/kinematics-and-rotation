@@ -700,9 +700,10 @@ The \citet{barnes2010} model has a different functional form: it uses Rossby
 number ($Ro = P_\mathrm{rot}/\tau$, where $\tau$ is the convective turnover
 time) to encode the mass-dependent evolution of rotation periods:
 $\frac{dP_\mathrm{rot}}{dt} \propto 1/Ro$.
-This simple relation neatly reproduces the rotation periods of young cluster
-stars, however, like the other empirical gyrochronology models, it does not
-reproduce the observed trends seen in the velocity dispersion data here.
+This simple relation neatly reproduces the rotation periods of stars in the
+slow-rotation sequences of young ($\sim$100-700 Gyr) clusters, however, like
+the other empirical gyrochronology models, it does not reproduce the observed
+trends seen in the velocity dispersion data here.
 The \citet{barnes2010} model has a similar period-\teff\ relation to the
 Praesepe-based \citet{angus2019} model, because the period-\teff\ relation of
 Praesepe roughly follows a line of constant Rossby number.
@@ -989,7 +990,26 @@ seen in many young open clusters, including Praesepe), at intermediate ages the
 relation flattens out and K dwarfs of different masses rotate at the same
 rate.
 At old ages, cooler K dwarfs spin more rapidly than hotter K dwarfs of the
-same age.}
+same age.
+        \racomment{ While most empirical gyrochronology models calibrated to
+        date can broadly reproduce the rotation periods of young
+        ($\sim$100-700 Gyr) cluster stars, they do not match the rotational
+        behavior of intermediate-age and old ($\gtrsim$1 Gyr) K dwarfs.
+In addition, their simple functional forms, with a universal age-rotation
+        power-law index, are not flexible enough to capture rotational
+        evolution at all ages and masses.
+This is because they have been calibrated with young open clusters: stellar
+        spin down is relatively straightforward at young ages, and can often
+        be represented with a color and age-separable power-law relation.
+Until recently, more complex rotational evolution models were not needed.
+We now know however, from new observations of intermediate-age clusters, and
+        the kinematic data presented here, that these empirical models are not
+        flexible enough to reproduce the mass and time-dependent spin-down
+        rate of cool dwarfs at old ages.
+We advocate for the adoption of more flexible models, like semi-parametric
+        Gaussian process models, in the future.
+        }
+        }
 
 \item{{\bf Variable core-envelope coupling may be the cause.} We showed that
 the period--\teff\ relations change shape over time in a way that
