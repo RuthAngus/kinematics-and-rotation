@@ -58,6 +58,7 @@
 \newcommand{\python}{{\it Python}}
 
 \newcommand{\racomment}[1]{{\color{blue}#1}}
+% \newcommand{\racomment}{}
 
 % \received{June 1, 2019}
 % \revised{January 10, 2019}
@@ -162,12 +163,10 @@ Science, 813 Santa Barbara Street, Pasadena, CA 91101, USA}
 The rotational evolution of cool dwarfs is poorly constrained after $\sim$1-2
 Gyr due to a lack of precise ages and rotation periods for old main-sequence
 stars.
-\racomment{
-In this work we use velocity dispersion as an age proxy to reveal the
+\racomment{In this work we use velocity dispersion as an age proxy to reveal the
 temperature-dependent rotational evolution of low-mass \kepler\ dwarfs, and
 demonstrate that kinematic ages could be a useful tool for calibrating
-gyrochronology in the future.
-}
+gyrochronology in the future.}
 % In this work, we use the velocity dispersions of groups of low-mass \kepler\
 % dwarfs as an age proxy, to reveal the temperature-dependent rotational
 % evolution of these stars, and demonstrate that kinematic ages could be a
@@ -226,22 +225,17 @@ However, in the NGC 6811 cluster which is around 1 Gyr \citep{janes2011,
 sandquist2016},
 late-K dwarfs rotate at the {\it same rate} as early-K dwarfs
 \citep{curtis2019}.
-\racomment{
-    In addition, new rotation period measurements for low-mass stars in
+\racomment{In addition, new rotation period measurements for low-mass stars in
 the 2.7-Gyr-old cluster Ruprecht 147 show that its slow-rotator sequence is
 flat compared to younger clusters like Praesepe (Curtis \etal\ 2020, submitted
 to AAS Journals), and departures from classical Skumanich-like spin-down were
 also noted in observations of the $\sim$1.3 Gyr NGC 752 open cluster
-\citep{agueros2018}.
-}
+\citep{agueros2018}.}
 % In other words, convection zone depth cannot be the only variable that
 % affects stellar spin-down rate.
 New semi-empirical models that vary the rate of angular momentum
 redistribution in the interiors of stars are able to reproduce the flattened
-period--color relation
-\\racomment{
-    seen in these clusters \citep{spada2019}.
-}
+period--color relation \racomment{seen in these clusters \citep{spada2019}.}
 These models suggest that mass and age-dependent angular momentum transport
 between the cores and envelopes of stars has a significant impact on their
 surface rotation rates.
@@ -281,9 +275,7 @@ indication that stars formed dynamically ``hotter'' in the past
 In either case, the vertical velocity distribution is observed to depend
 significantly on stellar age.
 While the velocity of any individual star only provides a weak age constraint
-\racomment{
-    (if any at all)
-}, because its velocity depends on its current
+\racomment{(if any at all)}, because its velocity depends on its current
 position in its orbit, the velocity {\it dispersion} of a {\it population} of
 stars indicates whether that population is old or young relative to other
 populations.
@@ -293,8 +285,7 @@ stars in the Galactic thin disk to ascertain which populations are older and
 which younger, and draw conclusions about the rotational evolution of stars
 based on their implied relative ages.
 
-\racomment{
-    There is a long history of using kinematic ages to explore the
+\racomment{There is a long history of using kinematic ages to explore the
 evolution of cool dwarfs \citep[\eg][]{reid1995, gizis2000, west2004,
 west2006, schmidt2007, faherty2009, kiman2019}.
 For example, \citet{west2004, west2006} used the vertical distances of stars
@@ -307,11 +298,9 @@ age proxy to explore the evolution of H$\alpha$ equivalent width (a magnetic
 activity indicator), in M dwarfs.
 }
 
-Although {\it vertical} velocity, \vz, is \racomment{
-    a well-established
-}
-age proxy, it can only be calculated with full 6-dimensional position and
-velocity information.
+Although {\it vertical} velocity, \vz, is \racomment{a well-established} age
+proxy, it can only be calculated with full 6-dimensional position and velocity
+information.
 In fact, with full 6D phase space and an assumed Galactic potential, it is
 possible to calculate the dynamically-invariant vertical {\it action}, which may
 be an even better age indicator \citep{beane2018, ting2019}.
@@ -362,10 +351,8 @@ Bayestar dust map implemented in the {\tt dustmaps} {\it Python} package
 \citep{green2018}, and {\tt astropy} \citep{astropy2013, astropy2018}.
 For this work, we used the precise \textit{Gaia} DR2 photometric color,
 $G_{\rm BP} - G_{\rm RP}$, to estimate \teff\ for the Kepler rotators.
-\racomment{
-    The calibration of this relation is described in Curtis \etal\ (2020,
-in prep) and summarized in the Appendix of this paper.
-}
+\racomment{The calibration of this relation is described in Curtis \etal\
+(2020, in prep) and summarized in the Appendix of this paper.}
 
 Photometric binaries and subgiants were removed from the \mct\ sample by
 applying cuts to the color-magnitude diagram (CMD), shown in figure
@@ -401,8 +388,7 @@ to have measurable rotation periods at old ages, the latter scenario seems
 likely.
 However, it is also possible that the rotation periods of the oldest early M
 dwarfs are so long that they are not measurable with Kepler data.
-\racomment{
-    Ground-based rotation period measurements of early M dwarfs
+\racomment{Ground-based rotation period measurements of early M dwarfs
 (spectral types earlier than $\sim$ M2.5, \teff\ $\gtrsim$ 3500 K) indicate
 there is a $\sim$ 80 day upper limit to their rotation periods
 \citep{newton2016, newton2018}, which is longer than the longest rotation
@@ -443,10 +429,8 @@ astropy2018} {\it Python} packages were used to calculate velocities for the
 covariance matrix via Monte Carlo sampling, thereby accounting for the
 covariances between \gaia\ positions, parallaxes and proper motions.
 Stars with negative parallaxes or parallax signal-to-noise ratios less than 10
-(around 3,000 stars), stars fainter than 16th magnitude \racomment{
-    in \gaia\ G-band
-}
-(200 stars), stars with absolute \vb\ uncertainties greater than 1
+(around 3,000 stars), stars fainter than 16th magnitude \racomment{in \gaia\
+G-band} (200 stars), stars with absolute \vb\ uncertainties greater than 1
 \kms\ (1000 stars), and stars with galactic latitudes greater than 15\degrees\
 (5500 stars, justification provided in the appendix) were removed from the
 sample.
@@ -458,10 +442,8 @@ less than 0.5 Gyr \citep[based on the][gyro-model]{angus2019}, because a 0.5
 Gyr gyrochrone\footnote{A gyrochrone is a gyrochronological isochrone, or a
 line of constant age in period-\teff, or period-color space.} traces the
 bottom edge of the main population of rotation periods.
-\racomment{
-    These rapid rotators are probably either very young stars, or
-synchronized binaries (see section \ref{sec:gap}).
-}
+\racomment{These rapid rotators are probably either very young stars, or
+synchronized binaries (see section \ref{sec:gap}).}
 After these cuts, around
 13,000 stars out of the original $\sim$34,000 were included in the sample.
 
@@ -543,9 +525,7 @@ these Praesepe-based models.
 The bottom panel of figure \ref{fig:vplot} shows velocity dispersion as a
 function of rotation period and {\it mass}, \citep[from][]{berger2020}, with
 gyrochrones from the \citet{spada2019} model shown in white.
-These gyrochrones are \racomment{
-    plotted for the same ages described above.
-}
+These gyrochrones are \racomment{plotted for the same ages described above.}
 Each point plotted in the top panel also appears in the bottom panel with the
 same color.
 Because velocity dispersion was calculated in bins of \teff, not mass, bin
@@ -569,16 +549,15 @@ core and envelope with time and mass \citep{spada2019}.
 
 The velocity dispersions of stars in the \mct\ sample, shown in figure
 \ref{fig:vplot}, provide the following picture of rotational evolution.
-\racomment{
-    At young ages \citep[younger than around 1 Gyr but still old enough to be on
-the main sequence and have transitioned from the `C' sequence to the `I'
-sequence ][]{barnes2003}, stellar rotation period {\it decreases} with {\it
-increasing} mass.
-}
-This is likely because lower-mass stars with deeper convection zones have
-stronger magnetic fields, larger Alfv\'en radii and therefore experience
-greater angular momentum loss rate \citep[\eg][]{schatzman1962, kraft1967,
-parker1970, kawaler1988, charbonneau2010, matt2012, matt2015}.
+\racomment{At young ages \citep[younger than around 1 Gyr but still old enough
+to be on the main sequence and have transitioned from the `C' sequence to the
+`I' sequence ][]{barnes2003}, stellar rotation period {\it decreases} with
+{\it increasing} mass.}
+This is likely because lower-mass stars with deeper
+convection zones have stronger magnetic fields, larger Alfv\'en radii and
+therefore experience greater angular momentum loss rate
+\citep[\eg][]{schatzman1962, kraft1967, parker1970, kawaler1988,
+charbonneau2010, matt2012, matt2015}.
 % This aligns with the current assumptions about stellar spin-down, dynamo
 % theory, and the gyrochronology paradigm that has been in place for decades.
 % \citep[\eg][]{skumanich1972, noyes1984, kawaler1988, barnes2003, barnes2010}.
@@ -591,16 +570,10 @@ ages, the rotation periods of K dwarfs appear {\it constant} with mass, and at
 late ages rotation period {\it increases} with {\it increasing} mass.
 The interpretation of this, according to the \citet{spada2019} model, is that
 lower-mass stars are still braking more efficiently at these intermediate and
-old ages \racomment{
-    compared to higher-mass stars,
-}
-but their cores are more
+old ages \racomment{compared to higher-mass stars,} but their cores are more
 tightly coupled to their envelopes, allowing angular momentum transport
 between the two layers.
-Angular momentum surfaces \racomment{
-    from the core
-}
-and prevents the stellar
+Angular momentum surfaces \racomment{from the core} and prevents the stellar
 envelopes from spinning-down rapidly, and this effect is strongest for late
 K-dwarfs with effective temperatures of $\sim$4000-4500K and masses
 $\sim$0.5-0.7 M$_\odot$.
@@ -645,8 +618,7 @@ brun2011, oglethorpe2013}.
 % Figure \ref{fig:vplot} reveals another phenomenon of magnetic evolution:
 % K and M dwarfs remain magnetically active for longer than G dwarfs.
 
-\racomment{
-In the top panel of figure \ref{fig:vplot}, the \citet{angus2019}
+\racomment{In the top panel of figure \ref{fig:vplot}, the \citet{angus2019}
 gyrochronology model is plotted for comparison with the data.
 This model was chosen as an example but there are many other empirical
 gyrochronology models we could have used.
@@ -821,9 +793,7 @@ average, {\it younger} than the total population of G stars in the Kepler
 field.
 On the other hand, the late K and early M dwarfs with detectable rotation
 periods have a similar age distribution to the overall Kepler population which
-suggests that \racomment{
-    most of
-}
+suggests that \racomment{most of}
 the oldest K and M dwarfs are represented in
 the \mct\ sample.
 This result bolsters the evidence that M dwarf rotation periods are measurable
@@ -907,14 +877,12 @@ needed to confirm a connection) these data suggest that the gap may indeed
 separate a young regime where stellar cores are decoupled from their envelopes
 from an old regime where these layers are more tightly coupled.
 If so, this could indicate that
-\racomment{
-    these phenomena are related, \ie\
+\racomment{these phenomena are related, \ie\
 the process that is responsible for changing the shape of gyrochrones in
-rotation-\teff\ space is related to the process that produces the gap.
+rotation-\teff\ space is related to the process that produces the gap.}
 % Of course this may just be a coincidence.
 % Alternatively, the fact that the gap is located near a changing stellar
 % evolution regime may be a coincidence.
-}
 
 An alternate explanation for the gap is that the \mct\ sample contains two
 distinct stellar populations: one young and one old.
