@@ -57,8 +57,8 @@
 \newcommand{\bvector}{${\bf b}$}
 \newcommand{\python}{{\it Python}}
 
-\newcommand{\racomment}[1]{{\color{blue}#1}}
-% \newcommand{\racomment}{}
+% \newcommand{\racomment}[1]{{\color{blue}#1}}
+\newcommand{\racomment}{}
 
 % \received{June 1, 2019}
 % \revised{January 10, 2019}
@@ -194,6 +194,10 @@ GKM dwarfs are likely to be synchronized binaries.
 %% keywords and the rules for their use.
 % \keywords{editorials, notices ---
 % miscellaneous --- catalogs --- surveys}
+\keywords{Stellar magnetic fields --- Milky Way dynamics ---
+Milky Way disk --- Stellar activity --- Solar analogs ---
+Stellar phenomena --- Late-type stars --- Low mass stars ---
+Stellar evolution}
 
 \section{Introduction}
 
@@ -335,6 +339,8 @@ In the appendix, we establish that \vb\ velocity dispersion, \sigmavb, can be
 used as an age proxy by demonstrating that neither mass-dependent heating nor
 the \kepler/\gaia\ selection function is observed to strongly affect our
 sample.
+The data used in this project is described in table \ref{tab:data}, at the end
+of this paper, and is available online.
 
 \section{Method}
 \label{sec:method}
@@ -422,7 +428,7 @@ with rotation periods and the models are poorly calibrated for these stars.
 \label{fig:age_gradient}
 \end{figure}
 
-The {\tt Pyia} \citep{price-whelan_2018} and {\tt astropy} \citep{astropy2013,
+The {\tt Pyia} \citep{price-whelan2018} and {\tt astropy} \citep{astropy2013,
 astropy2018} {\it Python} packages were used to calculate velocities for the
 \mct\ sample.
 {\tt Pyia} calculates velocity samples from the full \gaia\ uncertainty
@@ -491,6 +497,7 @@ stars with Galactic latitude $<$ 15\degrees.
     stars at long rotation periods/old ages: they trace lines of constant
     velocity dispersion by reproducing periods of `stalled' surface rotational
     evolution for K-dwarfs.
+    The data used to create this figure is available in table \ref{tab:data}.
 }
   \centering
     \includegraphics[width=1\textwidth]{main_figure}
@@ -1232,7 +1239,7 @@ optical and near-infrared spectroscopy \citep{mann2015}, and K and M dwarfs
 characterized with interferometry and bolometric flux analyses
 \citep{boyajian2012}.
 This empirical color--temperature relation is valid over the color range $0.55
-< (G_{\rm BP} - G_{\rm RP})_0 < 3.20$, corresponding to $3070 > T_{\rm eff} >
+< (G_{\rm BP} - G_{\rm RP})_0 < 3.20$, corresponding to $3070 < T_{\rm eff} <
 6470$~K.
 The dispersion about the relation implies a high precision of 50~K.
 These benchmark data enable us to accurately estimate \teff\ for cool dwarfs
@@ -1274,6 +1281,37 @@ color is a seventh-order polynomial with coefficients given in table
 %% bibtext sample63
 %% pdflatex sample63.tex
 %% pdflatex sample63.tex
+
+\ref{tab:data}.
+\begin{table}[h!]
+  \begin{center}
+      \caption{
+The data used for this project (the full table is available online).
+      Masses were obtained from \citet{berger2020}, rotation periods from
+      \mct, effective temperatures were calculated from dereddened \gaia\
+      photometry, as described in the appendix and Curtis \etal\ (Submitted).
+Velocities were calculated using {\tt pyia} and {\tt astropy}
+      \citep{astropy2013, astropy2018, price-whelan2018}.
+Uncertainties on velocity dispersions were calculated as the standard
+      error of the sample standard deviation \citep{rao1973}.
+      }
+    \label{tab:data}
+\begin{tabular}{cccccc}
+KIC ID & Mass [M$_\odot$] & T$_\mathrm{eff}$ [K] & P$_\mathrm{rot}$ [days] & v$_b$ [kms$^{-1}$] & $\sigma_\mathrm{vb}$ [kms$^{-1}$] \\
+\hline
+1164102 & 0.63 & 4053 & 31.5 $\pm$ 0.5 & 13.6 $\pm$ 0.2 & 21.2 $\pm$ 0.4 \\
+1292688 & 0.52 & 3752 & 42.7 $\pm$ 2.1 & -14.2 $\pm$ 0.2 & 21.9 $\pm$ 0.7 \\
+1297303 & 0.67 & 4318 & 27.3 $\pm$ 0.2 & 16.7 $\pm$ 0.3 & 16.7 $\pm$ 0.2 \\
+1429921 & 0.65 & 4258 & 23.1 $\pm$ 0.1 & -7.0 $\pm$ 0.2 & 14.8 $\pm$ 0.2 \\
+1430349 & 0.65 & 4368 & 34.7 $\pm$ 0.8 & 12.2 $\pm$ 0.2 & 19.7 $\pm$ 0.4 \\
+1430893 & 0.61 & 3985 & 17.0 $\pm$ 0.0 & 0.4 $\pm$ 0.1 & 9.2 $\pm$ 0.1 \\
+1431116 & 0.72 & 4415 & 38.8 $\pm$ 1.0 & -16.5 $\pm$ 0.1 & 19.7 $\pm$ 0.4 \\
+1432745 & 0.7 & 4413 & 22.2 $\pm$ 0.2 & -2.1 $\pm$ 0.0 & 13.4 $\pm$ 0.2 \\
+1435229 & 0.57 & 4080 & 23.5 $\pm$ 0.0 & -8.8 $\pm$ 1.0 & 13.2 $\pm$ 0.2 \\
+1569682 & 0.57 & 3909 & 17.4 $\pm$ 0.2 & 4.4 $\pm$ 0.1 & 9.2 $\pm$ 0.1 \\
+\end{tabular}
+\end{center}
+\end{table}
 
 \bibliography{bib}{}
 \bibliographystyle{aasjournal}

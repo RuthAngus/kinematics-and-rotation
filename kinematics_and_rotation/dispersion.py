@@ -274,6 +274,7 @@ def err_on_sample_std_dev(std_dev_of_distribution, n):
     Which takes the derivation from
     Rao (1973) Linear Statistical Inference and its Applications 2nd Ed, John
     Wiley & Sons, NY
+    https://onlinelibrary.wiley.com/doi/book/10.1002/9780470316436
 
     Derivation for standard error on the variance is here:
     https://math.stackexchange.com/questions/72975/variance-of-sample-variance
